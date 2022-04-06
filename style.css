@@ -3,11 +3,42 @@
 /*#region mixins */
 /*#endregion */
 * {
-  font-family: "Karla", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 0;
   margin: 0;
-  color: #FF9F15;
+  color: #2E2C2C;
   box-sizing: border-box;
+}
+
+.header nav {
+  height: 60px;
+}
+.header-logo {
+  width: 134px;
+}
+@media (min-width: 992px) {
+  .header-logo {
+    width: 282px;
+  }
+}
+.header .cart-badge {
+  background-color: #FF9F15;
+  color: #FFFFF8;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  top: -5px;
+  right: -5px;
+}
+
+.material-icons-outlined {
+  color: #999999;
+}
+
+a {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */

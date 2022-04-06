@@ -10,12 +10,48 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Welcome to BrightWorld!!!</h1>
+<body ng-app="myApp">
+    <div class="container">
+        <section id="header" class="header">
+            <nav class="d-flex justify-content-between align-items-center">
+                <a href="#/!">
+                    <img src="./imgs/Logo.png" alt="Logo" class="header-logo">
+                </a>
+                <div>
+                    <span class="material-icons-outlined ms-2">
+                        search
+                    </span>
+                    <a href="#!Cart" class="position-relative cart ms-2">
+                        <span class="material-icons-outlined">
+                            shopping_cart
+                        </span>
+                        <div class="cart-badge position-absolute">4</div>
+                    </a>
+                    <a href="./Login/login.html" class="ms-2">
+                        <span class="material-icons-outlined">
+                            person_outline
+                        </span>
+                    </a>
+                    <span class="material-icons-outlined ms-2">
+                        menu
+                    </span>
+                </div>
+
+                <!-- <div class="position-relative">
+                    <input type="text" placeholder="Search">
+                    <span class="material-icons-outlined position-absolute">
+                        shopping_cart
+                    </span>
+                </div> -->
+            </nav>
+        </section>
+        <ng-view></ng-view>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
