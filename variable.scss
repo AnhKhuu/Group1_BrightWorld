@@ -1,5 +1,7 @@
-
+$white: #FFFFF8;
+$grey: #999999;
 $yellow: #FF9F15;
+$black: #2E2C2C;
 /*#region breakpoints */
 $breakpoints: ( 'sm': ( min-width: 576px ), 'md': ( min-width: 768px ), 'lg': ( min-width: 992px ), 'xl': ( min-width: 1200px ), 'xxl': ( min-width: 1400px ), ) !default;
 /*#endregion */
