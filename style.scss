@@ -5,11 +5,16 @@
     margin: 0;
     color: $black;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 .header {
     nav {
         height: 60px;
+
+        @include on('lg') {
+            height: 100px;
+        }
     }
 
     &-logo {
@@ -21,6 +26,8 @@
     }
 
     .cart {
+        display: inline-block;
+
         &-badge {
             background-color: $yellow;
             color: $white;
@@ -33,13 +40,51 @@
             right: -5px;
         }
     }
-}
 
-.material-icons-outlined {
-    color: $grey;
+    .material-icons-outlined {
+        color: $grey;
+    }
+
+    #collapseNav {
+        top: 60px;
+        left: 0;
+        width: 80%;
+
+        &>div {
+            padding: 20px 24px;
+            background-color: $white;
+            font-weight: 500;
+        }
+
+        .material-icons-outlined {
+            color: $yellow;
+            cursor: pointer;
+        }
+
+        a {
+            padding-bottom: 8px;
+            display: block;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+
+        .collapseSubMenuLev1 {
+            
+        }
+
+        .collapseSubMenuLev2 {
+            a {
+                display: block;
+            }
+        }
+    }
 }
 
 a {
     display: inline-block;
+    text-decoration: none;
+    color: $black
 }
 
