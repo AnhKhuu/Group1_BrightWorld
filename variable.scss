@@ -24,12 +24,22 @@ $breakpoints: ( 'sm': ( min-width: 576px ), 'md': ( min-width: 768px ), 'lg': ( 
 }
 
 @mixin yellow-btn {
-    color: #fff;
+    color: $white;
+    height: 40px;
     font-size: 16px;
     font-weight: 600;
     background-color: $yellow;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin lm-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 /*#endregion */

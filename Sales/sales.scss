@@ -1,0 +1,161 @@
+@import '../variable.scss';
+
+.sales {
+    h1 {
+        font-size: 18px;
+        font-weight: 600;
+
+        @include on("lg")
+        {
+            font-size: 24px;
+        }
+    }
+
+    .show-more {
+        font-size: 14px;
+        color: $grey;
+    }
+
+    .brand {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+
+        @include on("md")
+        {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 16px; 
+        }
+
+        @include on("lg")
+        {
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+        }
+
+        a {
+            border-radius: 5px;
+            background-color: $white;
+            height: 36px;
+            padding: 0 10px;
+            border: 1px solid #e0e0e0;
+
+            @include on("lg")
+            {
+                height: 40px;
+            }
+        }
+
+        img {
+            width: auto;
+            height: 15px;
+
+            @include on("lg")
+            {
+                width: auto;
+                height: 30px;
+            }
+        }
+    }
+
+    .product-item {
+        border: 1px solid #D7D7D7;
+        border-radius: 5px;
+        padding: 8px;
+
+        img {
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 5;
+        }
+
+        .sales-tag {
+            background-color: #FFECD0;
+            font-size: 14px;
+            color: #FF9F15;
+            top: 16px;
+            left: 16px;
+            border-radius: 16px;
+            text-align: center;
+            font-weight: 500;
+            width: 50px;
+            height: 21px;
+
+            @include on("lg")
+            {
+                width: 70px;
+                height: 26px;
+                font-size: 18px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            margin: 8px 0;
+            padding: 0;
+            @include lm-text;
+            -webkit-line-clamp: 2;
+
+            @include on('lg')
+            {
+                font-size: 16px;
+            }
+        }
+
+        .old-price {
+            font-size: 12px;
+            color: $grey;
+            text-decoration: line-through;
+
+            @include on('lg')
+            {
+                font-size: 14px;
+            }
+        }
+
+        .new-price {
+            font-weight: 600;
+
+            @include on('lg')
+            {
+                font-size: 18px;
+            }
+        }
+
+        .material-icons {
+            font-size: 20px;
+
+            @include on('lg')
+            {
+                font-size: 24px;
+            }
+        }
+
+        .heart-outline {
+            color: #F14747;
+        }
+
+        .star {
+            color: #FDBC15;
+        }
+    }
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    right: 39%;
+
+    @include on("md")
+    {
+        right: 47%;
+    }
+}
