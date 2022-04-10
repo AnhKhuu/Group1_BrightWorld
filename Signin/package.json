@@ -3,6 +3,6 @@
         "node-sass": "^7.0.1"
     },
     "scripts": {
-        "scss": "node-sass --watch signin.css -o css"
+        "scss": "node-sass --watch signin.scss -o css"
     }
 }
