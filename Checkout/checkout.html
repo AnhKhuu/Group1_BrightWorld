@@ -1,3 +1,112 @@
-<section class="checkout">
-    <h1>Checkout</h1>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="checkout.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Billing Info</h3>
+
+                <div class="inputBox">
+                    <span>First name :</span>
+                    <input type="text" placeholder="Anh" required>
+                </div>
+                <div class="inputBox">
+                    <span>Last name :</span>
+                    <input type="text" placeholder="Khuu" required>
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="anhkhuu.3928@gmail.com" required>
+                </div>
+                <div class="inputBox">
+                    <span>Phone :</span>
+                    <input type="number" placeholder="Enter your phone number" required>
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="Enter your address" required>
+                </div>
+                <div class="inputBox">
+                    <span>Town / City :</span>
+                    <input type="text" placeholder="Enter town or city" required>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>State :</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Zip code :</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <span>Order Note :</span>
+                    <input type="text" placeholder="">
+                </div>
+                <div>
+                    <input type="checkbox" placeholder=""> I agree with our terms and conditions and privacy policy.
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>Cards accepted :</span>
+                    <img src="images/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Name on card :</span>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="inputBox">
+                    <span>Credit card number :</span>
+                    <input type="number" placeholder="" required>
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="january" required>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2022" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234" required>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="Complete Order" class="submit-btn">
+
+    </form>
+
+</div>    
+    
+</body>
+</html>
