@@ -23,6 +23,73 @@ $breakpoints: ( 'sm': ( min-width: 576px ), 'md': ( min-width: 768px ), 'lg': ( 
     }
 }
 
+@mixin star {
+    .material-icons.star {
+        color: #FDBC15;
+    }
+}
+
+@mixin star-outline {
+    .material-icons.star-outline {
+        color: #D1D1D1;
+    }
+}
+
+@mixin price {
+    .old-price {
+        font-size: 14px;
+        color: $grey;
+        text-decoration: line-through;
+
+        @include on('lg')
+        {
+            font-size: 14px;
+        }
+    }
+
+    .new-price {
+        font-weight: 600;
+        font-size: 18px;
+
+        @include on('lg')
+        {
+            font-size: 24px;
+        }
+    }
+}
+
+@mixin vl {
+    .vl {
+        height: 16px;
+        border-left: 1px solid grey;
+
+        &.last {
+            @include on('md') {
+                border-left: 1px solid white;
+            }
+        }
+        &.first {
+            display: none;
+
+            @include on('md') {
+                display: block;
+                border-left: 1px solid white;
+            }
+        }
+    }
+}
+
+@mixin border-btn {
+    color: $yellow;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid $yellow;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 @mixin yellow-btn {
     color: $white;
     height: 40px;

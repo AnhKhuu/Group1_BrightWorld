@@ -202,7 +202,7 @@ input {
         height: 55px;
     }
 
-    @include on('lg')
+    @include on('md')
     {
         display: block;
     }

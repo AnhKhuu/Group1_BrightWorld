@@ -3,5 +3,6 @@ angular.module('brightworldApp', [
     'productCarousel',
     'homepage',
     'sales',
-    'productCategory'
+    'productCategory',
+    'productDetail'
   ]);

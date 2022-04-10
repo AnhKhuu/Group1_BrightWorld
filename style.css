@@ -213,7 +213,7 @@ input:focus {
   height: 55px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .sub-menu {
     display: block;
   }
