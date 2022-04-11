@@ -3,70 +3,13 @@
 /*#region mixins */
 /*#endregion */
 * {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   padding: 0;
   margin: 0;
   color: #2E2C2C;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 16px;
-}
-
-.header nav {
-  height: 60px;
-}
-@media (min-width: 992px) {
-  .header nav {
-    height: 100px;
-  }
-}
-.header-logo {
-  width: 134px;
-}
-@media (min-width: 992px) {
-  .header-logo {
-    width: 282px;
-  }
-}
-.header .cart {
-  display: inline-block;
-}
-.header .cart-badge {
-  background-color: #FF9F15;
-  color: #FFFFF8;
-  border-radius: 50%;
-  font-size: 12px;
-  width: 16px;
-  height: 16px;
-  text-align: center;
-  top: -5px;
-  right: -5px;
-}
-.header .material-icons-outlined {
-  color: #999999;
-}
-.header #collapseNav {
-  top: 60px;
-  left: 0;
-  width: 80%;
-}
-.header #collapseNav > div {
-  padding: 20px 24px;
-  background-color: #FFFFF8;
-  font-weight: 500;
-}
-.header #collapseNav .material-icons-outlined {
-  color: #FF9F15;
-  cursor: pointer;
-}
-.header #collapseNav a {
-  padding-bottom: 8px;
-  display: block;
-}
-.header #collapseNav a:hover {
-  color: #FF9F15;
-}
-.header #collapseNav .collapseSubMenuLev2 a {
-  display: block;
 }
 
 a {
@@ -75,4 +18,362 @@ a {
   color: #2E2C2C;
 }
 
+a:hover {
+  color: #FF9F15;
+}
+
+input:focus {
+  outline: 1px solid #FF9F15;
+}
+
+.header {
+  background-color: #FFFFF8;
+}
+
+.header nav {
+  height: 60px;
+}
+
+@media (min-width: 992px) {
+  .header nav {
+    height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header nav .trigger-mb-menu {
+    display: none;
+  }
+}
+
+.header nav .search-desktop {
+  display: none;
+  width: 500px;
+}
+
+.header nav .search-desktop input {
+  border: 1px solid #999999;
+  border-radius: 5px;
+  height: 40px;
+  padding: 12px 18px;
+}
+
+.header nav .search-desktop input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.header nav .search-desktop input:-ms-input-placeholder {
+  color: #999999;
+}
+
+.header nav .search-desktop input::-ms-input-placeholder {
+  color: #999999;
+}
+
+.header nav .search-desktop input::placeholder {
+  color: #999999;
+}
+
+.header nav .search-desktop button {
+  top: 6px;
+  right: 6px;
+}
+
+@media (min-width: 992px) {
+  .header nav .search-desktop button {
+    top: 3px;
+    right: 3px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header nav .search-desktop {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .header nav .search-desktop {
+    width: 700px;
+  }
+}
+
+.header nav span.material-icons-outlined:hover {
+  color: #FF9F15;
+}
+
+@media (min-width: 768px) {
+  .header nav #searchTrigger {
+    display: none;
+  }
+}
+
+.header-logo {
+  width: 134px;
+}
+
+@media (min-width: 992px) {
+  .header-logo {
+    width: 282px;
+  }
+}
+
+.header .cart {
+  display: inline-block;
+}
+
+.header .cart-badge {
+  background-color: #FF9F15;
+  color: #FFFFF8;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  top: -5px;
+  right: -5px;
+}
+
+.header .material-icons-outlined {
+  color: #999999;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .header .material-icons-outlined {
+    font-size: 32px;
+  }
+}
+
+.header #collapseNav {
+  width: 80%;
+  height: 100vh;
+  background-color: #FFFFF8;
+  top: 60px;
+  left: 0;
+  z-index: 10;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header #collapseNav > div {
+  padding: 20px 24px;
+  font-weight: 500;
+}
+
+.header #collapseNav .material-icons-outlined {
+  color: #999999;
+  cursor: pointer;
+}
+
+.header #collapseNav a {
+  padding-bottom: 8px;
+  display: block;
+}
+
+.header #collapseNav a:hover {
+  color: #FF9F15;
+}
+
+.header #collapseNav .collapseSubMenuLev2 a {
+  display: block;
+}
+
+.header #collapseSearch {
+  top: 60px;
+  left: 0;
+  background-color: #FFFFF8;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.header #collapseSearch input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #999999;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.header #collapseSearch input:focus {
+  outline: none;
+}
+
+.header #collapseSearch span.material-icons-outlined:hover {
+  color: #999999;
+}
+
+.sub-menu {
+  display: none;
+  background-color: #F9F9F9;
+}
+
+.sub-menu-layout {
+  height: 55px;
+}
+
+@media (min-width: 768px) {
+  .sub-menu {
+    display: block;
+  }
+}
+
+.sub-menu .material-icons-outlined {
+  color: #999999;
+  cursor: pointer;
+}
+
+.sub-menu #collapseSubMenuLev1Desktop {
+  background-color: #FFFFF8;
+  padding: 16px 16px 0 16px;
+  top: 55px;
+  z-index: 2;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sub-menu #collapseSubMenuLev1Desktop a {
+  padding-bottom: 16px;
+}
+
+.sub-menu .collapseSubMenuLev2Desktop {
+  background-color: #FFFFF8;
+  padding: 16px 16px 0 16px;
+  right: -151px;
+  top: -16px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sub-menu .collapseSubMenuLev2Desktop a {
+  padding-bottom: 16px;
+  display: block;
+}
+
+.footer .subscribe {
+  min-height: 163px;
+}
+
+@media (min-width: 992px) {
+  .footer .subscribe {
+    min-height: 207px;
+  }
+}
+
+.footer .subscribe img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  min-height: 163px;
+  max-height: 207px;
+  z-index: -1;
+  top: 0;
+}
+
+.footer .subscribe form {
+  width: 75%;
+}
+
+@media (min-width: 768px) {
+  .footer .subscribe form {
+    width: 34%;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer .subscribe form {
+    width: 28%;
+  }
+}
+
+.footer .subscribe form .material-icons-outlined {
+  left: 0;
+  color: #FFFFF8;
+}
+
+.footer .subscribe form ::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #FFFFF8;
+}
+
+.footer .subscribe form :-ms-input-placeholder {
+  font-size: 14px;
+  color: #FFFFF8;
+}
+
+.footer .subscribe form ::-ms-input-placeholder {
+  font-size: 14px;
+  color: #FFFFF8;
+}
+
+.footer .subscribe form ::placeholder {
+  font-size: 14px;
+  color: #FFFFF8;
+}
+
+.footer .subscribe form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFFFF8;
+  padding-right: 32px;
+  padding-left: 32px;
+  color: #FFFFF8;
+}
+
+.footer .subscribe form input:focus {
+  outline: none;
+}
+
+.footer .subscribe form button {
+  color: #FFFFF8;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #FF9F15;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer .subscribe form h1 {
+  font-size: 18px;
+  color: #FFFFF8;
+}
+
+@media (min-width: 992px) {
+  .footer .subscribe form h1 {
+    font-size: 24px;
+  }
+}
+
+.footer .information {
+  background-color: #FFFFF8;
+}
+
+.footer .information h1 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 992px) {
+  .footer .information h1 {
+    font-size: 24px;
+  }
+}
+
+.footer .information div span:nth-child(2),
+.footer .information div span:last-child {
+  font-size: 14px;
+}
+
+@media (min-width: 992px) {
+  .footer .information div span:nth-child(2),
+  .footer .information div span:last-child {
+    font-size: 16px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

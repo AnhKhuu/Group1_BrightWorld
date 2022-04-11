@@ -1,3 +1,134 @@
+/*#region breakpoints */
+/*#endregion */
+/*#region mixins */
+/*#endregion */
+#signin-form {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  font-family: 'Inter';
+  font-style: normal;
+}
 
+#signin-form #signin-login {
+  max-width: 350px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
 
+#signin-form #signin-login input:invalid {
+  color: red;
+}
+
+#signin-form #signin-login input:valid {
+  color: green;
+}
+
+#signin-form .signin-heading {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 20px;
+  color: #202020;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#signin-form .form-group {
+  border-bottom: 1px solid #999999;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#signin-form .form-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #2E2C2C;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#signin-form .form-input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+#signin-form .form-input:-ms-input-placeholder {
+  color: #999999;
+}
+
+#signin-form .form-input::-ms-input-placeholder {
+  color: #999999;
+}
+
+#signin-form .form-input::placeholder {
+  color: #999999;
+}
+
+#signin-form .form-submit {
+  height: 40px;
+  background: #FF9F15;
+  border: 1px solid #FF9F15;
+  color: #FDF9F9;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+#signin-form .form-submit:hover {
+  border: 1px solid #0d6adc;
+}
+
+#signin-form .form-footer {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2E2C2C;
+  margin-bottom: 10px;
+}
+
+#signin-form .form-footer:hover {
+  font-weight: bold;
+}
+
+#signin-form .form-footer2 {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+#signin-form .form-footer2 .form-createInfo {
+  font-weight: 10;
+  color: #938F8F;
+}
+
+#signin-form .form-footer2 .form-createAcount {
+  font-weight: 500;
+  color: #2E2C2C;
+}
+
+#signin-form .form-footer2 .form-createAcount:hover {
+  font-weight: bold;
+}
+
+#signin-form h4 {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #535050;
+  text-align: center;
+  margin-top: 20px;
+}
 /*# sourceMappingURL=signin.css.map */

@@ -1,3 +1,20 @@
+/*#region breakpoints */
+/*#endregion */
+/*#region mixins */
+/*#endregion */
+.homepage .show-more {
+  color: #999999;
+  font-size: 14px;
+}
 
+.homepage h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
 
+@media (min-width: 992px) {
+  .homepage h1 {
+    font-size: 24px;
+  }
+}
 /*# sourceMappingURL=homepage.css.map */

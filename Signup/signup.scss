@@ -1,0 +1,95 @@
+@import '../variable.scss';
+
+#signup-form {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    #signup-login {
+        max-width: 350px;
+        flex-grow: 1;
+        // background: #E5E5E5;
+        input:invalid {
+            color: red;
+        }
+        input:valid {
+            color: green;
+        }
+    }
+    .signup-heading {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 20px;
+        color: #202020;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .form-group {
+        border-bottom: 1px solid #999999;
+        ;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .form-input {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        color: #2E2C2C;
+        flex-grow: 1;
+    }
+    .form-input::placeholder {
+        color: #999999;
+    }
+    .form-submit {
+        height: 40px;
+        background: #FF9F15;
+        border: 1px solid #FF9F15;
+        color: #FDF9F9;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .form-submit:hover {
+        border: 1px solid #0d6adc;
+    }
+    .form-footer {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #2E2C2C;
+        margin-bottom: 10px;
+    }
+    .form-footer:hover {
+        font-weight: bold;
+    }
+    .form-footer2 {
+        font-size: 12px;
+        line-height: 15px;
+        .form-createInfo {
+            font-weight: 10;
+            color: #938F8F;
+        }
+        .form-createAcount {
+            font-weight: 500;
+            color: #2E2C2C;
+        }
+        .form-createAcount:hover {
+            font-weight: bold;
+        }
+    }
+    h4 {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #535050;
+        text-align: center;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,17 @@
+@import '../variable.scss';
+.homepage {
+    .show-more {
+        color: $grey;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 18px;
+        font-weight: 600;
+
+        @include on("lg")
+        {
+            font-size: 24px;
+        }
+    }
+}
