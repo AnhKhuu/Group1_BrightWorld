@@ -1,8 +1,27 @@
 @import '../variable.scss';
 
 .product-detail {
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
     &-carousel {
-        min-height: 500px;
+        height: 100%;
+
+        @include on('lg')
+        {
+            height: 500px;
+        }
+    }
+
+    .col-lg-1 {
+        display: none;
+        @include on('lg')
+        {
+            display: block;
+        }
     }
 
     .star-rating {

@@ -2,8 +2,32 @@
 /*#endregion */
 /*#region mixins */
 /*#endregion */
+.product-detail img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .product-detail-carousel {
-  min-height: 500px;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .product-detail-carousel {
+    height: 500px;
+  }
+}
+
+.product-detail .col-lg-1 {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .product-detail .col-lg-1 {
+    display: block;
+  }
 }
 
 .product-detail .star-rating .material-icons.star {
