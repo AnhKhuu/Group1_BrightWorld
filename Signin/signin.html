@@ -1,1 +1,62 @@
-<h1>Login</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/signin.css">
+
+    <title>Logn in</title>
+</head>
+
+<body>
+    <div id="signin-form">
+        <form action="../index.html" id="signin-login" onsubmit="return showInfo()">
+            <div class="signin-heading">
+                <img src="./image/logo1.jpg" alt="Logo1" class="signin-logo1"> BrightWorld
+            </div>
+
+            <hr>
+            <div class="form-group">
+                Email <br>
+                <input id="uemail" type="email" class="form-input" placeholder="Enter your email" required autofocus pattern="^\w+@\w+\.[a-z]{2,3}$">
+            </div>
+            <div class="form-group">
+                Password <br>
+                <input id="upass" type="password" class="form-input" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?=.*\d).{6,12}$">
+            </div>
+            <div>
+                <input onclick="showInfo()" type="submit" value="Log in" class="form-submit">
+            </div>
+            <div class="form-footer">
+                <a href="#">Forgotten your password ?</a>
+            </div>
+            <div class="form-footer2">
+                <a class="form-createInfo">Don't have an account ?</a>
+                <a href="#" class="form-createAcount">Create new account</a>
+            </div>
+
+            <br>
+            <div>
+                <h4>Copyright by Group1</h4>
+            </div>
+        </form>
+    </div>
+    <script>
+        function showInfo() {
+            var email = document.getElementById("uemail").value;
+            var pass = document.getElementById("upass").value;
+            if (email.length < 2 | pass.length < 3) {
+                alert("Please input your email or password");
+                return 0;
+            } else {
+                // alert("Email: " + email + "\n" + "Pass: " + pass);
+                return true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
