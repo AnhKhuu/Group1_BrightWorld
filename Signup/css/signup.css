@@ -1,0 +1,127 @@
+/*#region breakpoints */
+
+
+/*#endregion */
+
+
+/*#region mixins */
+
+
+/*#endregion */
+
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #2E2C2C;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#signup-form {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+#signup-form #signup-login {
+    max-width: 350px;
+    flex-grow: 1;
+}
+
+#signup-form #signup-login input:invalid {
+    color: red;
+}
+
+#signup-form #signup-login input:valid {
+    color: green;
+}
+
+#signup-form .signup-heading {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 20px;
+    color: #202020;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#signup-form .form-group {
+    border-bottom: 1px solid #999999;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#signup-form .form-input {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #2E2C2C;
+    flex-grow: 1;
+}
+
+#signup-form .form-input::placeholder {
+    color: #999999;
+}
+
+#signup-form .form-submit {
+    height: 40px;
+    background: #FF9F15;
+    border: 1px solid #FF9F15;
+    color: #FDF9F9;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#signup-form .form-submit:hover {
+    border: 1px solid #0d6adc;
+}
+
+#signup-form .form-footer {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2E2C2C;
+    margin-bottom: 10px;
+}
+
+#signup-form .form-footer:hover {
+    font-weight: bold;
+}
+
+#signup-form .form-footer2 {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+#signup-form .form-footer2 .form-createInfo {
+    font-weight: 10;
+    color: #938F8F;
+}
+
+#signup-form .form-footer2 .form-createAcount {
+    font-weight: 500;
+    color: #2E2C2C;
+}
+
+#signup-form .form-footer2 .form-createAcount:hover {
+    font-weight: bold;
+}
+
+#signup-form h4 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #535050;
+    text-align: center;
+    margin-top: 20px;
+}
