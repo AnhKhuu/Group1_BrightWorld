@@ -12,8 +12,8 @@ angular.
         when('/Product-category', {
           template: '<product-category></product-category>'
         }).
-        when('/Product-detail', {
-          template: '<product-detail></product-detail>'
+        when('/About', {
+          template: '<about></about>'
         })
     }
   ]);
