@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="./Sales/sales.css">
     <link rel="stylesheet" href="./ProductCarousel/product-carousel.css">
     <link rel="stylesheet" href="./ProductDetail/product-detail.css">
-    <link rel="stylesheet" href="./Cart/cart.css">
 </head>
 
 <body ng-app="brightworldApp">
@@ -45,15 +44,11 @@
                         data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
                         search
                     </span>
-                    <div class="position-relative cart ms-2 ms-lg-3 ms-xxl-0" data-bs-toggle="collapse"
-                    data-bs-target="#collapseCart" aria-expanded="false" aria-controls="collapseCart">
+                    <div class="position-relative cart ms-2 ms-lg-3 ms-xxl-0">
                         <span class="material-icons-outlined">
                             shopping_cart
                         </span>
                         <div class="cart-badge position-absolute">4</div>
-                        <div class="position-absolute" id="collapseCart">
-                            <cart></cart>
-                        </div>
                     </div>
                     <a href="./Signin/signin.html" class="ms-2 ms-md-3 ms-xxl-5">
                         <span class="material-icons-outlined">
@@ -321,13 +316,8 @@
     <script src="ProductCategory/product-category.component.js"></script>
     <script src="ProductDetail/product-detail.module.js"></script>
     <script src="ProductDetail/product-detail.component.js"></script>
-<<<<<<< HEAD
-    <script src="Cart/cart.module.js"></script>
-    <script src="Cart/cart.component.js"></script>
-=======
     <script src="About/about.module.js"></script>
     <script src="About/about.component.js"></script>
->>>>>>> main
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
 </body>
