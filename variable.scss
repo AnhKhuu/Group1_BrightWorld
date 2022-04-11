@@ -23,13 +23,228 @@ $breakpoints: ( 'sm': ( min-width: 576px ), 'md': ( min-width: 768px ), 'lg': ( 
     }
 }
 
+@mixin star {
+    .material-icons.star {
+        color: #FDBC15;
+    }
+}
+
+@mixin star-outline {
+    .material-icons.star-outline {
+        color: #D1D1D1;
+    }
+}
+
+@mixin price {
+    .old-price {
+        font-size: 14px;
+        color: $grey;
+        text-decoration: line-through;
+
+        @include on('lg')
+        {
+            font-size: 14px;
+        }
+    }
+
+    .new-price {
+        font-weight: 600;
+        font-size: 18px;
+
+        @include on('lg')
+        {
+            font-size: 24px;
+        }
+    }
+}
+
+@mixin vl {
+    .vl {
+        height: 16px;
+        border-left: 1px solid grey;
+
+        &.last {
+            @include on('md') {
+                border-left: 1px solid white;
+            }
+        }
+        &.first {
+            display: none;
+
+            @include on('md') {
+                display: block;
+                border-left: 1px solid white;
+            }
+        }
+    }
+}
+
+@mixin border-btn {
+    color: $yellow;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid $yellow;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 @mixin yellow-btn {
-    color: #fff;
+    color: $white;
+    height: 40px;
     font-size: 16px;
     font-weight: 600;
     background-color: $yellow;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin lm-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+@mixin custom-radio {
+    .container-filter {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      /* Hide the browser's default radio button */
+      .container-filter input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      
+      /* Create a custom radio button */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
+      
+      /* On mouse-over, add a grey background color */
+      .container-filter:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      
+      /* When the radio button is checked, add a blue background */
+      .container-filter input:checked ~ .checkmark {
+        background-color: #2196F3;
+      }
+      
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+      /* Show the indicator (dot/circle) when checked */
+      .container-filter input:checked ~ .checkmark:after {
+        display: block;
+      }
+      
+      /* Style the indicator (dot/circle) */
+      .container-filter .checkmark:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
+}
+
+@mixin custom-checkbox {
+    /* Customize the label (the container) */
+    .container-filter {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Hide the browser's default checkbox */
+    .container-filter input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        border-radius: 2px;
+        border: 1.5px solid #D1D1D1; 
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container-filter:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container-filter input:checked~.checkmark {
+        background-color: $yellow;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .container-filter input:checked~.checkmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container-filter .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
 }
 /*#endregion */

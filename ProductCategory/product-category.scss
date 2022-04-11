@@ -1,0 +1,292 @@
+@import '../variable.scss';
+
+.product-category {
+    .col-md-3 {
+        display: none;
+
+        @include on('md') {
+            display: block;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+        }
+
+        span {
+            font-size: 16px;
+        }
+
+        .filter-type {
+            span {
+                &:last-of-type {
+                    font-size: 12px;
+                    color: $yellow;
+                    font-weight: 600;
+                    width: 38px;
+                    height: 18px;
+                    border-radius: 12px;
+                    background-color: #FFECD0;
+                    text-align: center;
+                }
+            }
+
+            label {
+                font-size: 16px;
+            }
+        }
+
+        .filter-rating,
+        .filter-brand {
+            @include custom-checkbox;
+        }
+
+        .filter-rating {
+            .material-icons.star {
+                color: #FDBC15;
+            }
+
+            .material-icons.star-outline {
+                color: #D1D1D1;
+            }
+
+        }
+
+        .filter-price {
+            @include custom-radio;
+        }
+
+        .btn-apply {
+            @include yellow-btn
+        }
+
+        .btn-reset {
+            color: $yellow;
+            height: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 1px solid $yellow;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    #collapseFilter {
+        width: 80%;
+        height: 600px;
+        overflow: scroll;
+        padding: 16px;
+
+        label {
+            font-size: 16px;
+            display: block;
+        }
+
+        span {
+            font-size: 16px;
+        }
+
+        .filter-type {
+            span {
+                &:last-of-type {
+                    font-size: 12px;
+                    color: $yellow;
+                    font-weight: 600;
+                    width: 38px;
+                    height: 18px;
+                    border-radius: 12px;
+                    background-color: #FFECD0;
+                    text-align: center;
+                }
+            }
+
+            label {
+                font-size: 16px;
+            }
+        }
+
+        .filter-rating,
+        .filter-brand {
+            @include custom-checkbox;
+        }
+
+        .filter-rating {
+            .material-icons.star {
+                color: #FDBC15;
+            }
+
+            .material-icons.star-outline {
+                color: #D1D1D1;
+            }
+
+        }
+
+        .filter-price {
+            @include custom-radio;
+        }
+
+        .btn-apply {
+            @include yellow-btn
+        }
+
+        .btn-reset {
+            color: $yellow;
+            height: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 1px solid $yellow;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .filter-category {
+        justify-content: space-around;
+
+        @include on('md')
+        {
+            justify-content: space-between;
+        }
+    }
+
+    .collapse {
+        top: 39px;
+        right: 0;
+        background-color: $white;
+        padding: 16px;
+    }
+
+    .vl {
+        height: 16px;
+        border-left: 1px solid grey;
+
+        &.last {
+            @include on('md') {
+                border-left: 1px solid white;
+            }
+        }
+        &.first {
+            display: none;
+
+            @include on('md') {
+                display: block;
+                border-left: 1px solid white;
+            }
+        }
+    }
+
+    .container-filter {
+        font-size: 14px;
+        color: $grey;
+    }
+
+    .material-icons-outlined {
+        color: $grey;
+
+        @include on('md') {
+            display: none;
+        }
+    }
+
+    /* Hide the browser's default radio button */
+    .container-filter input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+
+        @include on('md') {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+        }
+
+        @include on('lg') {
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+        }
+    }
+
+    .item {
+        border: 1px solid #D7D7D7;
+        border-radius: 5px;
+        padding: 8px;
+
+        img {
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 8px 0;
+            padding: 0;
+            @include lm-text;
+            -webkit-line-clamp: 2;
+
+            @include on('lg') {
+                font-size: 16px;
+            }
+        }
+
+        .old-price {
+            font-size: 12px;
+            color: $grey;
+            text-decoration: line-through;
+
+            @include on('lg') {
+                font-size: 14px;
+            }
+        }
+
+        .new-price {
+            font-weight: 600;
+
+            @include on('lg') {
+                font-size: 18px;
+            }
+        }
+
+        .material-icons {
+            font-size: 20px;
+
+            @include on('lg') {
+                font-size: 24px;
+            }
+        }
+
+        .heart-outline {
+            color: #F14747;
+        }
+
+        .star {
+            color: #FDBC15;
+        }
+    }
+
+    .product-list {
+        flex-wrap: wrap;
+    }
+}
