@@ -1,8 +1,0 @@
-{
-    "dependencies": {
-        "node-sass": "^7.0.1"
-    },
-    "scripts": {
-        "scss": "node-sass --watch signup.scss -o css"
-    }
-}
