@@ -13,4 +13,7 @@ app.config(function($routeProvider) {
     .when("/About",{
         templateUrl:"./About/about.html"
     })
+    .when("/Checkout",{
+        templateUrl:"./Checkout/checkout.html"
+    })
 });
