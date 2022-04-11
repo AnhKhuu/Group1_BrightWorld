@@ -1,3 +1,94 @@
-<section class="contact">
-    <h1>Contact</h1>
-</section>
+<body ng-app="myApp" ng-controller="myCtrl" ng-init="subject=['Product consulting', 'Product price', 'Lighting design', 'Job application', 'Agent resitration', 'Buy in bulk', 'Other']">
+    <section class="contact">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1140.2848761847695!2d106.66569711290656!3d10.778256344149696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752edadb963f71%3A0x6d3e88316f2c92a3!2zQ8O0bmcgVHkgQ3AgS-G7uSBUaHXhuq10IFPhu5EgRnB0IC0gSOG7hyBUaOG7kW5nIEZwdCBTaG9w!5e0!3m2!1sen!2s!4v1646832361890!5m2!1sen!2s"
+            class="contact-map"></iframe>
+        <br>
+        <div class="contact-headOffice">
+            <h4>Head office</h4>
+            <table>
+                <tr>
+                    <th class="table-column1"></th>
+                    <th class="table-column2"></th>
+                </tr>
+                <tr>
+                    <td><img src="Contact/image/Vector.jpg" alt="Vector"></td>
+                    <td>590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City.</td>
+                </tr>
+                <tr>
+                    <td><img src="Contact/image/Email.jpg" alt="Phone"></td>
+                    <td>support@brightworld.com.vn</td>
+                </tr>
+                <tr>
+                    <td><img src="Contact/image/Phone.jpg" alt="Phone"></td>
+                    <td>(84.28) 3863 3594 - (84.28) 3863 4270</td>
+                </tr>
+                <tr>
+                    <td><img src="Contact/image/Fax.jpg" alt="Fax"></td>
+                    <td>(84.28) 3863 1468</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="contact-form">
+            <form action="" id="contact-info">
+                <div class="contact-heading">
+                    Head office
+                </div>
+                <div class="contact-group">
+                    First name <br>
+                    <input id="uFirstname" type="text" class="form-input" placeholder="Enter your first name" required autofocus pattern="[a-z, A-Z]{2,20}">
+                </div>
+                <div class="contact-group">
+                    Last name <br>
+                    <input id="uLastname" type="text" class="form-input" placeholder="Enter your last name" required pattern="[a-z,A-Z]{2,40}">
+                </div>
+                <div class="contact-group">
+                    Email <br>
+                    <input id="uEmail" type="email" class="form-input" placeholder="Enter your email" required pattern="^\w+@\w+\.[a-z]{2,3}$">
+                </div>
+                <div class="contact-group">
+                    Phone <br>
+                    <input id="uPhone" type="tel" class="form-input" placeholder="Enter your phone number" required pattern="[0-9]{10,12}">
+                </div>
+
+                <div class="contact-group">
+                    Subject <br>
+                    <input id="uSubject" type="text" value={{subjects}} class="form-input" placeholder="Choose your subject" required>
+                    <select ng-model="subjects" class="uSelect">
+                        <option ng-repeat="subj in subject">{{subj}}</option>
+                    </select>
+                </div>
+
+                <div class="contact-group">
+                    State / Country <br>
+                    <input id="uStateCountry" type="text" class="form-input" placeholder="Choose a state or country" required>
+                </div>
+
+                <div class="contact-group">
+                    Content <br>
+                    <textarea id="ucomment" name="ucomment" class="contact-content"></textarea>
+                </div>
+
+                <div class="contact-attach">
+                    <img src="Contact/image/Attach.jpg" alt="AttachFile"> Choose file <i>(Capacity does not exceed 2Mb)</i>
+                </div>
+
+                <div>
+                    <input type="submit" value="Send" class="contact-submit">
+                </div>
+            </form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function($scope) {
+                // $scope.isShow = false;
+                // $scope.myFunc = function() {
+                //     $scope.isShow = !$scope.isShow;
+                // }
+            })
+        </script>
+    </section>
+
+</body>

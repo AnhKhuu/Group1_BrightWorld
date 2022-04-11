@@ -1,3 +1,104 @@
+/*#region breakpoints */
+/*#endregion */
+/*#region mixins */
+/*#endregion */
+* {
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #2E2C2C;
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
+.contact {
+  font-family: "Inter";
+  font-style: normal;
+  width: 540px;
+}
+.contact .contact-map {
+  width: 100%;
+  height: 250px;
+}
+.contact .contact-headOffice {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.contact .contact-headOffice .table-column1 {
+  width: 40px;
+}
+.contact .contact-headOffice .table-column2 {
+  width: 500px;
+}
+.contact #contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact #contact-form .contact-heading {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  text-align: center;
+}
+.contact #contact-form .contact-group {
+  border-bottom: 1px solid #999999;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.contact #contact-form .contact-group input:invalid {
+  color: red;
+}
+.contact #contact-form .contact-group input:valid {
+  color: #000000;
+}
+.contact #contact-form .contact-group .form-input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: #2E2C2C;
+  flex-grow: 1;
+}
+.contact #contact-form .contact-group .form-input #uSubject {
+  float: right;
+  margin-right: 0px;
+}
+.contact #contact-form .contact-group .form-input .uSelect {
+  border: 0;
+  float: right;
+}
+.contact #contact-form .contact-group .form-input::placeholder {
+  color: #999999;
+}
+.contact #contact-form .contact-content {
+  width: 100%;
+  height: 80px;
+}
+.contact #contact-form .contact-attach:hover {
+  font-weight: bold;
+}
+.contact #contact-form .contact-submit {
+  height: 40px;
+  width: 100%;
+  background: #FF9F15;
+  border: 1px solid #FF9F15;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FDF9F9;
+}
+.contact #contact-form .contact-submit:hover {
+  border: 1px solid #0d6adc;
+}
 
 /*# sourceMappingURL=contact.css.map */
