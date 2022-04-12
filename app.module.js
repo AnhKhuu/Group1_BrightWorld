@@ -4,5 +4,7 @@ angular.module('brightworldApp', [
     'homepage',
     'sales',
     'productCategory',
-    'productDetail'
+    'productDetail',
+    'cart',
+    'about'
   ]);
