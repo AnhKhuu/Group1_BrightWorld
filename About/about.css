@@ -3,16 +3,6 @@
 /*#region mixins */
 /*#endregion */
 .about .about-title {
-  position: absolute;
-  width: 111px;
-  height: 22px;
-  left: 132px;
-  top: 84px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
   color: #000000;
 }
 .about .about-info1 {
@@ -32,57 +22,12 @@
   left: 20px;
   top: 290px;
   border-radius: 5px;
+  float: right;
 }
 @media (min-width: 992px) {
   .about .about-image5 {
     right: 20px;
   }
-}
-.about .about-info2 {
-  position: absolute;
-  width: 335px;
-  height: 266px;
-  left: 20px;
-  top: 535px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-}
-.about .about-image7 {
-  position: absolute;
-  width: 335px;
-  height: 418.75px;
-  left: 20px;
-  top: 817px;
-  border-radius: 5px;
-}
-.about .about-history {
-  position: absolute;
-  width: 257px;
-  height: 29px;
-  left: 59px;
-  top: 1268px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  text-align: center;
-  color: #000000;
-}
-.about .about-history1 {
-  position: absolute;
-  width: 335px;
-  height: 264px;
-  left: 20px;
-  top: 1305px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  color: #000000;
 }
 
 /*# sourceMappingURL=about.css.map */
