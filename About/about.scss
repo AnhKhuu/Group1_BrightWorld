@@ -1,84 +1,92 @@
 @import '../variable.scss';
-
 .about {
-    .about-title {
-        position: absolute;
-        width: 111px;
-        height: 22px;
-        left: 132px;
-        top: 84px;
+    font-family: 'Inter';
+    h1 {
         font-style: normal;
         font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        text-align: center;
+        font-size: 32px;
+        line-height: 39px;
         color: #000000;
+        text-align: center;
+    }
+    h3 {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        color: #000000;
+        text-align: center;
     }
     .about-info1 {
-        position: absolute;
-        width: 335px;
-        height: 152px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        color: #000000;
-    }
-    .about-image5 {
-        position: absolute;
-        width: 335px;
-        height: 229px;
-        left: 20px;
-        top: 290px;
-        border-radius: 5px;
-        @include on('lg') {
-            right: 20px;
-        }
-    }
-    .about-info2 {
-        position: absolute;
-        width: 335px;
-        height: 266px;
-        left: 20px;
-        top: 535px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        color: #000000;
-    }
-    .about-image7 {
-        position: absolute;
-        width: 335px;
-        height: 418.75px;
-        left: 20px;
-        top: 817px;
-        border-radius: 5px;
-    }
-    .about-history {
-        position: absolute;
-        width: 257px;
-        height: 29px;
-        left: 59px;
-        top: 1268px;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
-        text-align: center;
-        color: #000000;
-    }
-    .about-history1 {
-        position: absolute;
-        width: 335px;
-        height: 264px;
-        left: 20px;
-        top: 1305px;
+        // position: absolute;
+        // display: flex;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
-        text-align: center;
         color: #000000;
+        text-align: justify;
+        margin: 20px 20px 20px 20px;
+        // align-items: center;
+        // float: left;
+        // @include on('lg') {
+        //     left: 10px;
+        // }
     }
+    .about-image5 {
+        // position: absolute;
+        // display: flex;
+        width: 555px;
+        height: 380px;
+        background: url(image.png);
+        border-radius: 5px;
+        // align-items: center;
+        margin: 20px 20px 20px 20px;
+        // float: right;
+        // @include on('lg') {
+        //     right: 10px;
+        // }
+    }
+    .about-info2 {
+        // position: absolute;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+        text-align: justify;
+    }
+    .about-image7 {
+        // position: absolute;
+        width: 464px;
+        height: 580px;
+        background: url(image.png);
+        border-radius: 5px;
+    }
+    // .about-history {
+    //     position: absolute;
+    //     width: 257px;
+    //     height: 29px;
+    //     left: 59px;
+    //     top: 1268px;
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     font-size: 24px;
+    //     line-height: 29px;
+    //     text-align: center;
+    //     color: #000000;
+    // }
+    // .about-history1 {
+    //     position: absolute;
+    //     width: 335px;
+    //     height: 264px;
+    //     left: 20px;
+    //     top: 1305px;
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     font-size: 18px;
+    //     line-height: 22px;
+    //     text-align: center;
+    //     color: #000000;
+    // }
 }
