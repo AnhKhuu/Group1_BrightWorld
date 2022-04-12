@@ -14,6 +14,9 @@ angular.
         }).
         when('/About', {
           template: '<about></about>'
+        }).
+        when('/Product-category/:productId', {
+          template: '<product-detail></product-detail>'
         })
     }
   ]);
