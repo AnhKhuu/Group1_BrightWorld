@@ -1,6 +1,7 @@
 <section class="product-detail container-lg my-3 my-lg-5">
   <div class="row">
     <div class="col-lg-6">
+      <img ng-src="{{$ctrl.mainImageUrl}}" class="w-100 img-desktop"/>
       <div class="owl-carousel owl-theme product-detail-carousel">
         <div class="item" ng-repeat="img in $ctrl.product.images">
           <img ng-src="{{img}}" alt="">
@@ -9,7 +10,7 @@
     </div>
     <div class="col-lg-1">
       <div class="w-100 mb-5" ng-repeat="img in $ctrl.product.images">
-        <img ng-src="{{img}}" alt="" class="w-100">
+        <img ng-src="{{img}}" alt="" class="w-100 img-gallery" ng-click="$ctrl.setImage(img)">
       </div>
     </div>
     <div class="product-information col-lg-5 ps-lg-5">
