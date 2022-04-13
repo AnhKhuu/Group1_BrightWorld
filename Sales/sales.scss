@@ -147,15 +147,3 @@
         }
     }
 }
-
-.owl-dots {
-    position: absolute;
-    bottom: 0;
-    margin: auto;
-    right: 39%;
-
-    @include on("md")
-    {
-        right: 47%;
-    }
-}

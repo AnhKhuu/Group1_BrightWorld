@@ -1,0 +1,39 @@
+{
+    "id": "govee-48ft",
+    "name": "Govee 48ft/15 Bulbs RGBW Wifi+Bluetooth",
+    "imageUrl": "imgs/smart-light/govee-48ft (1).jpg",
+    "images": [
+        "imgs/smart-light/govee-48ft (1).jpg",
+        "imgs/smart-light/govee-48ft (2).jpg",
+        "imgs/smart-light/govee-48ft (3).jpg",
+        "imgs/smart-light/govee-48ft (4).jpg",
+        "imgs/smart-light/govee-48ft (5).jpg"
+    ],
+    "type": "smart-light",
+    "oldPrice": "$45.4",
+    "newPrice": "$39.98",
+    "sale": "12%",
+    "starRating": "3.5",
+    "sold": "154",
+    "forYou": "false",
+    "publishDate": "06/04/2022",
+    "brand": "Wyze",
+    "ratings": "132",
+    "productDescription": [
+        "With the Govee 48ft/15 Bulbs RGBW WiFi+Bluetooth you can colorize your outdoor BBQs, pool parties, or weddings with these water-resistant, color-changing bulb string lights packed with our dynamic RGBIC technology."
+    ],
+    "reviewers": [
+        {
+            "name": "Bobbie",
+            "avatarUrl": "imgs/ava/reviewer-15.jpg",
+            "starRating": "4.5",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Max",
+            "avatarUrl": "imgs/ava/reviewer-16.jpg",
+            "starRating": "3.9",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

@@ -2,32 +2,22 @@
   <div class="row">
     <div class="col-lg-6">
       <div class="owl-carousel owl-theme product-detail-carousel">
-        <div class="item">
-          <img src="Sales/imgs/brand/sunco.png" alt="">
-        </div>
-        <div class="item">
-          <img src="Sales/imgs/brand/sunco.png" alt="">
-        </div>
-        <div class="item">
-          <img src="Sales/imgs/brand/sunco.png" alt="">
-        </div>
-        <div class="item">
-          <img src="Sales/imgs/brand/sunco.png" alt="">
+        <div class="item" ng-repeat="img in $ctrl.product.images">
+          <img ng-src="{{img}}" alt="">
         </div>
       </div>
     </div>
     <div class="col-lg-1">
-      <img src="Sales/imgs/brand/sunco.png" alt="" class="w-100 mb-5">
-      <img src="Sales/imgs/brand/sunco.png" alt="" class="w-100 mb-5">
-      <img src="Sales/imgs/brand/sunco.png" alt="" class="w-100 mb-5">
-      <img src="Sales/imgs/brand/sunco.png" alt="" class="w-100 mb-5">
+      <div class="w-100 mb-5" ng-repeat="img in $ctrl.product.images">
+        <img ng-src="{{img}}" alt="" class="w-100">
+      </div>
     </div>
     <div class="product-information col-lg-5 ps-lg-5">
-      <p class="product-name pt-3 pb-2 my-0">Here is Product Title, it can be anything so just relax and think for its name</p>
+      <p class="product-name pt-3 pb-2 my-0">{{$ctrl.product.name}}</p>
       <div class="d-flex product-sub-information align-items-center justify-content-between">
         <div class="vl first"></div>
         <div class="star-information d-flex align-items-center">
-          <p class="mb-1 me-1">4.9</p>
+          <p class="mb-1 me-1">{{$ctrl.product.starRating}}</p>
           <span class="star-rating">
             <span class="material-icons star">
               star
@@ -48,29 +38,32 @@
         </div>
         <div class="vl"></div>
         <div>
-          <span>77</span>
+          <span>{{$ctrl.product.ratings}}</span>
           <span>Ratings</span>
         </div>
         <div class="vl"></div>
         <div>
-          <span>14.7</span>
+          <span>{{$ctrl.product.sold}}</span>
           <span>Sold</span>
         </div>
         <div class="vl last"></div>
       </div>
       <div class="price">
-        <div class="new-price">$800.000</div>
-        <div class="old-price">$900.000</div>
+        <div class="new-price">{{$ctrl.product.newPrice}}</div>
+        <div class="old-price">{{$ctrl.product.oldPrice}}</div>
       </div>
       <div class="detail mt-3">
-        <div class="d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescription">
-          Product Description
+        <div class="d-flex justify-content-between" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescription">
+          <span class="product-description">Product Description</span>
           <span class="material-icons-outlined">
             expand_more
           </span>
         </div>
         <div class="collapse" id="collapseDescription">
-          <p>Here is Product Title, it can be anything so just relax and think for its name</p>
+          <ul>
+            <li ng-repeat="description in $ctrl.product.productDescription">{{description}}</li>
+          </ul>
         </div>
       </div>
       <button class="btn download-btn p-2 my-3 d-flex align-items-center">
@@ -99,6 +92,8 @@
         </button>
       </div>
     </div>
+  </div>
+  <div class="row">
     <div class="product-review col-lg-7">
       <div class="product-rating p-2 p-lg-3">
         <h2>Product Ratings</h2>
@@ -120,10 +115,12 @@
           </span>
         </span>
         <div class="reviewer">
-          <div class="d-flex justify-content-between">
-            <div class="reviewer-ava"></div>
+          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in $ctrl.product.reviewers">
+            <div class="reviewer-ava">
+              <img ng-src="{{reviewer.avatarUrl}}" alt="">
+            </div>
             <div class="reviewer-brief p-2 p-lg-3">
-              <h3 class="reviewer-name">Aloha</h3>
+              <h3 class="reviewer-name">{{reviewer.name}}</h3>
               <span class="star-rating">
                 <span class="material-icons star">
                   star
@@ -142,7 +139,7 @@
                 </span>
               </span>
               <p class="reviewer-cmt m-0 p-0">
-                This is my reviews about this product, I am really like it!!
+              {{reviewer.review}}
               </p>
             </div>
           </div>
@@ -169,7 +166,7 @@
         </span>
         <h3>Your review</h3>
         <textarea name="review" id="review" placeholder="Please let us know how do you feel about this product...">
-        </textarea>
+              </textarea>
         <button class="btn mt-2 mb-4">
           Submit
         </button>

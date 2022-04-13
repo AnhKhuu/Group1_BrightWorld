@@ -231,6 +231,22 @@
         border: 1px solid #D7D7D7;
         border-radius: 5px;
         padding: 8px;
+        min-height: 295.6px;
+
+        @include on('md')
+        {
+            min-height: 283.06px;
+        }
+
+        @include on('lg')
+        {
+            min-height: 395.73px;
+        }
+
+        @include on('xl')
+        {
+            min-height: 440.73px;
+        }
 
         img {
             max-width: 100%;
@@ -242,12 +258,19 @@
         p {
             font-size: 14px;
             margin: 8px 0;
+            height: 42px;
             padding: 0;
             @include lm-text;
             -webkit-line-clamp: 2;
 
+            @include on('md')
+            {
+                height: 42px;
+            }
+
             @include on('lg') {
                 font-size: 16px;
+                height: 48px;
             }
         }
 

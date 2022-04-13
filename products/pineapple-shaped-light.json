@@ -1,0 +1,42 @@
+{
+    "id": "pineapple-shaped-light",
+    "name": "10 LEDs Pineapple Fairy String Light",
+    "imageUrl": "imgs/decoration-light/pineapple-shaped-light (1).jpg",
+    "images": [
+        "imgs/decoration-light/pineapple-shaped-light (1).jpg",
+        "imgs/decoration-light/pineapple-shaped-light (2).jpg",
+        "imgs/decoration-light/pineapple-shaped-light (3).jpg",
+        "imgs/decoration-light/pineapple-shaped-light (4).jpg",
+        "imgs/decoration-light/pineapple-shaped-light (5).jpg"
+    ],
+    "type": "decoration-light",
+    "oldPrice": "",
+    "newPrice": "$8.95",
+    "sale": "",
+    "starRating": "4.2",
+    "sold": "167",
+    "forYou": "true",
+    "publishDate": "06/04/2022",
+    "brand": "BetUS",
+    "ratings": "133",
+    "productDescription": [
+        "These delicate pineapple-shaped lights can be used on window wall balcony porch patio or even tree vine to create a cozy and warm atmosphere for your home garden or party.",
+        "The 10 LEDs spaced 6 apart and 6.5 ft lead.",
+        "Gold plating metal material and high-quality LEDs can make the visual effect more attractive and absorbing.",
+        "The durable metal mesh is used to prevent the pineapple from deforming and rusting."
+    ],
+    "reviewers": [
+        {
+            "name": "Rin",
+            "avatarUrl": "imgs/ava/reviewer-9.jpg",
+            "starRating": "4.5",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Yang",
+            "avatarUrl": "imgs/ava/reviewer-10.jpg",
+            "starRating": "3.4",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}
