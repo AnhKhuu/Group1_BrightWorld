@@ -12,28 +12,31 @@
 
 <body>
     <div id="signup-form">
-        <form action="../index.html" id="signup-login" onsubmit="return showInfo()">
+        <form action="../index.html" id="signup-login" onsubmit="showInfo()">
             <div class="signup-heading">
                 <img src="./image/logo1.jpg" alt="Logo1" class="signin-logo1"> BrightWorld
             </div>
-
             <hr>
             <div class="form-group">
                 First name <br>
-                <input id="uFirstName" type="text" class="form-input" placeholder="Enter your first name" required autofocus pattern="[a-z][A-Z]{2,30}">
+                <input id="uFirstName" type="text" class="form-input" placeholder="Enter your first name" required autofocus pattern="[a-zA-Z ]{2,30}" onkeyup="checkFirstName()">
             </div>
+            <div id="errorName" style="text-align: right; font-style: italic;"></div>
             <div class="form-group">
                 Last name <br>
-                <input id="uLastName" type="text" class="form-input" placeholder="Enter your last name" required autofocus pattern="[a-z][A-Z]{2,50}">
+                <input id="uLastName" type="text" class="form-input" placeholder="Enter your last name" required pattern="[a-zA-Z ]{2,50}" onkeyup="checkLastName()">
             </div>
+            <div id="errorLastName" style="text-align: right; font-style: italic;"></div>
             <div class="form-group">
                 Email <br>
-                <input id="uemail" type="email" class="form-input" placeholder="Enter your email" required autofocus pattern="^\w+@\w+\.[a-z]{2,3}$">
+                <input id="uemail" type="email" class="form-input" placeholder="Enter your email" required pattern="^\w+@\w+\.[a-z]{2,3}$" onkeyup="checkEMail()">
             </div>
+            <div id="errorEMail" style="text-align: right; font-style: italic;"></div>
             <div class="form-group">
                 Password <br>
-                <input id="upass" type="password" class="form-input" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?=.*\d).{6,12}$">
+                <input id="upass" type="password" class="form-input" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z ])(?=.*\W)(?=.*\d).{6,12}$" onkeyup="checkPass()">
             </div>
+            <div id="errorPass" style="text-align: right; font-style: italic;"></div>
             <div>
                 <input onclick="showInfo()" type="submit" value="Sign up" class="form-submit">
             </div>
@@ -60,6 +63,66 @@
                 return true;
             }
 
+        }
+
+        function checkFirstName() {
+            var uFirstName = document.getElementById("uFirstName").value;
+            var pattern = /[a-zA-Z]{2,30}/;
+            var test = pattern.test(uFirstName);
+            var s = "";
+            if (test) {
+                s += "First name is valid";
+                document.getElementById("errorName").style.color = "green";
+            } else {
+                s += "Invalid, minimum 2 and maximum 30 symbols";
+                document.getElementById("errorName").style.color = "red";
+            }
+            document.getElementById("errorName").innerHTML = s;
+        }
+
+        function checkLastName() {
+            var uLastName = document.getElementById("uLastName").value;
+            var patternLName = /[a-zA-Z]{2,50}/;
+            var test = patternLName.test(uLastName);
+            var sLastName = "";
+            if (test) {
+                sLastName += "Last name is valid";
+                document.getElementById("errorLastName").style.color = "green";
+            } else {
+                sLastName += "Invalid, minimum 2 and maximum 50 symbols";
+                document.getElementById("errorLastName").style.color = "red";
+            }
+            document.getElementById("errorLastName").innerHTML = sLastName;
+        }
+
+        function checkEMail() {
+            var uemail = document.getElementById("uemail").value;
+            var pattern = /^\w+@\w+\.[a-z]{2,3}$/;
+            var test = pattern.test(uemail);
+            var s = "";
+            if (test) {
+                s += "Email is valid";
+                document.getElementById("errorEMail").style.color = "green";
+            } else {
+                s += "Invalid, ex: abcd@abc.com";
+                document.getElementById("errorEMail").style.color = "red";
+            }
+            document.getElementById("errorEMail").innerHTML = s;
+        }
+
+        function checkPass() {
+            var upass = document.getElementById("upass").value;
+            var pattern = /^(?=.*[a-z])(?=.*[A-Z ])(?=.*\W)(?=.*\d).{6,12}$/;
+            var test = pattern.test(upass);
+            var s = "";
+            if (test) {
+                s += "Passwoed is valid";
+                document.getElementById("errorPass").style.color = "green";
+            } else {
+                s += "Invalid, minimum 6 symbols, ex: aAbc12@";
+                document.getElementById("errorPass").style.color = "red";
+            }
+            document.getElementById("errorPass").innerHTML = s;
         }
     </script>
 </body>
