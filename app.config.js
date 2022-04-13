@@ -14,6 +14,9 @@ angular.
         }).
         when('/Product-detail', {
           template: '<product-detail></product-detail>'
+        }).
+        when('/Checkout', {
+          template: '<checkout></checkout>'
         })
     }
   ]);
