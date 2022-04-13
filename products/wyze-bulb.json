@@ -1,0 +1,39 @@
+{
+    "id": "wyze-bulb",
+    "name": "Wyze Bulb",
+    "imageUrl": "imgs/smart-light/wyze-bulb (1).jpg",
+    "images": [
+        "imgs/smart-light/wyze-bulb (1).jpg",
+        "imgs/smart-light/wyze-bulb (2).jpg",
+        "imgs/smart-light/wyze-bulb (3).jpg",
+        "imgs/smart-light/wyze-bulb (4).jpg",
+        "imgs/smart-light/wyze-bulb (5).jpg"
+    ],
+    "type": "smart-light",
+    "oldPrice": "$45.4",
+    "newPrice": "$39.98",
+    "sale": "12%",
+    "starRating": "3.5",
+    "sold": "154",
+    "forYou": "false",
+    "publishDate": "06/04/2022",
+    "brand": "Wyze",
+    "ratings": "124",
+    "productDescription": [
+        "Wyze Bulb is a 9.5-Watt (800 Lumens) smart LED bulb that connects directly to a 2.4 GHz Wi-Fi network (no hub required) and offers dimming you can turn off your lights and turn on your Wyze Cams (sold separately) with a single tap or schedule. With IFTTT support, you can use Wyze Bulbs with your existing smart home devices for an integrated experience."
+    ],
+    "reviewers": [
+        {
+            "name": "Binnie",
+            "avatarUrl": "imgs/ava/reviewer-16.jpg",
+            "starRating": "4.2",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Luis",
+            "avatarUrl": "imgs/ava/reviewer-17.jpg",
+            "starRating": "3.9",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

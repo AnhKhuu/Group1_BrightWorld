@@ -10,13 +10,34 @@
         "imgs/bulb-light/ge-led-10w (5).jpg"
     ],
     "type": "bulb-light",
-    "old-price": "",
-    "new-price": "$13.94",
-    "star-rating": "4",
-    "ratings": "77",
+    "oldPrice": "",
+    "newPrice": "$13.94",
+    "starRating": "4",
+    "ratings": "122",
     "sold": "132",
-    "for-you": "true",
-    "publish-date": "04/04/2022",
+    "forYou": "true",
+    "publishDate": "04/04/2022",
     "brand": "GE Lighting",
-    "product-description": "<br/>It offers a warm, soft light. Use GE's Soft White LED 65-Watt Replacement BR30 Floodlight bulb in track and recessed lighting fixtures.<br/>They are perfect for hard-to-reach sockets that are frequently left on.<br/>13 year life based on 3 hours use per day.<br/>65-Watt incandescent over the bulb's life.<br/>Bulbs are dimmable and work with most dimmer switches."
+    "productDescription": [
+        "It offers a warm, soft light.",
+        "Use GE's Soft White LED 65-Watt Replacement BR30 Floodlight bulb in track and recessed lighting fixtures.",
+        "They are perfect for hard-to-reach sockets that are frequently left on.",
+        "13 year life based on 3 hours use per day.",
+        "65-Watt incandescent over the bulb's life.", 
+        "Bulbs are dimmable and work with most dimmer switches."],
+        "reviewers":
+        [
+            {
+                "name": "Brown",
+                "avatarUrl": "imgs/ava/reviewer.jpg",
+                "starRating": "4.2",
+                "review": "My bulbs were wet with cleaner fluid"
+            },
+            {
+                "name": "Daniel",
+                "avatarUrl": "imgs/ava/reviewer-2.jpg",
+                "starRating": "3.9",
+                "review": "The bulbs are very bright and are dimmable"
+            }
+        ]
 }

@@ -17,7 +17,7 @@
       <div class="d-flex product-sub-information align-items-center justify-content-between">
         <div class="vl first"></div>
         <div class="star-information d-flex align-items-center">
-          <p class="mb-1 me-1">{{$ctrl.product.star-rating}}</p>
+          <p class="mb-1 me-1">{{$ctrl.product.starRating}}</p>
           <span class="star-rating">
             <span class="material-icons star">
               star
@@ -49,19 +49,21 @@
         <div class="vl last"></div>
       </div>
       <div class="price">
-        <div class="new-price">{{$ctrl.product.new-price}}</div>
-        <div class="old-price">{{$ctrl.product.old-price}}</div>
+        <div class="new-price">{{$ctrl.product.newPrice}}</div>
+        <div class="old-price">{{$ctrl.product.oldPrice}}</div>
       </div>
       <div class="detail mt-3">
         <div class="d-flex justify-content-between" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescription">
-          Product Description
+          <span class="product-description">Product Description</span>
           <span class="material-icons-outlined">
             expand_more
           </span>
         </div>
         <div class="collapse" id="collapseDescription">
-          <p>{{$ctrl.product.product-description}}</p>
+          <ul>
+            <li ng-repeat="description in $ctrl.product.productDescription">{{description}}</li>
+          </ul>
         </div>
       </div>
       <button class="btn download-btn p-2 my-3 d-flex align-items-center">
@@ -90,6 +92,8 @@
         </button>
       </div>
     </div>
+  </div>
+  <div class="row">
     <div class="product-review col-lg-7">
       <div class="product-rating p-2 p-lg-3">
         <h2>Product Ratings</h2>
@@ -111,10 +115,12 @@
           </span>
         </span>
         <div class="reviewer">
-          <div class="d-flex justify-content-between">
-            <div class="reviewer-ava"></div>
+          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in $ctrl.product.reviewers">
+            <div class="reviewer-ava">
+              <img ng-src="{{reviewer.avatarUrl}}" alt="">
+            </div>
             <div class="reviewer-brief p-2 p-lg-3">
-              <h3 class="reviewer-name">Aloha</h3>
+              <h3 class="reviewer-name">{{reviewer.name}}</h3>
               <span class="star-rating">
                 <span class="material-icons star">
                   star
@@ -133,7 +139,7 @@
                 </span>
               </span>
               <p class="reviewer-cmt m-0 p-0">
-                This is my reviews about this product, I am really like it!!
+              {{reviewer.review}}
               </p>
             </div>
           </div>

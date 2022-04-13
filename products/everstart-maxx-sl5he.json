@@ -1,0 +1,42 @@
+{
+    "id": "everstart-maxx-sl5he",
+    "name": "EverStart Maxx SL5HE 1200 Lumen LED Rechargeable Spotlight",
+    "imageUrl": "imgs/spot-light/everstart-maxx-sl5he (1).jpg",
+    "images": [
+        "imgs/spot-light/everstart-maxx-sl5he (1).jpg",
+        "imgs/spot-light/everstart-maxx-sl5he (2).jpg",
+        "imgs/spot-light/everstart-maxx-sl5he (3).jpg",
+        "imgs/spot-light/everstart-maxx-sl5he (4).jpg"
+    ],
+    "type": "spot-light",
+    "oldPrice": "",
+    "newPrice": "$34.88",
+    "sale": "",
+    "starRating": "3.9",
+    "sold": "112",
+    "forYou": "false",
+    "publishDate": "05/04/2022",
+    "brand": "EverStart",
+    "ratings": "93",
+    "productDescription": [
+        "The EverStart Maxx SL5HE 1200 Lumen LED Rechargeable Spotlight gives you up to 1200 lumens of ultra-bright light.",
+        "This dark gray spotlight features a power-saving halo mode that uses 8 ambient LEDs to deliver up to 12 hours of continuous runtime.",
+        "It also features an impact-resistant, polymer housing and a pivoting/collapsible stand that allows it to be used as a hands-free spotlight.",
+        "That means it's an ideal solution for big projects, emergencies, power outages, or nighttime outdoor activities.",
+        "Recharge the unit with the included home, car or USB charging cable/adapters"
+    ],
+    "reviewers": [
+        {
+            "name": "Zeus",
+            "avatarUrl": "imgs/ava/reviewer-17.jpg",
+            "starRating": "3.1",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Vin",
+            "avatarUrl": "imgs/ava/reviewer-18.jpg",
+            "starRating": "3.8",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}
