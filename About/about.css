@@ -29,6 +29,7 @@
   color: #000000;
   text-align: justify;
   margin: 20px 20px 20px 20px;
+  float: left;
 }
 .about .about-image5 {
   width: 555px;
@@ -36,6 +37,7 @@
   background: url(image.png);
   border-radius: 5px;
   margin: 20px 20px 20px 20px;
+  float: right;
 }
 .about .about-info2 {
   font-style: normal;
@@ -44,10 +46,12 @@
   line-height: 22px;
   color: #000000;
   text-align: justify;
+  display: flex;
+  float: right;
 }
 .about .about-image7 {
-  width: 464px;
-  height: 580px;
+  width: 555px;
+  height: 380px;
   background: url(image.png);
   border-radius: 5px;
 }

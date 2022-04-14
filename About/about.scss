@@ -28,7 +28,7 @@
         text-align: justify;
         margin: 20px 20px 20px 20px;
         // align-items: center;
-        // float: left;
+        float: left;
         // @include on('lg') {
         //     left: 10px;
         // }
@@ -42,26 +42,32 @@
         border-radius: 5px;
         // align-items: center;
         margin: 20px 20px 20px 20px;
-        // float: right;
+        float: right;
         // @include on('lg') {
         //     right: 10px;
         // }
     }
     .about-info2 {
-        // position: absolute;
+        // position: relative;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
         color: #000000;
         text-align: justify;
+        display: flex;
+        float: right;
     }
     .about-image7 {
-        // position: absolute;
-        width: 464px;
-        height: 580px;
+        // position: relative;
+        // width: 464px;
+        // height: 580px;
+        width: 555px;
+        height: 380px;
         background: url(image.png);
         border-radius: 5px;
+        // display: flex;
+        // float: left;
     }
     // .about-history {
     //     position: absolute;
