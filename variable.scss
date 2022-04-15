@@ -151,7 +151,7 @@ $breakpoints: ( 'sm': ( min-width: 576px ), 'md': ( min-width: 768px ), 'lg': ( 
       
       /* When the radio button is checked, add a blue background */
       .container-filter input:checked ~ .checkmark {
-        background-color: #2196F3;
+        background-color: $yellow;
       }
       
       /* Create the indicator (the dot/circle - hidden when not checked) */
