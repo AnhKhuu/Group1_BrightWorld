@@ -1,0 +1,154 @@
+@import '../variable.scss';
+.homepage {
+    .show-more {
+        color: $grey;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 18px;
+        font-weight: 600;
+
+        @include on("lg")
+        {
+            font-size: 24px;
+        }
+    }
+}
+
+.product-carousel {
+    .item {
+        border: 1px solid #D7D7D7;
+        border-radius: 5px;
+        padding: 8px;
+
+        .sale {
+            color: $yellow;
+            font-size: 12px;
+            border-radius: 13px;
+        }
+
+        img {
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 8px 0;
+            padding: 0;
+            @include lm-text;
+            -webkit-line-clamp: 2;
+            min-height: 42px;
+
+            @include on('lg')
+            {
+                font-size: 16px;
+            }
+        }
+
+        .old-price {
+            font-size: 12px;
+            color: $grey;
+            text-decoration: line-through;
+
+            @include on('lg')
+            {
+                font-size: 14px;
+            }
+        }
+
+        .new-price {
+            font-weight: 600;
+
+            @include on('lg')
+            {
+                font-size: 18px;
+            }
+        }
+
+        .material-icons {
+            font-size: 20px;
+
+            @include on('lg')
+            {
+                font-size: 24px;
+            }
+        }
+
+        .heart-outline {
+            color: #F14747;
+        }
+
+        .star {
+            color: #FDBC15;
+        }
+    }
+}
+
+.owl-carousel {
+
+    .owl-prev, .owl-next {
+        position: absolute;
+        top: 50%;
+    }
+
+    .owl-prev {
+        left: 0!important;
+    }
+
+    .owl-next {
+        right: 0!important;
+    }
+}
+
+.owl-carousel.owl-loading {
+    opacity: 1;
+}
+
+.owl-nav {
+    button.owl-next,
+    button.owl-prev {
+        background: $yellow!important;
+        opacity: 50%!important;      
+        position: absolute;
+        border-radius: 50%!important;
+        top: 50%;
+        width: 35px;
+        height: 35px;
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+
+        
+        &:hover {
+            background: $yellow;
+            opacity: 100%!important;
+        }
+    }
+
+    button.owl-next span {
+        font-size: 35px;
+        margin-bottom: 3px;
+        line-height: 0;
+        color: $white !important;
+        margin-left: 4px;
+    }
+
+    button.owl-prev span {
+        font-size: 35px;
+        margin-bottom: 3px;
+        line-height: 0;
+        color: $white !important;
+    }
+
+    button.owl-prev {
+        left: 20px;
+    }
+
+    button.owl-next {
+        right: 20px;
+    }
+}

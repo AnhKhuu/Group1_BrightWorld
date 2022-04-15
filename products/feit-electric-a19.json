@@ -1,0 +1,42 @@
+{
+    "id": "feit-electric-a19",
+    "name": "Feit Electric A19 RGBW ALEXA/GOOGLE 3Pk",
+    "imageUrl": "imgs/bulb-light/feit-electric-a19 (1).jpg",
+    "images": [
+        "imgs/bulb-light/feit-electric-a19 (1).jpg",
+        "imgs/bulb-light/feit-electric-a19 (2).jpg"
+    ],
+    "type": "bulb-light",
+    "oldPrice": "$22.92",
+    "newPrice": "$19.94",
+    "sale": "13%",
+    "starRating": "3.4",
+    "sold": "87",
+    "forYou": "false",
+    "publishDate": "02/04/2022",
+    "brand": "Feit Electric",
+    "ratings": "57",
+    "productDescription": [
+        "Feit Electric A19 RGBW ALEXA/GOOGLE 3Pk.",
+        "Easily turn lights on/off, dim, set groups, timers or schedules.",
+        "Control lighting with simple voice commands and an intuitive mobile app.",
+        "Set up is simple.",
+        "The bulbs connect directly to your WiFi at home.",
+        "It’s never been easier to customize your home’s lighting to suit your lifestyle"
+    ],
+    "reviewers":
+    [
+        {
+            "name": "Ray",
+            "avatarUrl": "imgs/ava/reviewer-5.jpg",
+            "starRating": "4.2",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Edward",
+            "avatarUrl": "imgs/ava/reviewer-6.jpg",
+            "starRating": "3.5",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

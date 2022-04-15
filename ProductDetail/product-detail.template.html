@@ -1,0 +1,184 @@
+<section class="product-detail container-lg my-3 my-lg-5" ng-controller="ProductDetailCtrl">
+  <div class="row">
+    <div class="col-lg-6">
+      <img ng-src="{{mainImageUrl}}" class="w-100 img-desktop"/>
+      <div class="owl-carousel owl-theme product-detail-carousel">
+        <div class="item" ng-repeat="img in product.images">
+          <img ng-src="{{img}}" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1">
+      <div class="w-100 mb-5" ng-repeat="img in product.images">
+        <img ng-src="{{img}}" alt="" class="w-100 img-gallery" ng-click="setImage(img)">
+      </div>
+    </div>
+    <div class="product-information col-lg-5 ps-lg-5">
+      <p class="product-name pt-3 pb-2 my-0">{{product.name}}</p>
+      <div class="d-flex product-sub-information align-items-center justify-content-between">
+        <div class="vl first"></div>
+        <div class="star-information d-flex align-items-center">
+          <p class="mb-1 me-1">{{product.starRating}}</p>
+          <span class="star-rating">
+            <span class="material-icons star">
+              star
+            </span>
+            <span class="material-icons star">
+              star
+            </span>
+            <span class="material-icons star">
+              star
+            </span>
+            <span class="material-icons star">
+              star
+            </span>
+            <span class="material-icons star-outline">
+              star_outline
+            </span>
+          </span>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <span>{{product.ratings}}</span>
+          <span>Ratings</span>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <span>{{product.sold}}</span>
+          <span>Sold</span>
+        </div>
+        <div class="vl last"></div>
+      </div>
+      <div class="price">
+        <div class="new-price">{{product.newPrice}}</div>
+        <div class="old-price">{{product.oldPrice}}</div>
+      </div>
+      <div class="detail mt-3">
+        <div class="d-flex justify-content-between" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescription">
+          <span class="product-description">Product Description</span>
+          <span class="material-icons-outlined">
+            expand_more
+          </span>
+        </div>
+        <div class="collapse" id="collapseDescription">
+          <ul>
+            <li ng-repeat="description in product.productDescription">{{description}}</li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn download-btn p-2 my-3 d-flex align-items-center">
+        <span class="material-icons-outlined">
+          file_download
+        </span>
+        Download specifications
+      </button>
+      <div class="quantity mb-3">
+        <label for="quantity">
+          <h2>Quantity</h2>
+          <div>
+            <button class="btn">+</button><input type="text"><button class="btn">-</button>
+          </div>
+        </label>
+      </div>
+      <div class="btn-bar d-flex justify-content-between my-0">
+        <button class="btn add-to-cart d-flex flex-column align-items-center me-lg-4">
+          <span class="material-icons-outlined">
+            add_shopping_cart
+          </span>
+          <span>Add to cart</span>
+        </button>
+        <button class="btn buy-now">
+          Buy now
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="product-review col-lg-7">
+      <div class="product-rating p-2 p-lg-3">
+        <h2>Product Ratings</h2>
+        <span class="star-rating">
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star-outline">
+            star_outline
+          </span>
+        </span>
+        <div class="reviewer">
+          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in product.reviewers">
+            <div class="reviewer-ava">
+              <img ng-src="{{reviewer.avatarUrl}}" alt="">
+            </div>
+            <div class="reviewer-brief p-2 p-lg-3">
+              <h3 class="reviewer-name">{{reviewer.name}}</h3>
+              <span class="star-rating">
+                <span class="material-icons star">
+                  star
+                </span>
+                <span class="material-icons star">
+                  star
+                </span>
+                <span class="material-icons star">
+                  star
+                </span>
+                <span class="material-icons star">
+                  star
+                </span>
+                <span class="material-icons star-outline">
+                  star_outline
+                </span>
+              </span>
+              <p class="reviewer-cmt m-0 p-0">
+              {{reviewer.review}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="my-3">
+        <h3>Your rating</h3>
+        <span class="star-rating">
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star">
+            star
+          </span>
+          <span class="material-icons star-outline">
+            star_outline
+          </span>
+        </span>
+        <h3>Your review</h3>
+        <textarea name="review" id="review" placeholder="Please let us know how do you feel about this product...">
+              </textarea>
+        <button class="btn mt-2 mb-4">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="related-product">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="mb-3">RELATED PRODUCT</h1>
+        <a href="" class="show-more">Show more ></a>
+      </div>
+      <product-carousel></product-carousel>
+    </div>
+  </div>
+</section>

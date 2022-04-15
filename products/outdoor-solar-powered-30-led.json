@@ -1,0 +1,41 @@
+{
+    "id": "outdoor-solar-powered-30-led",
+    "name": "Outdoor Solar-Powered LED String Light",
+    "imageUrl": "imgs/decoration-light/outdoor-solar-powered-30-led (1).jpg",
+    "images": [
+        "imgs/decoration-light/outdoor-solar-powered-30-led (1).jpg",
+        "imgs/decoration-light/outdoor-solar-powered-30-led (2).jpg",
+        "imgs/decoration-light/outdoor-solar-powered-30-led (3).jpg"
+    ],
+    "type": "decoration-light",
+    "oldPrice": "",
+    "newPrice": "$13.98",
+    "sale": "",
+    "starRating": "4.4",
+    "sold": "178",
+    "forYou": "true",
+    "publishDate": "05/04/2022",
+    "brand": "Linkpal",
+    "ratings": "156",
+    "productDescription": [
+        "Take your next backyard get-together to the next level when you incorporate this Outdoor Solar-Powered LED String Light.",
+        "This fun, frisky lamp will bring a renewed energy to your celebration.",
+        "Weave this patio string light around your landscape or wrap them around your posts to add a decorative flair.",
+        "The convenient size and functionality make it an attractive choice for your next party or for contemporary illumination.",
+        "The teardrop design of the bulbs will fit seamlessly into a variety of decor."
+    ],
+    "reviewers": [
+        {
+            "name": "Dawin",
+            "avatarUrl": "imgs/ava/reviewer-9.jpg",
+            "starRating": "4.5",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Ben",
+            "avatarUrl": "imgs/ava/reviewer-10.jpg",
+            "starRating": "4.0",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+<section class="homepage">
+    <div class="owl-carousel owl-theme banner-carousel position-relative">
+        <div class="item">
+            <img src="Sales/imgs/banner4.png" alt="">
+        </div>
+        <div class="item">
+            <img src="Sales/imgs/banner5.png" alt="">
+        </div>
+        <div class="item">
+            <img src="Sales/imgs/banner6.png" alt="">
+        </div>
+    </div>
+    <div class="container-lg my-3 my-lg-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="mb-3">BEST SELLERS</h1>
+        </div>
+        <section class="product-carousel">
+            <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+                <div ng-repeat="product in $ctrl.filteredBestSellers">
+                    <a href="#!/Homepage/{{product.id}}" class="item">
+                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <span class="old-price">{{product.oldPrice}}</span>
+                            <span class="new-price">{{product.newPrice}}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                            <span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                            </span>
+                            <span>
+                                <span class="material-icons heart-outline">
+                                    favorite_border
+                                </span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- For You -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="mb-3">JUST FOR YOU</h1>
+        </div>
+        <section class="product-carousel">
+            <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+                <div ng-repeat="product in $ctrl.filteredForYou">
+                    <a href="#!/Homepage/{{product.id}}" class="item">
+                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <span class="old-price">{{product.oldPrice}}</span>
+                            <span class="new-price">{{product.newPrice}}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                            <span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                            </span>
+                            <span>
+                                <span class="material-icons heart-outline">
+                                    favorite_border
+                                </span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- New Items -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="mb-3">NEW ITEMS</h1>
+        </div>
+        <section class="product-carousel">
+            <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+                <div ng-repeat="product in $ctrl.filteredNewItems">
+                    <a href="#!/Homepage/{{product.id}}" class="item">
+                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <span class="old-price">{{product.oldPrice}}</span>
+                            <span class="new-price">{{product.newPrice}}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                            <span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                            </span>
+                            <span>
+                                <span class="material-icons heart-outline">
+                                    favorite_border
+                                </span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

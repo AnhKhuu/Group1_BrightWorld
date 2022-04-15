@@ -1,0 +1,40 @@
+{
+    "id": "20-leds-pineapple-fairy",
+    "name": "20 LEDs Pineapple Fairy String Light",
+    "imageUrl": "imgs/decoration-light/20-leds-pineapple-fairy (1).jpg",
+    "images": [
+        "imgs/decoration-light/20-leds-pineapple-fairy (1).jpg",
+        "imgs/decoration-light/20-leds-pineapple-fairy (2).jpg",
+        "imgs/decoration-light/20-leds-pineapple-fairy (3).jpg",
+        "imgs/decoration-light/20-leds-pineapple-fairy (4).jpg",
+        "imgs/decoration-light/20-leds-pineapple-fairy (5).jpg"
+    ],
+    "type": "decoration-light",
+    "oldPrice": "$11.1",
+    "newPrice": "$9.99",
+    "sale": "10%",
+    "starRating": "4.7",
+    "sold": "185",
+    "forYou": "true",
+    "publishDate": "02/04/2022",
+    "brand": "BTMWAY",
+    "ratings": "146",
+    "productDescription": [
+        "Are you often recalling those beautiful LED string lights shining in a memorable party? So why not use them to decorate your room, patio, backyard, or outdoor space to let these bright spots accompany you every day? BTMWAY twinkle star warm white star string lights, it can be easily put or hung on walls, windows, curtains and etc, give you're surrounding a whole new look.",
+        "Premium LED string lights material reduces energy usage, LED string lights have a longer lifespan (up to 15000 hours), it definitely an economical and easy way of creating a romantic ambiance or lighting your room for special occasions."
+    ],
+    "reviewers": [
+        {
+            "name": "Adam",
+            "avatarUrl": "imgs/ava/reviewer-9.jpg",
+            "starRating": "4.3",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Leon",
+            "avatarUrl": "imgs/ava/reviewer-10.jpg",
+            "starRating": "4.6",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

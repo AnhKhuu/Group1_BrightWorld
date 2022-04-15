@@ -1,12 +1,4 @@
 @import '../variable.scss';
-* {
-    font-family: 'Inter', sans-serif;
-    padding: 0;
-    margin: 0;
-    color: $black;
-    box-sizing: border-box;
-    font-size: 16px;
-}
 
 .about {
     .about-title {
@@ -15,7 +7,6 @@
         height: 22px;
         left: 132px;
         top: 84px;
-        font-family: 'inter';
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
@@ -27,7 +18,6 @@
         position: absolute;
         width: 335px;
         height: 152px;
-        font-family: 'inter';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -51,7 +41,6 @@
         height: 266px;
         left: 20px;
         top: 535px;
-        font-family: 'inter';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -72,7 +61,6 @@
         height: 29px;
         left: 59px;
         top: 1268px;
-        font-family: 'inter';
         font-style: normal;
         font-weight: 700;
         font-size: 24px;
@@ -86,7 +74,6 @@
         height: 264px;
         left: 20px;
         top: 1305px;
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;

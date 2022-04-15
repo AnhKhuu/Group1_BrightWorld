@@ -1,0 +1,199 @@
+<section class="sales mb-3 mb-lg-5">
+    <div class="owl-carousel owl-theme banner-carousel position-relative">
+        <div class="item">
+            <img src="Sales/imgs/banner2.png" alt="">
+        </div>
+        <div class="item">
+            <img src="Sales/imgs/banner3.png" alt="">
+        </div>
+        <div class="item">
+            <img src="Sales/imgs/banner.png" alt="">
+        </div>
+    </div>
+    <div class="container-lg">
+        <div class="d-flex align-items-center justify-content-between my-3 mt-lg-5">
+            <h1>TOP BRANDS</h1>
+        </div>
+        <div class="brand mb-4 mb-lg-5">
+            <a href="" class="d-flex justify-content-center align-items-center" ng-repeat="brand in $ctrl.brands">
+                <img ng-src="{{brand.imageUrl}}" alt="">
+            </a>
+        </div>
+
+        <!-- BULB -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="mb-3">BULB LIGHTS</h1>
+        </div>
+        <section class="product-carousel">
+            <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+                <div ng-repeat="product in $ctrl.filteredBulb">
+                    <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
+                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <span class="sale-tag position-absolute">{{product.sale}}</span>
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <span class="old-price">{{product.oldPrice}}</span>
+                            <span class="new-price">{{product.newPrice}}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                            <span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                            </span>
+                            <span>
+                                <span class="material-icons heart-outline">
+                                    favorite_border
+                                </span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPOT -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="mb-3">SPOT LIGHTS</h1>
+        </div>
+        <section class="product-carousel">
+            <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+                <div ng-repeat="product in $ctrl.filteredSpot">
+                    <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
+                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <span class="sale-tag position-absolute">{{product.sale}}</span>
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <span class="old-price">{{product.oldPrice}}</span>
+                            <span class="new-price">{{product.newPrice}}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                            <span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                            </span>
+                            <span>
+                                <span class="material-icons heart-outline">
+                                    favorite_border
+                                </span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SMART -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="mb-3">SMART LIGHTS</h1>
+        </div>
+        <section class="product-carousel">
+            <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+                <div ng-repeat="product in $ctrl.filteredSmart">
+                    <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
+                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <span class="sale-tag position-absolute">{{product.sale}}</span>
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <span class="old-price">{{product.oldPrice}}</span>
+                            <span class="new-price">{{product.newPrice}}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                            <span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                            </span>
+                            <span>
+                                <span class="material-icons heart-outline">
+                                    favorite_border
+                                </span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DECORATION -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="mb-3">DECORATION LIGHTS</h1>
+        </div>
+        <section class="product-carousel">
+            <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+                <div ng-repeat="product in $ctrl.filteredDecoration">
+                    <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
+                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <span class="sale-tag position-absolute">{{product.sale}}</span>
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <span class="old-price">{{product.oldPrice}}</span>
+                            <span class="new-price">{{product.newPrice}}</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                            <span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                                <span class="material-icons star">
+                                    star
+                                </span>
+                            </span>
+                            <span>
+                                <span class="material-icons heart-outline">
+                                    favorite_border
+                                </span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+{
+    "id": "1200-lumen-stanley-lithium-ion-led-spotlight",
+    "name": "1200 lumen Stanley Lithium Ion LED spotlight",
+    "imageUrl": "imgs/spot-light/1200-lumen-stanley-lithium-ion-led-spotlight (1).jpg",
+    "images": [
+        "imgs/spot-light/1200-lumen-stanley-lithium-ion-led-spotlight (1).jpg",
+        "imgs/spot-light/1200-lumen-stanley-lithium-ion-led-spotlight (2).jpg",
+        "imgs/spot-light/1200-lumen-stanley-lithium-ion-led-spotlight (3).jpg",
+        "imgs/spot-light/1200-lumen-stanley-lithium-ion-led-spotlight (4).jpg"
+    ],
+    "type": "spot-light",
+    "oldPrice": "$57.88",
+    "newPrice": "$43.41",
+    "sale": "25%",
+    "starRating": "3.2",
+    "sold": "46",
+    "forYou": "true",
+    "publishDate": "01/04/2022",
+    "brand": "Stanley",
+    "ratings": "23",
+    "productDescription": [
+        "Get flexible, powerful lighting with the 1200 lumen Stanley Lithium Ion LED spotlight.", 
+        "Featuring an ergonomic pistol grip, locking trigger and impact-resistant polymer bezel, it goes anywhere you go for comfortable all-day lighting.", 
+        "It's ideal for the worksite, the campsite, the garage or even emergency power outages.", 
+        "The power-saving Halo mode provides up to 13 hours of battery life, and the integrated lithium ion battery can maintain a charge for up to 12 months in storage."
+    ],
+    "reviewers": [
+        {
+            "name": "Ewin",
+            "avatarUrl": "imgs/ava/reviewer-17.jpg",
+            "starRating": "4.2",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Gumble",
+            "avatarUrl": "imgs/ava/reviewer-18.jpg",
+            "starRating": "3.9",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

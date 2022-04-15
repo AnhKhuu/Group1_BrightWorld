@@ -1,0 +1,46 @@
+{
+    "id": "energizer-hard-case-professional",
+    "name": "Energizer Hard Case Professional Handheld LED Spotlight",
+    "imageUrl": "imgs/spot-light/energizer-hard-case-professional (1).jpg",
+    "images": [
+        "imgs/spot-light/energizer-hard-case-professional (1).jpg",
+        "imgs/spot-light/energizer-hard-case-professional (2).jpg",
+        "imgs/spot-light/energizer-hard-case-professional (3).jpg",
+        "imgs/spot-light/energizer-hard-case-professional (4).jpg",
+        "imgs/spot-light/energizer-hard-case-professional (5).jpg"
+    ],
+    "type": "spot-light",
+    "oldPrice": "",
+    "newPrice": "$20.37",
+    "sale": "",
+    "starRating": "4.2",
+    "sold": "143",
+    "forYou": "true",
+    "publishDate": "04/04/2022",
+    "brand": "Energizer",
+    "ratings": "112",
+    "productDescription": [
+        "Grab the Energizer Hard Case Professional Handheld LED Spotlight when you need a reliable white spotlight.",
+        "Using the latest LED technology, this portable work light throws off 600 lumens of clear, bright light.",
+        "A 425-meter beam distance on High provides powerful reach to see objects far way—on job sites or in the field.",
+        "High and Low modes put you in control of the brightness and run time.",
+        "Made for the most demanding of jobs, this LED handheld spotlight is designed to last 20 years based on typical consumer usage.",
+        "Rugged construction ensures maximum shock absorption—helping this LED work light withstand impact up to 7 meters and keep shining.",
+        "The large push-button switch is easy to press— even when you're wearing gloves.",
+        "A 22-hour run time on Low means you can rely on this portable spotlight until the job is done."
+    ],
+    "reviewers": [
+        {
+            "name": "Mui",
+            "avatarUrl": "imgs/ava/reviewer-18.jpg",
+            "starRating": "4.0",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Hellen",
+            "avatarUrl": "imgs/ava/reviewer-19.jpg",
+            "starRating": "4.1",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

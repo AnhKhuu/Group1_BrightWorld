@@ -1,0 +1,42 @@
+{
+    "id": "19.7-ft-40-led",
+    "name": "19.7 FT 40 LED Globe Ball String Lights, Fairy String Lights, Decor for Indoor Outdoor Party Wedding Christmas Tree Garden, Warm White",
+    "imageUrl": "imgs/decoration-light/19.7-ft-40-led (1).jpg",
+    "images": [
+        "imgs/decoration-light/19.7-ft-40-led (1).jpg",
+        "imgs/decoration-light/19.7-ft-40-led (2).jpg",
+        "imgs/decoration-light/19.7-ft-40-led (3).jpg",
+        "imgs/decoration-light/19.7-ft-40-led (4).jpg"
+    ],
+    "type": "decoration-light",
+    "oldPrice": "$12.5",
+    "newPrice": "$11.87",
+    "sale": "5%",
+    "starRating": "3.5",
+    "sold": "76",
+    "forYou": "false",
+    "publishDate": "01/04/2022",
+    "brand": "Wisteria Lane",
+    "ratings": "45",
+    "productDescription": [
+        "Application: Perfect decorations for Christmas and birthday party in the hotel, home, club, and so on.",
+        "Energy-saving: Lower power consumption string light is energy-saving which is environmentally friendly.",
+        "Long life span: The string light can be used for almost 50,000 hours which ensures that it can be used many times.",
+        "Design: Pretty designed round ball string light; really romantic and adds some the vitality for your house.",
+        "High quality: Size: Total length 6m(19.7ft). Lightweight; durable and can be used again and again"
+    ],
+    "reviewers": [
+        {
+            "name": "Roy",
+            "avatarUrl": "imgs/ava/reviewer-8.jpg",
+            "starRating": "4.3",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Will",
+            "avatarUrl": "imgs/ava/reviewer-9.jpg",
+            "starRating": "3.6",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "id": "viribright-60w",
+    "name": "Great Value LED Light bulbs",
+    "imageUrl": "imgs/bulb-light/viribright-60w (1).jpg",
+    "images": [
+        "imgs/bulb-light/viribright-60w (1).jpg",
+        "imgs/bulb-light/viribright-60w (1).png",
+        "imgs/bulb-light/viribright-60w (2).png",
+        "imgs/bulb-light/viribright-60w (3).png",
+        "imgs/bulb-light/viribright-60w (4).png"
+    ],
+    "type": "bulb-light",
+    "oldPrice": "",
+    "newPrice": "$20.53",
+    "starRating": "3.7",
+    "sold": "69",
+    "forYou": "false",
+    "publishDate": "06/04/2022",
+    "brand": "Viribright",
+    "ratings": "52",
+    "productDescription": [
+        "Light up any home, school, restaurant, office or store with the Viribright 60 Watt Replacement A19 LED Light Bulbs.",
+        "With low energy consumption, these bulbs are energy efficient and a great overall choice for both your home and the planet.",
+        "These cool white LED light bulbs look great in bathroom applications, kitchen spaces, table and floor lamps, ceiling fixtures, hallways and large rooms needing ample light.",
+        "With stunning CRI and high-lumen output per watt, these bulbs give your room the upper hand with great looks and even better energy savings.",
+        "Replace your old traditional incandescent light bulbs with these energy-efficient Viribright light bulbs.",
+        "Come in a 12-pack."
+    ],
+    "reviewers":
+    [
+        {
+            "name": "Raniel",
+            "avatarUrl": "imgs/ava/reviewer-4.jpg",
+            "starRating": "3.6",
+            "review": "These bulbs are really nice. I'm glad i tried them."
+        },
+        {
+            "name": "Kevin",
+            "avatarUrl": "imgs/ava/reviewer-5.jpg",
+            "starRating": "4.7",
+            "review": "These bulbs are also dimmable. I really like this"
+        }
+    ]
+}

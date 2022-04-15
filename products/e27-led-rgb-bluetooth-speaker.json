@@ -1,0 +1,43 @@
+{
+    "id": "e27-led-rgb-bluetooth-speaker",
+    "name": "E27 LED RGB Bluetooth Wireless Reading Speaker With Lamp",
+    "imageUrl": "imgs/smart-light/e27-led-rgb-bluetooth-speaker (1).jpg",
+    "images": [
+        "imgs/smart-light/e27-led-rgb-bluetooth-speaker (1).jpg",
+        "imgs/smart-light/e27-led-rgb-bluetooth-speaker (2).jpg",
+        "imgs/smart-light/e27-led-rgb-bluetooth-speaker (3).jpg",
+        "imgs/smart-light/e27-led-rgb-bluetooth-speaker (4).jpg",
+        "imgs/smart-light/e27-led-rgb-bluetooth-speaker (5).jpg",
+        "imgs/smart-light/e27-led-rgb-bluetooth-speaker (6).jpg"
+    ],
+    "type": "smart-light",
+    "oldPrice": "$15.24",
+    "newPrice": "$11.43",
+    "sale": "25%",
+    "starRating": "4.1",
+    "sold": "147",
+    "forYou": "true",
+    "publishDate": "01/04/2022",
+    "brand": "Rippers",
+    "ratings": "135",
+    "productDescription": [
+        "This is an LED light suitable for multiple places. We can pair the remote control with the smartphone by downloading the software. Rich colors are available for us to choose from.",
+        "Excellent materials make it have a longer service life and lower power consumption.",
+        "Smooth and uniform light transmission solves the problem of uneven light emission.",
+        "With adhesive, you can stick it wherever you want."
+    ],
+    "reviewers": [
+        {
+            "name": "Ken",
+            "avatarUrl": "imgs/ava/reviewer-12.jpg",
+            "starRating": "4.7",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "David",
+            "avatarUrl": "imgs/ava/reviewer-13.jpg",
+            "starRating": "3.2",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "id": "4pack-e26-e27",
+    "name": "4Pack E26 E27 3W RGB LED Light Bulb 16 Color Changing Lamp IR Remote Control",
+    "imageUrl": "imgs/bulb-light/4pack-e26-e27 (1).jpg",
+    "images": [
+        "imgs/bulb-light/4pack-e26-e27 (1).jpg",
+        "imgs/bulb-light/4pack-e26-e27 (2).jpg",
+        "imgs/bulb-light/4pack-e26-e27 (3).jpg",
+        "imgs/bulb-light/4pack-e26-e27 (4).jpg",
+        "imgs/bulb-light/4pack-e26-e27 (5).jpg"
+    ],
+    "type": "bulb-light",
+    "oldPrice": "$19.437",
+    "newPrice": "$15.55",
+    "sale": "20%",
+    "starRating": "4.5",
+    "sold": "120",
+    "forYou": "true",
+    "publishDate": "01/04/2022",
+    "brand": "Dazone",
+    "ratings": "89",
+    "productDescription": [
+        "Please be sure to cut off the power before inserting or removing the bulb from holder.",
+        "After use, do not take out the bulb immediately.",
+        "Cooling down the bulb to normal temperature before taking out.",
+        "Do not use in confined and narrow spaces, it will shorten the life of the bulb and speed up the light failure of the bulb.",
+        "If connect to holder with SCR switch, the light will appear flashing, timing inaccuracy, shifting mode instability, etc.",
+        "Available for outdoor use, but ensure that metal head does not get wet in the rain.",
+        "If the remote control cannot work, please try to remove the battery and insert it.",
+        "If it is not valid, please email us for remedial measures."
+    ],
+    "reviewers": [
+        {
+            "name": "Alex",
+            "avatarUrl": "imgs/ava/reviewer-6.jpg",
+            "starRating": "3.8",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Kevin",
+            "avatarUrl": "imgs/ava/reviewer-7.jpg",
+            "starRating": "3.6",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}
