@@ -1,11 +1,11 @@
 <section class="product-carousel">
     <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
-        <a href="#!Product-detail" class="item">
+        <a href="#!Product-detail" class="item" ng-repeat="product in $ctrl.products">
             <img src="Homepage/imgs/bulb_product01.jpg" alt="">
-            <p>This is our product. If you like it you can</p>
+            <p>{{product.name}}</p>
             <div class="price">
-                <span class="old-price">$900.000</span>
-                <span class="new-price">$800.000</span>
+                <span class="old-price">{{product.oldPrice}}</span>
+                <span class="new-price">{{product.newPrice}}</span>
             </div>
             <div class="d-flex align-items-center justify-content-between  mt-2">
                 <span>
@@ -32,101 +32,5 @@
                 </span>
             </div>
         </a>
-        <div class="item">
-            <img src="Homepage/imgs/bulb_product01.jpg" alt="">
-            <p>This is our product. If you like it you can</p>
-            <div class="price">
-                <span class="old-price">$900.000</span>
-                <span class="new-price">$800.000</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between  mt-2">
-                <span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                </span>
-                <span>
-                    <span class="material-icons heart-outline">
-                        favorite_border
-                    </span>
-                </span>
-            </div>
-        </div>
-        <div class="item">
-            <img src="Homepage/imgs/bulb_product01.jpg" alt="">
-            <p>This is our product. If you like it you can</p>
-            <div class="price">
-                <span class="old-price">$900.000</span>
-                <span class="new-price">$800.000</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between  mt-2">
-                <span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                </span>
-                <span>
-                    <span class="material-icons heart-outline">
-                        favorite_border
-                    </span>
-                </span>
-            </div>
-        </div>
-        <div class="item">
-            <img src="Homepage/imgs/bulb_product01.jpg" alt="">
-            <p>This is our product. If you like it you can</p>
-            <div class="price">
-                <span class="old-price">$900.000</span>
-                <span class="new-price">$800.000</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between  mt-2">
-                <span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                    <span class="material-icons star">
-                        star
-                    </span>
-                </span>
-                <span>
-                    <span class="material-icons heart-outline">
-                        favorite_border
-                    </span>
-                </span>
-            </div>
-        </div>
     </div>
 </section>

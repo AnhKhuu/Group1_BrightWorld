@@ -1,23 +1,24 @@
-<section class="product-detail container-lg my-3 my-lg-5">
+<section class="product-detail container-lg my-3 my-lg-5" ng-controller="ProductDetailCtrl">
   <div class="row">
     <div class="col-lg-6">
+      <img ng-src="{{mainImageUrl}}" class="w-100 img-desktop"/>
       <div class="owl-carousel owl-theme product-detail-carousel">
-        <div class="item" ng-repeat="img in $ctrl.product.images">
+        <div class="item" ng-repeat="img in product.images">
           <img ng-src="{{img}}" alt="">
         </div>
       </div>
     </div>
     <div class="col-lg-1">
-      <div class="w-100 mb-5" ng-repeat="img in $ctrl.product.images">
-        <img ng-src="{{img}}" alt="" class="w-100">
+      <div class="w-100 mb-5" ng-repeat="img in product.images">
+        <img ng-src="{{img}}" alt="" class="w-100 img-gallery" ng-click="setImage(img)">
       </div>
     </div>
     <div class="product-information col-lg-5 ps-lg-5">
-      <p class="product-name pt-3 pb-2 my-0">{{$ctrl.product.name}}</p>
+      <p class="product-name pt-3 pb-2 my-0">{{product.name}}</p>
       <div class="d-flex product-sub-information align-items-center justify-content-between">
         <div class="vl first"></div>
         <div class="star-information d-flex align-items-center">
-          <p class="mb-1 me-1">{{$ctrl.product.starRating}}</p>
+          <p class="mb-1 me-1">{{product.starRating}}</p>
           <span class="star-rating">
             <span class="material-icons star">
               star
@@ -38,19 +39,19 @@
         </div>
         <div class="vl"></div>
         <div>
-          <span>{{$ctrl.product.ratings}}</span>
+          <span>{{product.ratings}}</span>
           <span>Ratings</span>
         </div>
         <div class="vl"></div>
         <div>
-          <span>{{$ctrl.product.sold}}</span>
+          <span>{{product.sold}}</span>
           <span>Sold</span>
         </div>
         <div class="vl last"></div>
       </div>
       <div class="price">
-        <div class="new-price">{{$ctrl.product.newPrice}}</div>
-        <div class="old-price">{{$ctrl.product.oldPrice}}</div>
+        <div class="new-price">{{product.newPrice}}</div>
+        <div class="old-price">{{product.oldPrice}}</div>
       </div>
       <div class="detail mt-3">
         <div class="d-flex justify-content-between" type="button" data-bs-toggle="collapse"
@@ -62,7 +63,7 @@
         </div>
         <div class="collapse" id="collapseDescription">
           <ul>
-            <li ng-repeat="description in $ctrl.product.productDescription">{{description}}</li>
+            <li ng-repeat="description in product.productDescription">{{description}}</li>
           </ul>
         </div>
       </div>
@@ -115,7 +116,7 @@
           </span>
         </span>
         <div class="reviewer">
-          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in $ctrl.product.reviewers">
+          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in product.reviewers">
             <div class="reviewer-ava">
               <img ng-src="{{reviewer.avatarUrl}}" alt="">
             </div>

@@ -9,17 +9,21 @@
 
     &-carousel {
         height: 100%;
-
-        @include on('lg')
-        {
-            height: 500px;
-        }
     }
 
     .col-lg-6 {
         @include on('lg')
         {
             min-height: 660px;
+        }
+
+        .img-desktop {
+            display: none;
+
+            @include on('lg')
+            {
+                display: block;
+            }
         }
     }
 
@@ -28,6 +32,10 @@
         @include on('lg')
         {
             display: block;
+        }
+
+        .img-gallery {
+            cursor: pointer;
         }
     }
 
@@ -276,5 +284,12 @@
                 font-size: 24px;
             }
         }
+    }
+}
+
+.owl-carousel.owl-loaded.product-detail-carousel {
+    @include on('lg')
+    {
+        display: none;
     }
 }

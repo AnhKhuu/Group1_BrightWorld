@@ -15,14 +15,18 @@
 }
 
 @media (min-width: 992px) {
-  .product-detail-carousel {
-    height: 500px;
+  .product-detail .col-lg-6 {
+    min-height: 660px;
   }
 }
 
+.product-detail .col-lg-6 .img-desktop {
+  display: none;
+}
+
 @media (min-width: 992px) {
-  .product-detail .col-lg-6 {
-    min-height: 660px;
+  .product-detail .col-lg-6 .img-desktop {
+    display: block;
   }
 }
 
@@ -34,6 +38,10 @@
   .product-detail .col-lg-1 {
     display: block;
   }
+}
+
+.product-detail .col-lg-1 .img-gallery {
+  cursor: pointer;
 }
 
 .product-detail .star-rating .material-icons.star {
@@ -358,6 +366,12 @@
 @media (min-width: 992px) {
   .product-detail .related-product h1 {
     font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .owl-carousel.owl-loaded.product-detail-carousel {
+    display: none;
   }
 }
 /*# sourceMappingURL=product-detail.css.map */
