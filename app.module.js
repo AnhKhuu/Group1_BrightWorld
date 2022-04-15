@@ -6,7 +6,8 @@ var app = angular.module('brightworldApp', [
     'productDetail',
     'checkout',
     'cart',
-    'about'
+    'about',
+    'contact'
 ]);
 
 app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http) {
