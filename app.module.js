@@ -4,6 +4,7 @@ var app = angular.module('brightworldApp', [
     'homepage',
     'sales',
     'productDetail',
+    'checkout',
     'cart',
     'about'
 ]);

@@ -20,6 +20,9 @@ angular.
         }).
         when('/Homepage/:productId', {
           template: '<product-detail></product-detail>'
+        }).
+        when('/Checkout', {
+          template: '<checkout></checkout>'
         })
     }
   ]);
