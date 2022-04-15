@@ -1,11 +1,11 @@
 @import '../variable.scss';
+
 #signup-form {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
-    font-family: 'Inter';
     font-style: normal;
     .signup-heading {
         font-weight: 500;
