@@ -1,0 +1,45 @@
+{
+    "id": "great-value-led-light-bulb",
+    "name": "Great Value LED Light bulbs",
+    "imageUrl": "imgs/bulb-light/great-value-led-light-bulb (1).jpg",
+    "images": [
+        "imgs/bulb-light/great-value-led-light-bulb (1).jpg",
+        "imgs/bulb-light/great-value-led-light-bulb (2).jpg",
+        "imgs/bulb-light/great-value-led-light-bulb (3).jpg",
+        "imgs/bulb-light/great-value-led-light-bulb (4).jpg",
+        "imgs/bulb-light/great-value-led-light-bulb (5).jpg"
+    ],
+    "type": "bulb-light",
+    "oldPrice": "",
+    "newPrice": "$6.94",
+    "starRating": "4.2",
+    "sold": "77",
+    "forYou": "false",
+    "publishDate": "05/04/2022",
+    "brand": "Great Value",
+    "ratings": "77",
+    "productDescription": [
+        "Great Value LED light bulbs are a great option for their cost and energy efficiency. ",
+        "Built for durability, the solid structure of the LED bulbs will outlast any incandescent bulb while using up to 80% less energy. ",
+        "Need help deciding between a Daylight or Soft White LED' Consider the atmosphere you are hoping to create with your new energy efficient LED bulb. ",
+        "The Daylight LED light bulb creates a crisp natural effect and will be the right choice for Display areas, security lighting, garages, and task lighting. ",
+        "The Soft White LED light bulb will provide a much more calming effect. ",
+        "This bulb is generally chosen to deliver a cozy and inviting ambiance. ",
+        "This is the recommended choice for your living room, kitchen and bedroom lighting."
+    ],
+    "reviewers":
+    [
+        {
+            "name": "Alex",
+            "avatarUrl": "imgs/ava/reviewer.jpg",
+            "starRating": "4.2",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Kevin",
+            "avatarUrl": "imgs/ava/reviewer-3.jpg",
+            "starRating": "4.2",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

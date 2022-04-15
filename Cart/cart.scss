@@ -3,13 +3,75 @@
 .cart {
     z-index: 2;
     background-color: $white;
+    border-radius: 5px;
     
     .product-info {
         img {
-            width: 128px;
-            height: 128px;
+            width: 90px;
+            height: 90px;
+            border-radius: 5px;
             object-fit: cover;
             object-position: center;
+
+            @include on('lg')
+            {
+                width: 128px;
+                height: 128px;
+            }
+        }
+
+        .product-detail {
+            width: 200px;
+        }
+
+        .new-price {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: $grey;
+        }
+    }
+
+    .material-icons-outlined.close {
+        cursor: p;
+
+        &:hover {
+            color: #F14747!important;
+        }
+    }
+
+    .quantity {
+
+        input {
+            width: 50px;
+            border: none;
+        }
+
+        div {
+            border: 1px solid $grey;
+        }
+
+        button {
+            padding: 2px 5px;
+            line-height: 1;
+            background-color: white;
+
+            &:first-of-type {
+                border-right: 1px solid $grey;
+                border-radius: 0;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            &:last-of-type {
+                border-left: 1px solid $grey;
+                border-radius: 0;
+                font-size: 20px;
+                font-weight: 500;
+            }
         }
     }
 }

@@ -137,13 +137,14 @@
 }
 
 .product-category .col-md-3 .filter-price {
-  /* Hide the browser's default radio button */
-  /* Create a custom radio button */
+  /* Customize the label (the container) */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
   /* On mouse-over, add a grey background color */
-  /* When the radio button is checked, add a blue background */
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  /* Show the indicator (dot/circle) when checked */
-  /* Style the indicator (dot/circle) */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
 }
 
 .product-category .col-md-3 .filter-price .container-filter {
@@ -173,8 +174,8 @@
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+  border-radius: 2px;
+  border: 1.5px solid #D1D1D1;
 }
 
 .product-category .col-md-3 .filter-price .container-filter:hover input ~ .checkmark {
@@ -182,7 +183,7 @@
 }
 
 .product-category .col-md-3 .filter-price .container-filter input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #FF9F15;
 }
 
 .product-category .col-md-3 .filter-price .checkmark:after {
@@ -196,12 +197,14 @@
 }
 
 .product-category .col-md-3 .filter-price .container-filter .checkmark:after {
-  top: 9px;
   left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .product-category .col-md-3 .btn-apply {
@@ -539,6 +542,25 @@
   border: 1px solid #D7D7D7;
   border-radius: 5px;
   padding: 8px;
+  min-height: 295.6px;
+}
+
+@media (min-width: 768px) {
+  .product-category .item {
+    min-height: 283.06px;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-category .item {
+    min-height: 395.73px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-category .item {
+    min-height: 440.73px;
+  }
 }
 
 .product-category .item img {
@@ -553,6 +575,7 @@
 .product-category .item p {
   font-size: 14px;
   margin: 8px 0;
+  height: 42px;
   padding: 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -562,9 +585,16 @@
   -webkit-line-clamp: 2;
 }
 
+@media (min-width: 768px) {
+  .product-category .item p {
+    height: 42px;
+  }
+}
+
 @media (min-width: 992px) {
   .product-category .item p {
     font-size: 16px;
+    height: 48px;
   }
 }
 

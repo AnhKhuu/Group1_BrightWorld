@@ -1,0 +1,39 @@
+{
+    "id": "compact-5w-led-protable-spotlight",
+    "name": "Compact 5-watt LED portable spotlight",
+    "imageUrl": "imgs/spot-light/compact-5w-led-protable-spotlight (1).jpg",
+    "images": [
+        "imgs/spot-light/compact-5w-led-protable-spotlight (1).jpg",
+        "imgs/spot-light/compact-5w-led-protable-spotlight (2).jpg",
+        "imgs/spot-light/compact-5w-led-protable-spotlight (3).jpg",
+        "imgs/spot-light/compact-5w-led-protable-spotlight (4).jpg"
+    ],
+    "type": "spot-light",
+    "oldPrice": "",
+    "newPrice": "$26.61",
+    "sale": "",
+    "starRating": "4.9",
+    "sold": "178",
+    "forYou": "true",
+    "publishDate": "03/04/2022",
+    "brand": "Attwood",
+    "ratings": "121",
+    "productDescription": [
+        "Be prepared for an emergency, or just easier night docking, with this compact 5-watt LED portable spotlight.", 
+        "Stores almost anywhere; 10-foot cord lets you move around for more effective use."
+    ],
+    "reviewers": [
+        {
+            "name": "Mike",
+            "avatarUrl": "imgs/ava/reviewer-17.jpg",
+            "starRating": "4.8",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Jack",
+            "avatarUrl": "imgs/ava/reviewer-18.jpg",
+            "starRating": "4.7",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

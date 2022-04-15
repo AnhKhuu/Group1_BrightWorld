@@ -1,0 +1,44 @@
+{
+    "id": "diammable-ST64-led-bulb",
+    "name": "Dimmable ST64 LED Bulb E26 Base",
+    "imageUrl": "imgs/bulb-light/diammable-ST64-led-bulb (1).jpg",
+    "images": [
+        "imgs/bulb-light/diammable-ST64-led-bulb (1).jpg",
+        "imgs/bulb-light/diammable-ST64-led-bulb (2).jpg",
+        "imgs/bulb-light/diammable-ST64-led-bulb (3).jpg",
+        "imgs/bulb-light/diammable-ST64-led-bulb (4).jpg",
+        "imgs/bulb-light/diammable-ST64-led-bulb (5).jpg"
+    ],
+    "type": "bulb-light",
+    "oldPrice": "$41.2375",
+    "newPrice": "$32.99",
+    "starRating": "4",
+    "sold": "100",
+    "forYou": "false",
+    "publishDate": "02/04/2022",
+    "brand": "Sunco",
+    "ratings": "77",
+    "productDescription": [
+        "DIMMABLE - Seamless dimming capabilities (100%-10%) to fit any mood or decor.",
+        "Our ST64 LED lights combine charming vintage design with the latest in LED technology.",
+        "Ideal applications include restaurants, hotels, and exposed lamp fixtures/pendants.",
+        " WATERPROOF - Our LED ST64 bulbs are weatherproof and can stand up to the elements.",
+        "Durable dust-tight construction provides you reliable bright light in any weather.",
+        " UL CERTIFIED & TITLE 20 COMPLIANT - We uphold the highest standards for all our products by testing each product for optimal performance and safety.",
+        "Sunco's LEDs are the sustainable choice offering a longer lifetime than traditional bulbs (halogen, incandescent, fluorescent) and reduced relamping costs."
+    ],
+    "reviewers": [
+        {
+            "name": "Alexender",
+            "avatarUrl": "imgs/ava/reviewer-7.jpg",
+            "starRating": "4.0",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Junnie",
+            "avatarUrl": "imgs/ava/reviewer-8.jpg",
+            "starRating": "3.5",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}
