@@ -23,6 +23,9 @@ angular.
         }).
         when('/Checkout', {
           template: '<checkout></checkout>'
+        }).
+        when('/Contact', {
+          template: '<contact></contact>'
         })
     }
   ]);
