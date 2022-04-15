@@ -61,7 +61,7 @@
         }
 
         .filter-price {
-            @include custom-radio;
+            @include custom-checkbox;
         }
 
         .btn-apply {

@@ -1,1 +1,1 @@
-angular.module('productCategory', []);
+angular.module('brightworldApp', []);

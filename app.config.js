@@ -10,7 +10,7 @@ angular.
           template: '<sales></sales>'
         }).
         when('/Product-category', {
-          template: '<product-category></product-category>'
+          templateUrl: 'ProductCategory/product-category.template.html'
         }).
         when('/About', {
           template: '<about></about>'

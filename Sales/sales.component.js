@@ -6,10 +6,10 @@ angular.
       var self = this;
   
       $http.get('products/products.json').then(function(response) {
-        self.filteredBulb = response.data.filter(function(x){ return x.type == "bulb-light" && x.hasOwnProperty("sale")});
-        self.filteredSpot = response.data.filter(function(x){ return x.type == "spot-light" && x.hasOwnProperty("sale")});
-        self.filteredSmart = response.data.filter(function(x){ return x.type == "smart-light" && x.hasOwnProperty("sale")});
-        self.filteredDecoration = response.data.filter(function(x){ return x.type == "decoration-light" && x.hasOwnProperty("sale")});
+        self.filteredBulb = response.data.filter(function(x){ return x.type == "Bulb Lights" && x.hasOwnProperty("sale")});
+        self.filteredSpot = response.data.filter(function(x){ return x.type == "Spot Lights" && x.hasOwnProperty("sale")});
+        self.filteredSmart = response.data.filter(function(x){ return x.type == "Smart Lights" && x.hasOwnProperty("sale")});
+        self.filteredDecoration = response.data.filter(function(x){ return x.type == "Decoration Lights" && x.hasOwnProperty("sale")});
       });
 
       $http.get('products/brands.json').then(function(response) {

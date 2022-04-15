@@ -98,13 +98,19 @@
         p {
             font-size: 14px;
             margin: 8px 0;
+            height: 42px;
             padding: 0;
             @include lm-text;
             -webkit-line-clamp: 2;
 
-            @include on('lg')
+            @include on('md')
             {
+                height: 42px;
+            }
+
+            @include on('lg') {
                 font-size: 16px;
+                height: 48px;
             }
         }
 

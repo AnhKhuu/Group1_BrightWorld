@@ -1,5 +1,5 @@
 angular.
-  module('productCategory').
+  module('brightworldApp').
   component('productCategory', {
     templateUrl: 'ProductCategory/product-category.template.html',
     controller: ['$http',function ProductCategoryCtrl($http) {

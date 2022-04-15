@@ -115,6 +115,7 @@
 .sales .product-item p {
   font-size: 14px;
   margin: 8px 0;
+  height: 42px;
   padding: 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -124,9 +125,16 @@
   -webkit-line-clamp: 2;
 }
 
+@media (min-width: 768px) {
+  .sales .product-item p {
+    height: 42px;
+  }
+}
+
 @media (min-width: 992px) {
   .sales .product-item p {
     font-size: 16px;
+    height: 48px;
   }
 }
 
