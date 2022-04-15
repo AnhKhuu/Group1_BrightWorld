@@ -27,7 +27,7 @@
   color: red;
 }
 #signin-form #signin-login input:valid {
-  color: #2E2C2C;
+  color: black;
 }
 #signin-form .form-group {
   font-weight: 500;
@@ -36,6 +36,10 @@
   border-bottom: 1px solid #999999;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+#signin-form .erInput {
+  font-style: italic;
+  color: red;
 }
 #signin-form .form-input {
   background: transparent;
