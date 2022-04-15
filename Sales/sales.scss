@@ -55,11 +55,13 @@
         img {
             width: auto;
             height: 15px;
+            max-width: 62px;
 
             @include on("lg")
             {
                 width: auto;
                 height: 30px;
+                max-width: 100px;
             }
         }
     }
@@ -76,7 +78,7 @@
             border-radius: 5;
         }
 
-        .sales-tag {
+        .sale-tag {
             background-color: #FFECD0;
             font-size: 14px;
             color: #FF9F15;
@@ -85,13 +87,10 @@
             border-radius: 16px;
             text-align: center;
             font-weight: 500;
-            width: 50px;
-            height: 21px;
+            padding: 2px 10px;
 
             @include on("lg")
             {
-                width: 70px;
-                height: 26px;
                 font-size: 18px;
             }
         }

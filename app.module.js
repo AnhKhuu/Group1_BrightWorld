@@ -7,4 +7,4 @@ angular.module('brightworldApp', [
     'productDetail',
     'cart',
     'about'
-  ]);
+])

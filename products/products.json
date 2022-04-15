@@ -20,9 +20,10 @@
         "type": "bulb-light",
         "oldPrice": "$41.2375",
         "newPrice": "$32.99",
+        "sale": "20%",
         "starRating": "4",
         "sold": "100",
-        "forYou": "false",
+        "forYou": "true",
         "publishDate": "02/04/2022",
         "brand": "Sunco"
     },
@@ -35,7 +36,7 @@
         "newPrice": "$19.94",
         "starRating": "3.6",
         "sold": "97",
-        "forYou": "false",
+        "forYou": "true",
         "publishDate": "03/04/2022",
         "brand": "Reit"
     },
@@ -61,7 +62,7 @@
         "newPrice": "$6.94",
         "starRating": "4.2",
         "sold": "77",
-        "forYou": "false",
+        "forYou": "true",
         "publishDate": "05/04/2022",
         "brand": "Great Value"
     },
@@ -74,7 +75,7 @@
         "newPrice": "$20.53",
         "starRating": "3.7",
         "sold": "69",
-        "forYou": "false",
+        "forYou": "true",
         "publishDate": "06/04/2022",
         "brand": "Viribright"
     },
@@ -88,7 +89,6 @@
         "sale": "25%",
         "starRating": "4.1",
         "sold": "147",
-        "forYou": "true",
         "publishDate": "01/04/2022",
         "brand": "Rippers"
     },
@@ -102,7 +102,6 @@
         "sale": "13%",
         "starRating": "3.4",
         "sold": "87",
-        "forYou": "false",
         "publishDate": "02/04/2022",
         "brand": "Feit Electric"
     },
@@ -113,10 +112,8 @@
         "type": "smart-light",
         "oldPrice": "",
         "newPrice": "$57.78",
-        "sale": "",
         "starRating": "3.2",
         "sold": "74",
-        "forYou": "false",
         "publishDate": "03/04/2022",
         "brand": "Govee"
     },
@@ -127,10 +124,8 @@
         "type": "smart-light",
         "oldPrice": "",
         "newPrice": "$17.99",
-        "sale": "",
         "starRating": "4.0",
         "sold": "169",
-        "forYou": "true",
         "publishDate": "04/04/2022",
         "brand": "Ktaxon"
     },
@@ -141,10 +136,8 @@
         "type": "smart-light",
         "oldPrice": "",
         "newPrice": "$39.98",
-        "sale": "",
         "starRating": "3.8",
         "sold": "167",
-        "forYou": "false",
         "publishDate": "05/04/2022",
         "brand": "Sengled"
     },
@@ -158,7 +151,6 @@
         "sale": "12%",
         "starRating": "3.5",
         "sold": "154",
-        "forYou": "false",
         "publishDate": "06/04/2022",
         "brand": "Wyze"
     },
@@ -172,7 +164,6 @@
         "sale": "25%",
         "starRating": "3.2",
         "sold": "46",
-        "forYou": "true",
         "publishDate": "01/04/2022",
         "brand": "Stanley"
     },
@@ -186,7 +177,6 @@
         "sale": "20%",
         "starRating": "4.1",
         "sold": "156",
-        "forYou": "true",
         "publishDate": "02/04/2022",
         "brand": "Alpena"
     },
@@ -197,10 +187,8 @@
         "type": "spot-light",
         "oldPrice": "",
         "newPrice": "$26.61",
-        "sale": "",
         "starRating": "4.9",
         "sold": "178",
-        "forYou": "true",
         "publishDate": "03/04/2022",
         "brand": "Attwood"
     },
@@ -211,10 +199,8 @@
         "type": "spot-light",
         "oldPrice": "",
         "newPrice": "$20.37",
-        "sale": "",
         "starRating": "4.2",
         "sold": "143",
-        "forYou": "true",
         "publishDate": "04/04/2022",
         "brand": "Energizer"
     },
@@ -225,10 +211,8 @@
         "type": "spot-light",
         "oldPrice": "",
         "newPrice": "$34.88",
-        "sale": "",
         "starRating": "3.9",
         "sold": "112",
-        "forYou": "false",
         "publishDate": "05/04/2022",
         "brand": "EverStart"
     },
@@ -239,10 +223,8 @@
         "type": "spot-light",
         "oldPrice": "",
         "newPrice": "$18.00",
-        "sale": "",
         "starRating": "4.1",
         "sold": "178",
-        "forYou": "false",
         "publishDate": "06/04/2022",
         "brand": "Nilight"
     },
@@ -256,7 +238,6 @@
         "sale": "5%",
         "starRating": "3.5",
         "sold": "76",
-        "forYou": "false",
         "publishDate": "01/04/2022",
         "brand": "Wisteria Lane"
     },
@@ -270,7 +251,6 @@
         "sale": "10%",
         "starRating": "4.7",
         "sold": "185",
-        "forYou": "true",
         "publishDate": "02/04/2022",
         "brand": "BTMWAY"
     },
@@ -281,10 +261,8 @@
         "type": "decoration-light",
         "oldPrice": "",
         "newPrice": "$12.24",
-        "sale": "",
         "starRating": "4.2",
         "sold": "125",
-        "forYou": "false",
         "publishDate": "03/04/2022",
         "brand": "Solar"
     },
@@ -295,10 +273,8 @@
         "type": "decoration-light",
         "oldPrice": "",
         "newPrice": "$9.37",
-        "sale": "",
         "starRating": "4.8",
         "sold": "139",
-        "forYou": "true",
         "publishDate": "04/04/2022",
         "brand": "Generic"
     },
@@ -309,10 +285,8 @@
         "type": "decoration-light",
         "oldPrice": "",
         "newPrice": "$13.98",
-        "sale": "",
         "starRating": "4.4",
         "sold": "178",
-        "forYou": "true",
         "publishDate": "05/04/2022",
         "brand": "Linkpal"
     },
@@ -323,10 +297,8 @@
         "type": "decoration-light",
         "oldPrice": "",
         "newPrice": "$8.95",
-        "sale": "",
         "starRating": "4.2",
         "sold": "167",
-        "forYou": "true",
         "publishDate": "06/04/2022",
         "brand": "BetUS"
     }

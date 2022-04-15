@@ -17,6 +17,9 @@ angular.
         }).
         when('/Product-category/:productId', {
           template: '<product-detail></product-detail>'
+        }).
+        when('/Homepage/:productId', {
+          template: '<product-detail></product-detail>'
         })
     }
   ]);
