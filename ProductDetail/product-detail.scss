@@ -1,8 +1,34 @@
 @import '../variable.scss';
 
 .product-detail {
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
     &-carousel {
-        min-height: 500px;
+        height: 100%;
+
+        @include on('lg')
+        {
+            height: 500px;
+        }
+    }
+
+    .col-lg-6 {
+        @include on('lg')
+        {
+            min-height: 660px;
+        }
+    }
+
+    .col-lg-1 {
+        display: none;
+        @include on('lg')
+        {
+            display: block;
+        }
     }
 
     .star-rating {
@@ -16,6 +42,12 @@
     .product-information {
         .product-name {
             font-size: 16px;
+            font-weight: 600;
+
+            @include on('lg')
+            {
+                font-size: 20px;
+            }
         }
 
 
@@ -24,6 +56,13 @@
 
             .vl.last {
                 border-left: 1px solid white;
+            }
+
+            .vl.first {
+                @include on('md')
+                {
+                    display: none;
+                }
             }
         }
 
@@ -69,6 +108,11 @@
             div {
                 font-size: 16px;
                 border-bottom: 1px solid $grey;
+
+                .product-description {
+                    font-weight: 500;
+                    color: $black;
+                }
 
                 span {
                     color: $yellow;
@@ -155,12 +199,25 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: $yellow;
 
-            @include on('lg')
+            @include on('md')
             {
-                width: 50px;
-                height: 50px;
+                width: 60px;
+                height: 60px;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+
+                @include on('md')
+                {
+                    width: 60px;
+                    height: 60px;
+                }
             }
         }
 

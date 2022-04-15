@@ -163,6 +163,12 @@ input {
         }
     }
 
+    
+    #collapseCart {
+        top: 50px;
+        right: 0px;
+    }
+
     #collapseSearch {
         top: 60px;
         left: 0;
@@ -187,10 +193,6 @@ input {
                 color: $grey;
             }
         }
-    }
-
-    .search-desktop {
-        
     }
 }
 

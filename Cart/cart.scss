@@ -1,0 +1,15 @@
+@import '../variable.scss';
+
+.cart {
+    z-index: 2;
+    background-color: $white;
+    
+    .product-info {
+        img {
+            width: 128px;
+            height: 128px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

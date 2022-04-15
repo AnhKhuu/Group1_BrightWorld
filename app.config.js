@@ -12,7 +12,10 @@ angular.
         when('/Product-category', {
           template: '<product-category></product-category>'
         }).
-        when('/Product-detail', {
+        when('/About', {
+          template: '<about></about>'
+        }).
+        when('/Product-category/:productId', {
           template: '<product-detail></product-detail>'
         }).
         when('/Checkout', {

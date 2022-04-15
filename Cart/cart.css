@@ -1,0 +1,18 @@
+/*#region breakpoints */
+/*#endregion */
+/*#region mixins */
+/*#endregion */
+.cart {
+  z-index: 2;
+  background-color: #FFFFF8;
+}
+
+.cart .product-info img {
+  width: 128px;
+  height: 128px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+/*# sourceMappingURL=cart.css.map */

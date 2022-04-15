@@ -1,0 +1,49 @@
+{
+    "id": "artificial-sunflower-led-string-light",
+    "name": "Artificial Sunflower Led String Light for Home Wedding Party Bedroom Décor",
+    "imageUrl": "imgs/decoration-light/artificial-sunflower-led-string-light (1).jpg",
+    "images": [
+        "imgs/decoration-light/artificial-sunflower-led-string-light (1).jpg",
+        "imgs/decoration-light/artificial-sunflower-led-string-light (2).jpg",
+        "imgs/decoration-light/artificial-sunflower-led-string-light (3).jpg",
+        "imgs/decoration-light/artificial-sunflower-led-string-light (4).jpg"
+    ],
+    "type": "decoration-light",
+    "oldPrice": "",
+    "newPrice": "$9.37",
+    "sale": "",
+    "starRating": "4.8",
+    "sold": "139",
+    "forYou": "true",
+    "publishDate": "04/04/2022",
+    "brand": "Generic",
+    "ratings": "129",
+    "productDescription": [
+        "Item type:light.",
+        "Occasion of use: room, home shop outdoor courtyard wedding.",
+        "Light color: helianthus, chrysanthemum and vine light string.",
+        "Power: 2m 20 lamp battery type.",
+        "Switch type: manual.",
+        "Power supply mode: 3 AA batteries (not included).",
+        "Size: 2m 20 lamp.",
+        "Control mode: switch.",
+        "Number of LED beads: 20.",
+        "Shell material: plastic.",
+        "Input voltage: 4.5.",
+        "Protection grade: IP54"
+    ],
+    "reviewers": [
+        {
+            "name": "Heven",
+            "avatarUrl": "imgs/ava/reviewer-11.jpg",
+            "starRating": "4.4",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Hill",
+            "avatarUrl": "imgs/ava/reviewer-12.jpg",
+            "starRating": "3.8",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

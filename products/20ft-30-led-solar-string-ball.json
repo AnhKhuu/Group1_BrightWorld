@@ -1,0 +1,45 @@
+{
+    "id": "20ft-30-led-solar-string-ball",
+    "name": "20ft 30 LED Solar String Ball Lights Outdoor Waterproof Warm White Garden Decor",
+    "imageUrl": "imgs/decoration-light/20ft-30-led-solar-string-ball (1).jpg",
+    "images": [
+        "imgs/decoration-light/20ft-30-led-solar-string-ball (1).jpg",
+        "imgs/decoration-light/20ft-30-led-solar-string-ball (2).jpg",
+        "imgs/decoration-light/20ft-30-led-solar-string-ball (3).jpg",
+        "imgs/decoration-light/20ft-30-led-solar-string-ball (4).jpg"
+    ],
+    "type": "decoration-light",
+    "oldPrice": "",
+    "newPrice": "$12.24",
+    "sale": "",
+    "starRating": "4.2",
+    "sold": "125",
+    "forYou": "false",
+    "publishDate": "03/04/2022",
+    "brand": "Solar",
+    "ratings": "111",
+    "productDescription": [
+        "Length: 17.5ft",
+        "Diameter of Bulb: 1 in",
+        "Length between 2 bulbs: 4.7 in",
+        "LED Quantity: 30",
+        "Rechargeable Ni-MH Battery: 1.2V 600mA",
+        "Charging Time: 5~8 hours",
+        "Switch: ON/OFF & MODE",
+        "2 lighting Modes: CTwinkle /Flash, Steady on."
+    ],
+    "reviewers": [
+        {
+            "name": "Bin",
+            "avatarUrl": "imgs/ava/reviewer-11.jpg",
+            "starRating": "4.3",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Liam",
+            "avatarUrl": "imgs/ava/reviewer-10.jpg",
+            "starRating": "3.6",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}

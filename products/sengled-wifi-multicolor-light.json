@@ -1,0 +1,44 @@
+{
+    "id": "sengled-wifi-multicolor-light",
+    "name": "Sengled Wi-Fi Multicolor Light Strip",
+    "imageUrl": "imgs/smart-light/sengled-wifi-multicolor-light (1).jpg",
+    "images": [
+        "imgs/smart-light/sengled-wifi-multicolor-light (1).jpg",
+        "imgs/smart-light/sengled-wifi-multicolor-light (2).jpg",
+        "imgs/smart-light/sengled-wifi-multicolor-light (3).jpg"
+    ],
+    "type": "smart-light",
+    "oldPrice": "",
+    "newPrice": "$39.98",
+    "sale": "",
+    "starRating": "3.8",
+    "sold": "167",
+    "forYou": "false",
+    "publishDate": "05/04/2022",
+    "brand": "Sengled",
+    "ratings": "131",
+    "productDescription": [
+        "Add accents and fun to any room or space.", 
+        "The flexible Sengled Wi-Fi Multicolor Light Strip is 196 inches long and allows you to create your custom fit.", 
+        "Sengled Bluetooth Mesh Smart LED Light Strip that works with Alexa.", 
+        "Vibrant color, 1800 Lumens @ 2700K.", 
+        "Put it under shelves, under counters, behind or under furniture, and more.", 
+        "Bluetooth Mesh technology allows you to reach every corner of your house.", 
+        "Say Alexa Discover New Devices for easy installation, and then use the Alexa app or voice control to set up routines, schedules, and more.", 
+        "Also works with the Sengled Bluetooth App (for at-home use)."    
+    ],
+    "reviewers": [
+        {
+            "name": "Nick",
+            "avatarUrl": "imgs/ava/reviewer-16.jpg",
+            "starRating": "3.1",
+            "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
+        },
+        {
+            "name": "Philip",
+            "avatarUrl": "imgs/ava/reviewer-17.jpg",
+            "starRating": "3.2",
+            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
+        }
+    ]
+}
