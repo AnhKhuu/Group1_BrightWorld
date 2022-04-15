@@ -6,39 +6,40 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
-    font-family: 'Inter';
     font-style: normal;
+    .signup-heading {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $black;
+        text-align: center;
+        margin-bottom: 10px;
+    }
     #signup-login {
         max-width: 350px;
         flex-grow: 1;
-        // background: #E5E5E5;
         input:invalid {
             color: red;
         }
         input:valid {
-            color: green;
+            color: $black;
         }
     }
-    .signup-heading {
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 20px;
-        color: #202020;
-        text-align: center;
-        margin-bottom: 10px;
-    }
     .form-group {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
         border-bottom: 1px solid #999999;
-        ;
-        margin-top: 15px;
-        margin-bottom: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     .form-input {
         background: transparent;
         border: 0;
         outline: 0;
-        color: #2E2C2C;
+        color: $black;
         flex-grow: 1;
+        width: 100%;
     }
     .form-input::placeholder {
         color: #999999;
@@ -54,7 +55,7 @@
         font-weight: 400;
         font-size: 12px;
         line-height: 15px;
-        color: #2E2C2C;
+        color: $black;
         margin-bottom: 10px;
     }
     .form-footer:hover {
@@ -69,7 +70,7 @@
         }
         .form-createAcount {
             font-weight: 500;
-            color: #2E2C2C;
+            color: $black;
         }
         .form-createAcount:hover {
             font-weight: bold;
