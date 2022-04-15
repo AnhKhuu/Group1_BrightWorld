@@ -44,17 +44,8 @@
         color: #999999;
     }
     .form-submit {
-        height: 40px;
-        background: #FF9F15;
-        border: 1px solid #FF9F15;
-        color: #FDF9F9;
+        @include yellow-btn;
         width: 100%;
-        border-radius: 5px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
     }
     .form-submit:hover {
         border: 1px solid #0d6adc;
