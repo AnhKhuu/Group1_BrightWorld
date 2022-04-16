@@ -14,7 +14,7 @@
     <div id="signin-form">
         <form id="signin-login" name="myForm" action="../index.html">
             <div class="signin-heading">
-                <img src="./image/logo1.jpg" alt="Logo1" class="signin-logo1"> BrightWorld
+                <img src="../imgs/Logo.png" alt="Logo1" class="signin-logo1">
             </div>
 
             <hr>
@@ -22,7 +22,7 @@
                 Email <br>
                 <input id="uemail" name="uemail" class="form-input" type="email" ng-model="myEmail" placeholder="Enter your email" required autofocus pattern="^\w+@\w+\.[a-z]{2,3}$">
             </div>
-            <div class="erInput text-right">
+            <div class="erInput text-right mb-3">
                 <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.required">Email must be required</span>
                 <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.email">Format email is missing</span>
             </div>
@@ -31,12 +31,12 @@
                 Password <br>
                 <input id="upass" name="upass" type="password" class="form-input" ng-model="myPass" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z ])(?=.*\W)(?=.*\d).{6,12}$">
             </div>
-            <div class="erInput text-right">
+            <div class="erInput text-right mb-3">
                 <span class="error" ng-show="myForm.upass.$dirty && myForm.upass.$error.required">Password must be required</span>
                 <span class="error" ng-show="myForm.upass.$dirty && myForm.upass.$error.password">Password is missing</span>
             </div>
             <div>
-                <input type="submit" value="Log in" class="form-submit">
+                <button type="submit" class="form-submit w-100 mb-3">Log in</button>
             </div>
             <div class="form-footer">
                 <a href="#">Forgotten your password ?</a>

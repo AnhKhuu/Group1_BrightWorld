@@ -122,6 +122,82 @@
   color: #999999;
 }
 
+.checkout .trigger-ship {
+  border-radius: 5px;
+  border: 1px solid #999999;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  /* Customize the label (the container) */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.checkout .trigger-ship .container-filter {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkout .trigger-ship .container-filter input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkout .trigger-ship .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 2px;
+  border: 1.5px solid #D1D1D1;
+}
+
+.checkout .trigger-ship .container-filter:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkout .trigger-ship .container-filter input:checked ~ .checkmark {
+  background-color: #FF9F15;
+}
+
+.checkout .trigger-ship .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkout .trigger-ship .container-filter input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkout .trigger-ship .container-filter .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .checkout .form-group p {
   font-size: 16px;
   font-weight: 500;
@@ -147,13 +223,13 @@
   color: #999999;
 }
 
-.checkout .form-group input {
+.checkout .form-group input, .checkout .form-group select {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #999999;
 }
 
-.checkout .form-group input:focus {
+.checkout .form-group input:focus, .checkout .form-group select:focus {
   outline: none;
 }
 
