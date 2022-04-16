@@ -24,7 +24,16 @@ angular.
           items: 1,
           autoplay: true,
           autoplayTimeout: 2000,
-          autoplayHoverPause: true
+          autoplayHoverPause: true,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              nav: false
+            },
+            768: {
+              nav: true
+            }
+          }
       });
       },1000);
 

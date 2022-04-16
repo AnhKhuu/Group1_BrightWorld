@@ -1,5 +1,4 @@
 @import '../variable.scss';
-
 #signup-form {
     min-height: 100vh;
     display: flex;
@@ -22,7 +21,8 @@
             color: red;
         }
         input:valid {
-            color: $black;
+            // color: $black;
+            color: black;
         }
     }
     .form-group {
@@ -32,6 +32,10 @@
         border-bottom: 1px solid #999999;
         margin-top: 5px;
         margin-bottom: 5px;
+    }
+    .erInput {
+        font-style: italic;
+        color: red;
     }
     .form-input {
         background: transparent;

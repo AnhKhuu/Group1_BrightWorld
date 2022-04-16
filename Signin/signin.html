@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="signin.css">
-
-    <title>Logn in</title>
+    <title>Sign in</title>
 </head>
 
-<body>
+<body ng-app="">
     <div id="signin-form">
-        <form action="../index.html" id="signin-login" onsubmit="return showInfo()">
+        <form id="signin-login" name="myForm" action="../index.html">
             <div class="signin-heading">
                 <img src="./image/logo1.jpg" alt="Logo1" class="signin-logo1"> BrightWorld
             </div>
@@ -20,16 +20,23 @@
             <hr>
             <div class="form-group">
                 Email <br>
-                <input id="uemail" type="email" class="form-input" placeholder="Enter your email" required autofocus pattern="^\w+@\w+\.[a-z]{2,3}$" onkeyup="checkEMail()">
+                <input id="uemail" name="uemail" class="form-input" type="email" ng-model="myEmail" placeholder="Enter your email" required autofocus pattern="^\w+@\w+\.[a-z]{2,3}$">
             </div>
-            <div id="errorEMail" style="text-align: right; font-style: italic;"></div>
+            <div class="erInput text-right">
+                <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.required">Email must be required</span>
+                <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.email">Format email is missing</span>
+            </div>
+
             <div class="form-group">
                 Password <br>
-                <input id="upass" type="password" class="form-input" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z ])(?=.*\W)(?=.*\d).{6,12}$" onkeyup="checkPass()">
+                <input id="upass" name="upass" type="password" class="form-input" ng-model="myPass" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z ])(?=.*\W)(?=.*\d).{6,12}$">
             </div>
-            <div id="errorPass" style="text-align: right; font-style: italic;"></div>
+            <div class="erInput text-right">
+                <span class="error" ng-show="myForm.upass.$dirty && myForm.upass.$error.required">Password must be required</span>
+                <span class="error" ng-show="myForm.upass.$dirty && myForm.upass.$error.password">Password is missing</span>
+            </div>
             <div>
-                <input onclick="showInfo()" type="submit" value="Log in" class="form-submit">
+                <input type="submit" value="Log in" class="form-submit">
             </div>
             <div class="form-footer">
                 <a href="#">Forgotten your password ?</a>
@@ -45,50 +52,8 @@
             </div>
         </form>
     </div>
-    <script>
-        function showInfo() {
-            var email = document.getElementById("uemail").value;
-            var pass = document.getElementById("upass").value;
-            if (email.length < 2 | pass.length < 3) {
-                alert("Please input your email or password");
-                return 0;
-            } else {
-                // alert("Email: " + email + "\n" + "Pass: " + pass);
-                return true;
-            }
-
-        }
-
-        function checkEMail() {
-            var uemail = document.getElementById("uemail").value;
-            var pattern = /^\w+@\w+\.[a-z]{2,3}$/;
-            var test = pattern.test(uemail);
-            var s = "";
-            if (test) {
-                s += "Email is valid";
-                document.getElementById("errorEMail").style.color = "green";
-            } else {
-                s += "Invalid, ex: abcd@abc.com";
-                document.getElementById("errorEMail").style.color = "red";
-            }
-            document.getElementById("errorEMail").innerHTML = s;
-        }
-
-        function checkPass() {
-            var upass = document.getElementById("upass").value;
-            var pattern = /^(?=.*[a-z])(?=.*[A-Z ])(?=.*\W)(?=.*\d).{6,12}$/;
-            var test = pattern.test(upass);
-            var s = "";
-            if (test) {
-                s += "Passwoed is valid";
-                document.getElementById("errorPass").style.color = "green";
-            } else {
-                s += "Invalid, minimum 6 symbols, ex: aAbc12@";
-                document.getElementById("errorPass").style.color = "red";
-            }
-            document.getElementById("errorPass").innerHTML = s;
-        }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

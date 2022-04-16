@@ -191,6 +191,11 @@ input:focus {
   background-color: white !important;
 }
 
+.header .search-icon {
+  right: 5px;
+  top: 3px;
+}
+
 .header .cart-dropdown {
   width: 300px;
 }
