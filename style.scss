@@ -171,6 +171,11 @@ input {
         background-color: white!important;
     }
 
+    .search-icon {
+        right: 5px;
+        top: 3px;
+    }
+
     .cart-dropdown {
         width: 300px;
 
@@ -191,7 +196,10 @@ input {
 
         .btn-bar {
 
-            button {
+            a,button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 height: 50px !important;
                 border-radius: 0 !important;
 

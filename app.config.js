@@ -22,7 +22,7 @@ angular.
           template: '<product-detail></product-detail>'
         }).
         when('/Checkout', {
-          template: '<checkout></checkout>'
+          templateUrl: 'Checkout/checkout.template.html'
         }).
         when('/Contact', {
           template: '<contact></contact>'

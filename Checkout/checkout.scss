@@ -110,6 +110,13 @@
     color: $grey;
   }
 
+  .trigger-ship {
+    border-radius: 5px;
+    border: 1px solid $grey;
+    width: fit-content;
+    @include custom-checkbox;
+  }
+
   .form-group {
     p {
       font-size: 16px;
@@ -121,7 +128,7 @@
       color: $grey;
     }
 
-    input {
+    input, select {
       background-color: transparent;
       border: none;
       border-bottom: 2px solid $grey;

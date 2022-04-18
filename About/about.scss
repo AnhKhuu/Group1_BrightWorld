@@ -1,6 +1,5 @@
 @import '../variable.scss';
 .about {
-    font-family: 'Inter';
     h1 {
         font-style: normal;
         font-weight: 700;
@@ -26,7 +25,6 @@
         line-height: 22px;
         color: #000000;
         text-align: justify;
-        margin: 20px 20px 20px 20px;
         // align-items: center;
         float: left;
         // @include on('lg') {
@@ -34,18 +32,11 @@
         // }
     }
     .about-image5 {
-        // position: absolute;
-        // display: flex;
         width: 555px;
         height: 380px;
         background: url(image.png);
         border-radius: 5px;
-        // align-items: center;
-        margin: 20px 20px 20px 20px;
         float: right;
-        // @include on('lg') {
-        //     right: 10px;
-        // }
     }
     .about-info2 {
         // position: relative;
@@ -68,6 +59,11 @@
         border-radius: 5px;
         // display: flex;
         // float: left;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
     }
     // .about-history {
     //     position: absolute;

@@ -18,8 +18,8 @@
       <div class="d-flex product-sub-information align-items-center justify-content-between">
         <div class="vl first"></div>
         <div class="star-information d-flex align-items-center">
-          <p class="mb-1 me-1">{{product.starRating}}</p>
-          <span class="star-rating">
+          <p class="mb-1 me-1">{{$ctrl.ratings}}</p>
+          <span class="star-rating" id="productRating">
             <span class="material-icons star">
               star
             </span>
@@ -67,17 +67,17 @@
           </ul>
         </div>
       </div>
-      <button class="btn download-btn p-2 my-3 d-flex align-items-center">
+      <a href="{{product.documentUrl}}" class="btn download-btn p-2 my-3 d-flex align-items-center">
         <span class="material-icons-outlined">
           file_download
         </span>
         Download specifications
-      </button>
+      </a>
       <div class="quantity mb-3">
         <label for="quantity">
           <h2>Quantity</h2>
           <div>
-            <button class="btn">+</button><input type="text"><button class="btn">-</button>
+            <button class="btn" ng-click="$ctrl.add()">+</button><span class="px-4">{{$ctrl.quantity}}</span><button class="btn" ng-click="$ctrl.remove()">-</button>
           </div>
         </label>
       </div>
@@ -116,7 +116,7 @@
           </span>
         </span>
         <div class="reviewer">
-          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in product.reviewers">
+          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in $ctrl.reviews">
             <div class="reviewer-ava">
               <img ng-src="{{reviewer.avatarUrl}}" alt="">
             </div>
@@ -166,9 +166,9 @@
           </span>
         </span>
         <h3>Your review</h3>
-        <textarea name="review" id="review" placeholder="Please let us know how do you feel about this product...">
+        <textarea name="review" id="review" ng-model="$ctrl.myReview" class="p-2 p-lg-3" placeholder="Please let us know how do you feel about this product...">
               </textarea>
-        <button class="btn mt-2 mb-4">
+        <button class="btn mt-2 mb-4" ng-click="$ctrl.addReview()">
           Submit
         </button>
       </form>
@@ -176,9 +176,45 @@
     <div class="related-product">
       <div class="d-flex justify-content-between align-items-center">
         <h1 class="mb-3">RELATED PRODUCT</h1>
-        <a href="" class="show-more">Show more ></a>
       </div>
-      <product-carousel></product-carousel>
+      <section class="product-carousel">
+        <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+            <div ng-repeat="product in $ctrl.relatedProduct">
+                <a href="#!/Homepage/{{product.id}}" class="item">
+                    <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                    <p>{{product.name}}</p>
+                    <div class="price">
+                        <span class="old-price">{{product.oldPrice}}</span>
+                        <span class="new-price">{{product.newPrice}}</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between  mt-2">
+                        <span>
+                            <span class="material-icons star">
+                                star
+                            </span>
+                            <span class="material-icons star">
+                                star
+                            </span>
+                            <span class="material-icons star">
+                                star
+                            </span>
+                            <span class="material-icons star">
+                                star
+                            </span>
+                            <span class="material-icons star">
+                                star
+                            </span>
+                        </span>
+                        <span>
+                            <span class="material-icons heart-outline">
+                                favorite_border
+                            </span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
     </div>
   </div>
 </section>

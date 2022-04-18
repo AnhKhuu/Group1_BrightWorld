@@ -1,10 +1,8 @@
 var app = angular.module('brightworldApp', [
     'ngRoute',
-    'productCarousel',
     'homepage',
     'sales',
     'productDetail',
-    'checkout',
     'cart',
     'about',
     'contact'
@@ -50,20 +48,12 @@ app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http
             map(function (product) { return product.type; }).
             filter(function (cat, idx, arr) { return arr.indexOf(cat) === idx; });
     }
+})
 
-    // Filter By Price
-    $scope.filterPrice = [];
-    $scope.filterByPriceCategory = filterByPriceCategory;
-    $scope.getPriceCategories = getPriceCategories;
-    function filterByPriceCategory(product) {
-        return $scope.filterPrice[product.priceCategory] || noFilter($scope.filterPrice);
-    }
-
-    function getPriceCategories() {
-        return ($scope.products || []).
-            map(function (product) { return product.priceCategory; }).
-            filter(function (cat, idx, arr) { return arr.indexOf(cat) === idx; });
-    }
+app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
+    $http.get('products/provinces.json').then(function(response) {
+        $scope.provinces = response.data;
+      });
 })
 
 app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $routeParams) {
