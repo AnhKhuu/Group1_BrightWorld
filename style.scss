@@ -194,9 +194,12 @@ input {
             color: $grey;
         }
 
-        .btn-bar {
+        .btn-bar-cart {
 
-            button {
+            a,button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 height: 50px !important;
                 border-radius: 0 !important;
 
@@ -228,7 +231,6 @@ input {
 
             .buy-now {
                 @include yellow-btn;
-                width: 70%;
 
                 @include on('lg')
                 {

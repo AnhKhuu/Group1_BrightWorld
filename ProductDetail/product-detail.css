@@ -2,6 +2,86 @@
 /*#endregion */
 /*#region mixins */
 /*#endregion */
+.product-detail .product-carousel .item {
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.product-detail .product-carousel .item .sale {
+  color: #FF9F15;
+  font-size: 12px;
+  border-radius: 13px;
+}
+
+.product-detail .product-carousel .item img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 5px;
+}
+
+.product-detail .product-carousel .item p {
+  font-size: 14px;
+  margin: 8px 0;
+  padding: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  min-height: 42px;
+}
+
+@media (min-width: 992px) {
+  .product-detail .product-carousel .item p {
+    font-size: 16px;
+  }
+}
+
+.product-detail .product-carousel .item .old-price {
+  font-size: 12px;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+@media (min-width: 992px) {
+  .product-detail .product-carousel .item .old-price {
+    font-size: 14px;
+  }
+}
+
+.product-detail .product-carousel .item .new-price {
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .product-detail .product-carousel .item .new-price {
+    font-size: 18px;
+  }
+}
+
+.product-detail .product-carousel .item .material-icons {
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  .product-detail .product-carousel .item .material-icons {
+    font-size: 24px;
+  }
+}
+
+.product-detail .product-carousel .item .heart-outline {
+  color: #F14747;
+}
+
+.product-detail .product-carousel .item .star {
+  color: #FDBC15;
+}
+
 .product-detail img {
   width: 100%;
   -o-object-fit: cover;
@@ -253,6 +333,10 @@
   width: 70%;
 }
 
+.product-detail .product-information .btn-bar .buy-now:hover {
+  background-color: #cc7f11;
+}
+
 @media (min-width: 992px) {
   .product-detail .product-information .btn-bar .buy-now {
     font-size: 20px;
@@ -342,6 +426,10 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product-detail form button:hover {
+  background-color: #cc7f11;
 }
 
 .product-detail form textarea {

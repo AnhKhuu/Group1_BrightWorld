@@ -33,7 +33,7 @@
   font-size: 16px;
 }
 
-.product-category .col-md-3 .filter-type span:last-of-type {
+.product-category .col-md-3 .filter-brand .quantity {
   font-size: 12px;
   color: #FF9F15;
   font-weight: 600;
@@ -42,10 +42,6 @@
   border-radius: 12px;
   background-color: #FFECD0;
   text-align: center;
-}
-
-.product-category .col-md-3 .filter-type label {
-  font-size: 16px;
 }
 
 .product-category .col-md-3 .filter-rating,
@@ -220,6 +216,10 @@
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.product-category .col-md-3 .btn-apply:hover {
+  background-color: #cc7f11;
+}
+
 .product-category .col-md-3 .btn-reset {
   color: #FF9F15;
   height: 40px;
@@ -248,7 +248,7 @@
   font-size: 16px;
 }
 
-.product-category #collapseFilter .filter-type span:last-of-type {
+.product-category #collapseFilter .filter-brand .quantity {
   font-size: 12px;
   color: #FF9F15;
   font-weight: 600;
@@ -259,12 +259,9 @@
   text-align: center;
 }
 
-.product-category #collapseFilter .filter-type label {
-  font-size: 16px;
-}
-
 .product-category #collapseFilter .filter-rating,
-.product-category #collapseFilter .filter-brand {
+.product-category #collapseFilter .filter-brand,
+.product-category #collapseFilter .filter-type {
   /* Customize the label (the container) */
   /* Hide the browser's default checkbox */
   /* Create a custom checkbox */
@@ -276,7 +273,8 @@
 }
 
 .product-category #collapseFilter .filter-rating .container-filter,
-.product-category #collapseFilter .filter-brand .container-filter {
+.product-category #collapseFilter .filter-brand .container-filter,
+.product-category #collapseFilter .filter-type .container-filter {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -290,7 +288,8 @@
 }
 
 .product-category #collapseFilter .filter-rating .container-filter input,
-.product-category #collapseFilter .filter-brand .container-filter input {
+.product-category #collapseFilter .filter-brand .container-filter input,
+.product-category #collapseFilter .filter-type .container-filter input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -299,7 +298,8 @@
 }
 
 .product-category #collapseFilter .filter-rating .checkmark,
-.product-category #collapseFilter .filter-brand .checkmark {
+.product-category #collapseFilter .filter-brand .checkmark,
+.product-category #collapseFilter .filter-type .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -310,29 +310,34 @@
 }
 
 .product-category #collapseFilter .filter-rating .container-filter:hover input ~ .checkmark,
-.product-category #collapseFilter .filter-brand .container-filter:hover input ~ .checkmark {
+.product-category #collapseFilter .filter-brand .container-filter:hover input ~ .checkmark,
+.product-category #collapseFilter .filter-type .container-filter:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 .product-category #collapseFilter .filter-rating .container-filter input:checked ~ .checkmark,
-.product-category #collapseFilter .filter-brand .container-filter input:checked ~ .checkmark {
+.product-category #collapseFilter .filter-brand .container-filter input:checked ~ .checkmark,
+.product-category #collapseFilter .filter-type .container-filter input:checked ~ .checkmark {
   background-color: #FF9F15;
 }
 
 .product-category #collapseFilter .filter-rating .checkmark:after,
-.product-category #collapseFilter .filter-brand .checkmark:after {
+.product-category #collapseFilter .filter-brand .checkmark:after,
+.product-category #collapseFilter .filter-type .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 .product-category #collapseFilter .filter-rating .container-filter input:checked ~ .checkmark:after,
-.product-category #collapseFilter .filter-brand .container-filter input:checked ~ .checkmark:after {
+.product-category #collapseFilter .filter-brand .container-filter input:checked ~ .checkmark:after,
+.product-category #collapseFilter .filter-type .container-filter input:checked ~ .checkmark:after {
   display: block;
 }
 
 .product-category #collapseFilter .filter-rating .container-filter .checkmark:after,
-.product-category #collapseFilter .filter-brand .container-filter .checkmark:after {
+.product-category #collapseFilter .filter-brand .container-filter .checkmark:after,
+.product-category #collapseFilter .filter-type .container-filter .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -397,7 +402,7 @@
 }
 
 .product-category #collapseFilter .filter-price .container-filter input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #FF9F15;
 }
 
 .product-category #collapseFilter .filter-price .checkmark:after {
@@ -430,6 +435,10 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product-category #collapseFilter .btn-apply:hover {
+  background-color: #cc7f11;
 }
 
 .product-category #collapseFilter .btn-reset {
