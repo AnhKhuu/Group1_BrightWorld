@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<body ng-app="brightworldApp" ng-controller="BrightWorldCtrl">
+<body ng-app="brightworldApp">
     <div>
         <section id="header" class="header">
             <nav class="d-flex justify-content-between align-items-center position-relative container-lg">
@@ -56,41 +56,28 @@
                             <span class="material-icons-outlined">
                                 shopping_cart
                             </span>
-                            <div class="cart-badge position-absolute">4</div>
+                            <div class="cart-badge position-absolute">{{ProductInCart.length}}</div>
                         </div>
                         <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuClickableInside">
                             <div class="dropdown-item p-0 cart-dropdown">
-                                <div class="product-info p-2 p-lg-4 d-flex align-items-center justify-content-between">
-                                    <img src="Sales/imgs/brand/sunco.png" alt="">
+                                <div class="product-info p-2 p-lg-4 d-flex align-items-center justify-content-between" ng-repeat="product in myProduct as ProductInCart">
+                                    <img ng-src="{{product.imageUrl}}" alt="">
                                     <div class="product-detail px-2 px-md-3">
-                                        <p class="mb-1 mb-md-2">This is product's name. As long as possible</p>
+                                        <p class="mb-1 mb-md-2">{{product.name}}</p>
                                         <div class="quantity mb-1 mb-md-2">
-                                            <label for="quantity">
-                                                <div>
-                                                    <button class="btn">+</button><input type="text"><button
-                                                        class="btn">-</button>
-                                                </div>
-                                            </label>
+                                            x{{product.productQuantity}}
                                         </div>
                                         <div class="price">
-                                            <div class="new-price">$800.000</div>
-                                            <div class="old-price">$900.000</div>
+                                            <div class="new-price">{{product.newPrice}}</div>
+                                            <div class="old-price">{{product.oldPrice}}</div>
                                         </div>
                                     </div>
-                                    <span class="material-icons-outlined close">
+                                    <span ng-click="delete($index)" class="material-icons-outlined close">
                                         delete
                                     </span>
                                 </div>
-                                <div class="btn-bar w-100 d-flex justify-content-between my-0">
-                                    <button class="btn add-to-cart d-flex flex-column align-items-center">
-                                        <span class="material-icons-outlined">
-                                            add_shopping_cart
-                                        </span>
-                                        <span>Add to cart</span>
-                                    </button>
-                                    <a href="#!Checkout" class="btn buy-now">
-                                        Buy now
-                                    </a>
+                                <div class="btn-bar-cart w-100 d-flex justify-content-between my-0">
+                                    <!-- buy-now -->
                                 </div>
                             </div>
                         </div>
@@ -283,8 +270,8 @@
     <script src="Homepage/homepage.component.js"></script>
     <script src="Sales/sales.module.js"></script>
     <script src="Sales/sales.component.js"></script>
-    <script src="ProductDetail/product-detail.module.js"></script>
-    <script src="ProductDetail/product-detail.component.js"></script>
+    <!-- <script src="ProductDetail/product-detail.module.js"></script>
+    <script src="ProductDetail/product-detail.component.js"></script> -->
     <script src="About/about.module.js"></script>
     <script src="About/about.component.js"></script>
     <script src="Contact/contact.module.js"></script>

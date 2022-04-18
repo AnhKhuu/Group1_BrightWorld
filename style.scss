@@ -194,7 +194,7 @@ input {
             color: $grey;
         }
 
-        .btn-bar {
+        .btn-bar-cart {
 
             a,button {
                 display: flex;
@@ -231,7 +231,6 @@ input {
 
             .buy-now {
                 @include yellow-btn;
-                width: 70%;
 
                 @include on('lg')
                 {

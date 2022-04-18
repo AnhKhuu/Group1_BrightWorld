@@ -16,10 +16,10 @@ angular.
           template: '<about></about>'
         }).
         when('/Product-category/:productId', {
-          template: '<product-detail></product-detail>'
+          templateUrl: 'ProductDetail/product-detail.template.html'
         }).
         when('/Homepage/:productId', {
-          template: '<product-detail></product-detail>'
+          templateUrl: 'ProductDetail/product-detail.template.html'
         }).
         when('/Checkout', {
           templateUrl: 'Checkout/checkout.template.html'
