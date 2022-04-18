@@ -1,6 +1,5 @@
 var app = angular.module('brightworldApp', [
     'ngRoute',
-    'productCarousel',
     'homepage',
     'sales',
     'productDetail',
@@ -8,14 +7,6 @@ var app = angular.module('brightworldApp', [
     'about',
     'contact'
 ]);
-
-app.controller("SignupCtrl", function SignupCtrl($scope) {  
-    $scope.add = function(){
-        var newUser = {"name": $scope.uName, "salary": $scope.uSalary, "department": $scope.uDepartment};
-        $scope.list.push(newUser);
-        alert("Registry successfully!");
-    }
-})
 
 app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http) {
     $http.get('products/products.json').then(function (response) {

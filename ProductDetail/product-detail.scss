@@ -1,6 +1,78 @@
 @import '../variable.scss';
 
 .product-detail {
+    .product-carousel {
+        .item {
+            border: 1px solid #D7D7D7;
+            border-radius: 5px;
+            padding: 8px;
+    
+            .sale {
+                color: $yellow;
+                font-size: 12px;
+                border-radius: 13px;
+            }
+    
+            img {
+                max-width: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 5px;
+            }
+    
+            p {
+                font-size: 14px;
+                margin: 8px 0;
+                padding: 0;
+                @include lm-text;
+                -webkit-line-clamp: 2;
+                min-height: 42px;
+    
+                @include on('lg')
+                {
+                    font-size: 16px;
+                }
+            }
+    
+            .old-price {
+                font-size: 12px;
+                color: $grey;
+                text-decoration: line-through;
+    
+                @include on('lg')
+                {
+                    font-size: 14px;
+                }
+            }
+    
+            .new-price {
+                font-weight: 600;
+    
+                @include on('lg')
+                {
+                    font-size: 18px;
+                }
+            }
+    
+            .material-icons {
+                font-size: 20px;
+    
+                @include on('lg')
+                {
+                    font-size: 24px;
+                }
+            }
+    
+            .heart-outline {
+                color: #F14747;
+            }
+    
+            .star {
+                color: #FDBC15;
+            }
+        }
+    }
+    
     img {
         width: 100%;
         object-fit: cover;
