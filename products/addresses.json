@@ -1,0 +1,26 @@
+[
+    {
+        "branchName": "Head Office",
+        "address": "590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City.",
+        "email": "support@brightworld.com.vn",
+        "phone1": "(84.28) 3863 3594",
+        "phone2": "(84.28) 3863 4270",
+        "fax": "(84.28) 3863 1468"
+    },
+    {
+        "branchName": "Ha Noi Branch",
+        "address": "M09 - L12, Duong Noi New Urban Area, La Khe, Ha Dong District, Hanoi, Vietnam",
+        "email": "support@brightworld.com.vn",
+        "phone1": "024 66646238",
+        "phone2": "024 66646239",
+        "fax": "(84.28) 3863 3569"
+    },
+    {
+        "branchName": "Can Tho Branch",
+        "address": "1 Ly Thuong Kiet, Ward 11, Ninh Kieu District, Can Tho City.",
+        "email": "support@brightworld.com.vn",
+        "phone1": "(84.28) 1254 3594",
+        "phone2": "(84.28) 5986 4270",
+        "fax": "(84.28) 2456 1468"
+    }
+]

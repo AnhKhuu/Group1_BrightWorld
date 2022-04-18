@@ -18,7 +18,7 @@
       <div class="d-flex product-sub-information align-items-center justify-content-between">
         <div class="vl first"></div>
         <div class="star-information d-flex align-items-center">
-          <p class="mb-1 me-1">{{$ctrl.ratings}}</p>
+          <p class="mb-1 me-1">{{ratings}}</p>
           <span class="star-rating" id="productRating">
             <span class="material-icons star">
               star
@@ -77,12 +77,12 @@
         <label for="quantity">
           <h2>Quantity</h2>
           <div>
-            <button class="btn" ng-click="$ctrl.add()">+</button><span class="px-4">{{$ctrl.quantity}}</span><button class="btn" ng-click="$ctrl.remove()">-</button>
+            <button class="btn" ng-click="add()">+</button><span class="px-4">{{quantity}}</span><button class="btn" ng-click="remove()">-</button>
           </div>
         </label>
       </div>
       <div class="btn-bar d-flex justify-content-between my-0">
-        <button class="btn add-to-cart d-flex flex-column align-items-center me-lg-4">
+        <button ng-click="addToCart($index)" class="btn add-to-cart d-flex flex-column align-items-center me-lg-4">
           <span class="material-icons-outlined">
             add_shopping_cart
           </span>
@@ -116,7 +116,7 @@
           </span>
         </span>
         <div class="reviewer">
-          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in $ctrl.reviews">
+          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in reviews">
             <div class="reviewer-ava">
               <img ng-src="{{reviewer.avatarUrl}}" alt="">
             </div>
@@ -166,9 +166,9 @@
           </span>
         </span>
         <h3>Your review</h3>
-        <textarea name="review" id="review" ng-model="$ctrl.myReview" class="p-2 p-lg-3" placeholder="Please let us know how do you feel about this product...">
+        <textarea name="review" id="review" ng-model="myReview" class="p-2 p-lg-3" placeholder="Please let us know how do you feel about this product...">
               </textarea>
-        <button class="btn mt-2 mb-4" ng-click="$ctrl.addReview()">
+        <button class="btn mt-2 mb-4" ng-click="addReview()">
           Submit
         </button>
       </form>
@@ -179,7 +179,7 @@
       </div>
       <section class="product-carousel">
         <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
-            <div ng-repeat="product in $ctrl.relatedProduct">
+            <div ng-repeat="product in relatedProduct">
                 <a href="#!/Homepage/{{product.id}}" class="item">
                     <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
                     <p>{{product.name}}</p>
