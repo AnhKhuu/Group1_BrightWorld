@@ -3,10 +3,15 @@ var app = angular.module('brightworldApp', [
     'homepage',
     'sales',
     'productDetail',
-    'cart',
     'about',
     'contact'
 ]);
+
+app.controller("BrightWorldCtrl", function CheckoutCtrl($scope, $http) {
+    $http.get('products/addresses.json').then(function(response) {
+        $scope.addresses = response.data;
+      });
+})
 
 app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http) {
     $http.get('products/products.json').then(function (response) {

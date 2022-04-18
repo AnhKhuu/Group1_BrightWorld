@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrightWorld</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        type="text/css">
     <link rel="icon" href="imgs/logo-title.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="Owlcarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="Owlcarousel/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
@@ -24,12 +27,11 @@
     <link rel="stylesheet" href="./About/about.css">
     <link rel="stylesheet" href="./Sales/sales.css">
     <link rel="stylesheet" href="./ProductDetail/product-detail.css">
-    <link rel="stylesheet" href="./Cart/cart.css">
     <!--library font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<body ng-app="brightworldApp">
+<body ng-app="brightworldApp" ng-controller="BrightWorldCtrl">
     <div>
         <section id="header" class="header">
             <nav class="d-flex justify-content-between align-items-center position-relative container-lg">
@@ -43,11 +45,14 @@
                     </a>
                 </div>
                 <div class="d-flex">
-                    <span class="material-icons-outlined ms-2" id="searchTrigger" data-bs-toggle="collapse" data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
+                    <span class="material-icons-outlined ms-2" id="searchTrigger" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
                         search
                     </span>
                     <div class="dropdown">
-                        <div class="position-relative cart ms-2 ms-lg-3 ms-xxl-0 dropdown-toggle" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                        <div class="position-relative cart ms-2 ms-lg-3 ms-xxl-0 dropdown-toggle"
+                            id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            aria-expanded="false">
                             <span class="material-icons-outlined">
                                 shopping_cart
                             </span>
@@ -62,7 +67,8 @@
                                         <div class="quantity mb-1 mb-md-2">
                                             <label for="quantity">
                                                 <div>
-                                                    <button class="btn">+</button><input type="text"><button class="btn">-</button>
+                                                    <button class="btn">+</button><input type="text"><button
+                                                        class="btn">-</button>
                                                 </div>
                                             </label>
                                         </div>
@@ -77,13 +83,13 @@
                                 </div>
                                 <div class="btn-bar w-100 d-flex justify-content-between my-0">
                                     <button class="btn add-to-cart d-flex flex-column align-items-center">
-                                      <span class="material-icons-outlined">
-                                        add_shopping_cart
-                                      </span>
-                                      <span>Add to cart</span>
+                                        <span class="material-icons-outlined">
+                                            add_shopping_cart
+                                        </span>
+                                        <span>Add to cart</span>
                                     </button>
                                     <a href="#!Checkout" class="btn buy-now">
-                                      Buy now
+                                        Buy now
                                     </a>
                                 </div>
                             </div>
@@ -94,7 +100,8 @@
                             person_outline
                         </span>
                     </a>
-                    <span class="material-icons-outlined ms-2 trigger-mb-menu" data-bs-toggle="collapse" data-bs-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav">
+                    <span class="material-icons-outlined ms-2 trigger-mb-menu" data-bs-toggle="collapse"
+                        data-bs-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav">
                         menu
                     </span>
                 </div>
@@ -105,12 +112,16 @@
                         </a>
                         <div class="d-flex justify-content-between">
                             <a href="#!Product-category">PRODUCT</a>
-                            <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev1" aria-expanded="false" aria-controls="collapseSubMenuLev1">expand_more</span>
+                            <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSubMenuLev1" aria-expanded="false"
+                                aria-controls="collapseSubMenuLev1">expand_more</span>
                         </div>
                         <div id="collapseSubMenuLev1" class="collapse ms-3">
                             <div class="d-flex justify-content-between">
                                 <a href="">BULB</a>
-                                <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false" aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev2-1">expand_more</span>
                             </div>
                             <div class="collapse collapseSubMenuLev2 ms-3" id="collapseSubMenuLev2-1">
                                 <a href="">Wisteria Lane</a>
@@ -119,15 +130,21 @@
                             </div>
                             <div class="d-flex justify-content-between">
                                 <a href="">SPOT LIGHT</a>
-                                <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false" aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev2-1">expand_more</span>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <a href="">SMART LIGHT</a>
-                                <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false" aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev2-1">expand_more</span>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <a href="">DECORATION LIGHT</a>
-                                <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false" aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev2-1">expand_more</span>
                             </div>
                         </div>
                         <a class="" href="#!Sales">SALES</a>
@@ -147,7 +164,8 @@
         </section>
         <hr class="my-0">
         <nav class="sub-menu">
-            <div class="d-flex justify-content-around align-items-center container-lg sub-menu-layout position-relative">
+            <div
+                class="d-flex justify-content-around align-items-center container-lg sub-menu-layout position-relative">
                 <a href="#/!">HOME</a>
                 <span>
                     <div class="d-flex align-items-center">
@@ -155,160 +173,109 @@
                         <span class="material-icons-outlined" data-bs-toggle="collapse"
                             data-bs-target="#collapseSubMenuLev1Desktop" aria-expanded="false"
                             aria-controls="collapseSubMenuLev1Desktop">expand_more</span>
-            </div>
-            <div class="position-absolute collapse" id="collapseSubMenuLev1Desktop">
-                <div class="d-flex justify-content-between position-relative">
-                    <a href="">BULB</a>
-                    <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev2Desktop-1" aria-expanded="false" aria-controls="collapseSubMenuLev2Desktop-1">chevron_right</span>
-                    <div class="collapse position-absolute collapseSubMenuLev2Desktop" id="collapseSubMenuLev2Desktop-1">
-                        <a href="">Wisteria Lane</a>
-                        <a href="">BetUS</a>
-                        <a href="">BTMWAY</a>
                     </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <a href="">SPOT LIGHT</a>
-                    <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev2-2" aria-expanded="false" aria-controls="collapseSubMenuLev2-2">chevron_right</span>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <a href="">SMART LIGHT</a>
-                    <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev2-3" aria-expanded="false" aria-controls="collapseSubMenuLev2-3">chevron_right</span>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <a href="">DECORATION LIGHT</a>
-                    <span class="material-icons-outlined" data-bs-toggle="collapse" data-bs-target="#collapseSubMenuLev2-4" aria-expanded="false" aria-controls="collapseSubMenuLev2-4">chevron_right</span>
-                </div>
+                    <div class="position-absolute collapse" id="collapseSubMenuLev1Desktop">
+                        <div class="d-flex justify-content-between position-relative">
+                            <a href="">BULB</a>
+                            <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSubMenuLev2Desktop-1" aria-expanded="false"
+                                aria-controls="collapseSubMenuLev2Desktop-1">chevron_right</span>
+                            <div class="collapse position-absolute collapseSubMenuLev2Desktop"
+                                id="collapseSubMenuLev2Desktop-1">
+                                <a href="">Wisteria Lane</a>
+                                <a href="">BetUS</a>
+                                <a href="">BTMWAY</a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="">SPOT LIGHT</a>
+                            <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSubMenuLev2-2" aria-expanded="false"
+                                aria-controls="collapseSubMenuLev2-2">chevron_right</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="">SMART LIGHT</a>
+                            <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSubMenuLev2-3" aria-expanded="false"
+                                aria-controls="collapseSubMenuLev2-3">chevron_right</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="">DECORATION LIGHT</a>
+                            <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSubMenuLev2-4" aria-expanded="false"
+                                aria-controls="collapseSubMenuLev2-4">chevron_right</span>
+                        </div>
+                    </div>
+                </span>
+                <a class="#!Sales" href="#!Sales">SALES</a>
+                <a class="#!Contact" href="#!Contact">CONTACT</a>
+                <a class="#!About" href="#!About">ABOUT</a>
             </div>
-            </span>
-            <a class="#!Sales" href="#!Sales">SALES</a>
-            <a class="#!Contact" href="#!Contact">CONTACT</a>
-            <a class="#!About" href="#!About">ABOUT</a>
-    </div>
-    </nav>
-    <section>
-        <ng-view></ng-view>
-    </section>
-    <section class="footer" id="footer">
-        <div class="subscribe d-flex align-items-center justify-content-center position-relative">
-            <img src="./imgs/subscribe.png" alt="" class="w-100 position-absolute">
-            <form class="d-flex flex-column align-items-center">
-                <h1>SUBSCRIBE TO NEWSLETTER</h1>
-                <div class="position-relative w-100">
-                    <input class="w-100" type="text" placeholder="Enter your email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
-                    <span class="material-icons-outlined position-absolute">
+        </nav>
+        <section>
+            <ng-view></ng-view>
+        </section>
+        <section class="footer" id="footer">
+            <div class="subscribe d-flex align-items-center justify-content-center position-relative">
+                <img src="./imgs/subscribe.png" alt="" class="w-100 position-absolute">
+                <form class="d-flex flex-column align-items-center">
+                    <h1>SUBSCRIBE TO NEWSLETTER</h1>
+                    <div class="position-relative w-100">
+                        <input class="w-100" type="text" placeholder="Enter your email"
+                            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+                        <span class="material-icons-outlined position-absolute">
                             email
                         </span>
-                </div>
-                <button class="w-100 mt-3">Subscribe</button>
-            </form>
-        </div>
-        <div class="information">
-            <div class="container-lg">
-                <div class="row py-3">
-                    <div class="col-lg-4 mb-4">
-                        <h1>Head office</h1>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
-                                    location_on
-                                </span>
-                            <span class="text-justify">590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh
-                                    City.</span>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
-                                    email
-                                </span>
-                            <a href="mailto:support@brightworld.com.vn">support@brightworld.com.vn</a>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
-                                    phone_in_talk
-                                </span>
-                            <a href="tel:(84.28) 3863 3594">(84.28) 3863 3594 </a>
-                            <span>-</span>
-                            <a href="tel:(84.28) 3863 4270">(84.28) 3863 4270 </a>
-                        </div>
-
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
-                                    print
-                                </span>
-                            <span>(84.28) 3863 1468</span>
-                        </div>
                     </div>
-                    <div class="col-lg-4 mb-4">
-                        <h1>Head office</h1>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
+                    <button class="w-100 mt-3">Subscribe</button>
+                </form>
+            </div>
+            <div class="information">
+                <div class="container-lg">
+                    <div class="row py-3">
+                        <div class="col-lg-4 mb-4" ng-repeat="address in addresses">
+                            <h1>{{address.branchName}}</h1>
+                            <div class="d-flex mb-2">
+                                <span class="material-icons-outlined me-3">
                                     location_on
                                 </span>
-                            <span class="text-justify">590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh
-                                    City.</span>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
+                                <span class="text-justify">{{address.address}}</span>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <span class="material-icons-outlined me-3">
                                     email
                                 </span>
-                            <a href="mailto:support@brightworld.com.vn">support@brightworld.com.vn</a>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
+                                <a href="mailto:{{address.email}}">{{address.email}}</a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <span class="material-icons-outlined me-3">
                                     phone_in_talk
                                 </span>
-                            <a href="tel:(84.28) 3863 3594">(84.28) 3863 3594 </a>
-                            <span>-</span>
-                            <a href="tel:(84.28) 3863 4270">(84.28) 3863 4270 </a>
-                        </div>
-
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
+                                <a href="tel:(84.28) 3863 3594">{{address.phone1}} </a>
+                                <span>-</span>
+                                <a href="tel:(84.28) 3863 4270">{{address.phone2}} </a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <span class="material-icons-outlined me-3">
                                     print
                                 </span>
-                            <span>(84.28) 3863 1468</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <h1>Head office</h1>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
-                                    location_on
-                                </span>
-                            <span class="text-justify">590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh
-                                    City.</span>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
-                                    email
-                                </span>
-                            <a href="mailto:support@brightworld.com.vn">support@brightworld.com.vn</a>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
-                                    phone_in_talk
-                                </span>
-                            <a href="tel:(84.28) 3863 3594">(84.28) 3863 3594 </a>
-                            <span>-</span>
-                            <a href="tel:(84.28) 3863 4270">(84.28) 3863 4270 </a>
-                        </div>
-
-                        <div class="d-flex mb-2">
-                            <span class="material-icons-outlined me-3">
-                                    print
-                                </span>
-                            <span>(84.28) 3863 1468</span>
+                                <span>{{address.fax}} </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center py-2">
-            &copy Copyright by Group1
-        </div>
+    </div>
+    <div class="text-center py-2">
+        &copy Copyright by Group1
+    </div>
     </section>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <scriptpr type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></scriptpr>
     <script src="Owlcarousel/docs/assets/owlcarousel/owl.carousel.min.js"></script>
@@ -318,8 +285,6 @@
     <script src="Sales/sales.component.js"></script>
     <script src="ProductDetail/product-detail.module.js"></script>
     <script src="ProductDetail/product-detail.component.js"></script>
-    <script src="Cart/cart.module.js"></script>
-    <script src="Cart/cart.component.js"></script>
     <script src="About/about.module.js"></script>
     <script src="About/about.component.js"></script>
     <script src="Contact/contact.module.js"></script>

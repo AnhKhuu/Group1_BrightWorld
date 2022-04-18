@@ -119,6 +119,10 @@ a {
 }
 
 #signup-form .form-submit:hover {
+  background-color: #cc7f11;
+}
+
+#signup-form .form-submit:hover {
   border: 1px solid #0d6adc;
 }
 

@@ -1,114 +1,91 @@
-<body ng-app="myApp" ng-controller="myCtrl" ng-init="subject=['Product consulting', 'Product price', 'Lighting design', 'Job application', 'Agent resitration', 'Buy in bulk', 'Other']">
-<section class="contact">
-    <div class="row">
-        <div class="col-lg-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319350036688!2d106.66408561471847!3d10.786834792314464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2zRlBUIEFwdGVjaCBIQ00gLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1650166470269!5m2!1svi!2s" width="1125" height="517" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<section class="contact container-lg">
+    <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319350036697!2d106.6640856147185!3d10.786834792314467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1sen!2smm!4v1650249808301!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="row my-4">
+        <div class="col-lg-4" ng-repeat="address in $ctrl.addresses">
+            <h1>{{address.branchName}}</h1>
+            <div class="d-flex mb-2">
+                <span class="material-icons-outlined me-3">
+                        location_on
+                    </span>
+                <span class="text-justify">{{address.address}}</span>
+            </div>
+            <div class="d-flex mb-2">
+                <span class="material-icons-outlined me-3">
+                        email
+                    </span>
+                <a href="mailto:{{address.email}}">{{address.email}}</a>
+            </div>
+            <div class="d-flex mb-2">
+                <span class="material-icons-outlined me-3">
+                        phone_in_talk
+                    </span>
+                <a href="tel:(84.28) 3863 3594">{{address.phone1}} </a>
+                <span>-</span>
+                <a href="tel:(84.28) 3863 4270">{{address.phone2}} </a>
+            </div>
+            <div class="d-flex mb-2">
+                <span class="material-icons-outlined me-3">
+                        print
+                    </span>
+                <span>{{address.fax}} </span>
+            </div>
         </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col-lg-4">
-            <h4>Head Office</h4>
-            <p>
-                <img src="contact/image/Vector.jpg" alt="location">
-                590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City.
-            </p>
-            <p>
-                <img src="contact/image/Email.jpg" alt="">
-                <u>support@brightwolrd.com.vn</u>
-            </p>
-            <p>
-                <img src="contact/image/Phone.jpg" alt="">
-                (84.28) 3863 3594 - (84.28) 3863 4270
-            </p>
-            <p>
-                <img src="contact/image/Fax.jpg" alt="">
-                (84.28) 3863 1468
-            </p>
-        </div>
-        <div class="col-lg-4">
-            <h4>Head Office</h4>
-            <p>
-                <img src="contact/image/Vector.jpg" alt="location">
-                590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City.
-            </p>
-            <p>
-                <img src="contact/image/Email.jpg" alt="">
-                <u>support@brightwolrd.com.vn</u>
-            </p>
-            <p>
-                <img src="contact/image/Phone.jpg" alt="">
-                (84.28) 3863 3594 - (84.28) 3863 4270
-            </p>
-            <p>
-                <img src="contact/image/Fax.jpg" alt="">
-                (84.28) 3863 1468
-            </p>
-        </div>
-        <div class="col-lg-4">
-            <h4>Ha Noi Branch</h4>
-            <p>
-                <img src="contact/image/Vector.jpg" alt="location">
-                590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City.
-            </p>
-            <p>
-                <img src="contact/image/Email.jpg" alt="">
-                <u>support@brightwolrd.com.vn</u>
-            </p>
-            <p>
-                <img src="contact/image/Phone.jpg" alt="">
-                (84.28) 3863 3594 - (84.28) 3863 4270
-            </p>
-            <p>
-                <img src="contact/image/Fax.jpg" alt="">
-                (84.28) 3863 1468
-            </p>
-        </div>
-    </div>
-    <div class="col-lg-8">
-        <form action="">
-            <div class="billing-info mb-lg-5 mb-3">
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h2>Send Information</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 pe-lg-5">
-                        <div class="form-group mb-4">
-                            <p>First name</p>
-                            <input type="text" class="w-100" placeholder="Enter your first name">
-                        </div>
-                        <div class="form-group mb-4">
-                            <p>Email</p>
-                            <input type="email" class="w-100" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group mb-4">
-                            <p>Subject</p>
-                            <input type="text" class="w-100" placeholder="Choose your subject">
-                        </div>
-                        <div class="form-group mb-4">
-                            <p>Content</p>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                        </div>
+    <div class="row justify-content-center mb-4 mb-lg-5">
+        <div class="col-lg-8">
+            <h1 class="text-center">Send information</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group mb-4">
+                        <p>First name</p>
+                        <input type="text" class="w-100" placeholder="Enter your first name">
                     </div>
-                    <div class="col-lg-6 pe-lg-5">
-                        <div class="form-group mb-4">
-                            <p>Last name</p>
-                            <input type="text" class="w-100" placeholder="Enter your last name">
-                        </div>
-                        <div class="form-group mb-4">
-                            <p>Phone</p>
-                            <input type="text" class="w-100" placeholder="Enter your phone number">
-                        </div>
-                        <div class="form-group mb-4">
-                            <p>State/Country</p>
-                            <input type="text" class="w-100" placeholder="Choose a state or country">
-                        </div>
+                    <div class="form-group mb-4">
+                        <p>Email</p>
+                        <input type="text" class="w-100" placeholder="Enter your email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+                    </div>
+                    <div class="form-group mb-4">
+                        <p>Subject</p>
+                        <select name="subject" id="" class="w-100">
+                            <option value="Choose your subject">Choose your subject</option>
+                            <option value="Product consulting">Product consulting</option>
+                            <option value="Product price">Product price</option>
+                            <option value="Lighting design">Lighting design</option>
+                            <option value="Job application">Job application</option>
+                            <option value="Agent resitration">Agent resitration</option>
+                            <option value="Buy in bulk">Buy in bulk</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group mb-4">
+                        <p>Last name</p>
+                        <input type="text" class="w-100" placeholder="Enter your last name">
+                    </div>
+                    <div class="form-group mb-4">
+                        <p>Phone</p>
+                        <input type="text" class="w-100" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group mb-4">
+                        <p>Province/City</p>
+                        <select name="provinceCity" id="" class="w-100">
+                            <option value="Choose a province or city">Choose a province or city</option>
+                            <option value="province.name" ng-repeat="province in $ctrl.provinces">{{province.name}}</option>
+                        </select>
                     </div>
                 </div>
             </div>
-            <img src="contact/image/Attach.jpg" alt="">Choose file (Capacity does not exceed 2 Mb)
-            <br>
-            <button class="px-3 py-lg-3 px-lg-5">Send</button>
-        </form>
+            <div class="form-group mb-4">
+                <p>Content</p>
+                <textarea class="p-3" placeholder="Let's say your concern..."></textarea>
+            </div>
+            <label>
+                <input type="file">
+            </label>
+            <div class="w-100 d-flex justify-content-center mt-3 mt-lg-4">
+                <button class="py-2 px-5">Send information</button>
+            </div>
+        </div>
     </div>
 </section>
