@@ -1,4 +1,4 @@
-<section class="checkout container-lg my-4 my-lg-5">
+<section class="checkout container-lg my-4 my-lg-5" ng-controller="CheckoutCtrl">
     <div class="row">
         <div class="col-lg-4 order-summary p-3">
             <h2>Order Summary</h2>
@@ -60,8 +60,10 @@
                                 <input type="text" class="w-100" placeholder="Enter your address">
                             </div>
                             <div class="form-group mb-4">
-                                <p>Town/City</p>
-                                <input type="text" class="w-100" placeholder="Enter town or city">
+                                <p>Province/City</p>
+                                <select name="provinceCity" id="" class="w-100">
+                                    <option value="province.name" ng-repeat="province in provinces">{{province.name}}</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-6 pe-lg-5">
@@ -74,17 +76,20 @@
                                 <input type="text" class="w-100" placeholder="Enter your phone number">
                             </div>
                             <div class="form-group mb-4">
-                                <p>State/Country</p>
-                                <input type="text" class="w-100" placeholder="Choose a state or country">
-                            </div>
-                            <div class="form-group mb-4">
                                 <p>Zip/Postal</p>
                                 <input type="text" class="w-100" placeholder="Enter zip or postal">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="billing-info ship-to-different-address mb-lg-5 mb-3">
+                <div class="trigger-ship d-flex align-items-center mb-3">
+                    <label class="container-filter d-flex align-items-center m-2">
+                        <span class="brand-name" data-bs-toggle="collapse" data-bs-target="#collapseShipping" aria-expanded="false" aria-controls="collapseShipping">Ship to a different address?</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="billing-info ship-to-different-address mb-lg-5 mb-3 collapse" id="collapseShipping">
                     <div class="row">
                         <div class="col-lg-6 pe-lg-5">
                             <div class="form-group mb-4">
@@ -96,15 +101,13 @@
                                 <input type="text" class="w-100" placeholder="Enter your address">
                             </div>
                             <div class="form-group mb-4">
-                                <p>Town/City</p>
-                                <input type="text" class="w-100" placeholder="Enter town or city">
+                                <p>Province/City</p>
+                                <select name="provinceCity" id="" class="w-100">
+                                    <option value="province.name" ng-repeat="province in provinces">{{province.name}}</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-6 pe-lg-5">
-                            <div class="form-group mb-4">
-                                <p>State/Country</p>
-                                <input type="text" class="w-100" placeholder="Choose a state or country">
-                            </div>
                             <div class="form-group mb-4">
                                 <p>Zip/Postal</p>
                                 <input type="text" class="w-100" placeholder="Enter zip or postal">
@@ -123,43 +126,75 @@
                         <span class="checkmark"></span>
                     </label>
                     <label class="container-filter d-flex align-items-center">
-                        <img src="imgs/visa.png" alt="">
+                        <img src="imgs/visa.png" alt="" data-bs-toggle="collapse" data-bs-target="#collapseVisa" aria-expanded="false" aria-controls="collapseVisa">
                         <input type="radio" name="payment">
                         <span class="checkmark"></span>
                     </label>
-                    <div class="row">
-                        <div class="col-lg-6 pe-lg-5">
-                            <div class="form-group mb-4">
-                                <p>Cart number</p>
-                                <input type="text" class="w-100" placeholder="Enter your card number">
+                    <div class="collapse" id="collapseVisa">
+                        <div class="row">
+                            <div class="col-lg-6 pe-lg-5">
+                                <div class="form-group mb-4">
+                                    <p>Cart number</p>
+                                    <input type="text" class="w-100" placeholder="Enter your card number">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 pe-lg-5">
-                            <div class="form-group mb-4">
-                                <p>Cart holder</p>
-                                <input type="text" class="w-100" placeholder="Enter your card holder">
+                        <div class="row">
+                            <div class="col-lg-6 pe-lg-5">
+                                <div class="form-group mb-4">
+                                    <p>Cart holder</p>
+                                    <input type="text" class="w-100" placeholder="Enter your card holder">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 pe-lg-5">
-                            <div class="form-group mb-4">
-                                <p>Expiration date</p>
-                                <input type="text" class="w-100" placeholder="DD/MM/YY">
+                            <div class="col-lg-3 pe-lg-5">
+                                <div class="form-group mb-4">
+                                    <p>Expiration date</p>
+                                    <input type="text" class="w-100" placeholder="DD/MM/YY">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 pe-lg-5">
-                            <div class="form-group mb-4">
-                                <p>CVC</p>
-                                <input type="text" class="w-100" placeholder="Enter CVC">
+                            <div class="col-lg-3 pe-lg-5">
+                                <div class="form-group mb-4">
+                                    <p>CVC</p>
+                                    <input type="text" class="w-100" placeholder="Enter CVC">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <label class="container-filter d-flex align-items-center">
-                        <img src="imgs/paypal.png" alt="">
+                        <img src="imgs/paypal.png" alt="" data-bs-toggle="collapse" data-bs-target="#collapsePaypal" aria-expanded="false" aria-controls="collapsePaypal">
                         <input type="radio" name="payment">
                         <span class="checkmark"></span>
                     </label>
+                    <div class="collapse" id="collapsePaypal">
+                        <div class="row">
+                            <div class="col-lg-6 pe-lg-5">
+                                <div class="form-group mb-4">
+                                    <p>Cart number</p>
+                                    <input type="text" class="w-100" placeholder="Enter your card number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 pe-lg-5">
+                                <div class="form-group mb-4">
+                                    <p>Cart holder</p>
+                                    <input type="text" class="w-100" placeholder="Enter your card holder">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 pe-lg-5">
+                                <div class="form-group mb-4">
+                                    <p>Expiration date</p>
+                                    <input type="text" class="w-100" placeholder="DD/MM/YY">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 pe-lg-5">
+                                <div class="form-group mb-4">
+                                    <p>CVC</p>
+                                    <input type="text" class="w-100" placeholder="Enter CVC">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="order-notes mb-lg-5 mb-3">
                     <div class="mb-4">

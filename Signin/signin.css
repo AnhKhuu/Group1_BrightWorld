@@ -2,15 +2,36 @@
 /*#endregion */
 /*#region mixins */
 /*#endregion */
+* {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #2E2C2C;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
 #signin-form {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 30px;
-  font-family: "Inter";
+  font-family: 'Inter';
   font-style: normal;
 }
+
 #signin-form .signin-heading {
   font-weight: 700;
   font-size: 26px;
@@ -19,16 +40,22 @@
   text-align: center;
   margin-bottom: 10px;
 }
+
 #signin-form #signin-login {
   max-width: 350px;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
+
 #signin-form #signin-login input:invalid {
   color: red;
 }
+
 #signin-form #signin-login input:valid {
   color: black;
 }
+
 #signin-form .form-group {
   font-weight: 500;
   font-size: 16px;
@@ -37,62 +64,92 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 #signin-form .erInput {
   font-style: italic;
   color: red;
 }
+
 #signin-form .form-input {
   background: transparent;
   border: 0;
   outline: 0;
   color: #2E2C2C;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 100%;
 }
+
+#signin-form .form-input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+#signin-form .form-input:-ms-input-placeholder {
+  color: #999999;
+}
+
+#signin-form .form-input::-ms-input-placeholder {
+  color: #999999;
+}
+
 #signin-form .form-input::placeholder {
   color: #999999;
 }
+
 #signin-form .form-submit {
-  height: 40px;
-  background: #FF9F15;
-  border: 1px solid #FF9F15;
   color: #FFFFF8;
-  width: 100%;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-weight: 600;
+  height: 40px;
   font-size: 16px;
-  line-height: 19px;
+  font-weight: 600;
+  background-color: #FF9F15;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #signin-form .form-submit:hover {
   border: 1px solid #0d6adc;
 }
-#signin-form .form-footer {
+
+#signin-form .form-footer a {
+  color: #2E2C2C;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   color: #2E2C2C;
   margin-bottom: 10px;
 }
+
 #signin-form .form-footer:hover {
   font-weight: bold;
 }
-#signin-form .form-footer2 {
+
+#signin-form .form-footer2 a {
   font-size: 12px;
   line-height: 15px;
 }
+
 #signin-form .form-footer2 .form-createInfo {
-  font-weight: 10;
+  font-weight: 400;
   color: #938F8F;
 }
+
 #signin-form .form-footer2 .form-createAcount {
-  font-weight: 500;
+  font-weight: 600;
   color: #2E2C2C;
 }
+
 #signin-form .form-footer2 .form-createAcount:hover {
   font-weight: bold;
 }
+
+#signin-form .error {
+  color: red;
+}
+
 #signin-form h4 {
   font-weight: 300;
   font-size: 14px;
@@ -101,5 +158,4 @@
   text-align: center;
   margin-top: 20px;
 }
-
 /*# sourceMappingURL=signin.css.map */

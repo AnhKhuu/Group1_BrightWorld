@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="./Contact/contact.css">
     <link rel="stylesheet" href="./About/about.css">
     <link rel="stylesheet" href="./Sales/sales.css">
-    <link rel="stylesheet" href="./ProductCarousel/product-carousel.css">
     <link rel="stylesheet" href="./ProductDetail/product-detail.css">
     <link rel="stylesheet" href="./Cart/cart.css">
 </head>
@@ -81,9 +80,9 @@
                                       </span>
                                       <span>Add to cart</span>
                                     </button>
-                                    <button class="btn buy-now">
+                                    <a href="#!Checkout" class="btn buy-now">
                                       Buy now
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +192,7 @@
             <form class="d-flex flex-column align-items-center">
                 <h1>SUBSCRIBE TO NEWSLETTER</h1>
                 <div class="position-relative w-100">
-                    <input class="w-100" type="text" placeholder="Enter your email">
+                    <input class="w-100" type="text" placeholder="Enter your email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
                     <span class="material-icons-outlined position-absolute">
                             email
                         </span>
@@ -311,8 +310,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <scriptpr type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></scriptpr>
     <script src="Owlcarousel/docs/assets/owlcarousel/owl.carousel.min.js"></script>
-    <script src="ProductCarousel/product-carousel.module.js"></script>
-    <script src="ProductCarousel/product-carousel.component.js"></script>
     <script src="Homepage/homepage.module.js"></script>
     <script src="Homepage/homepage.component.js"></script>
     <script src="Sales/sales.module.js"></script>
@@ -323,8 +320,6 @@
     <script src="Cart/cart.component.js"></script>
     <script src="About/about.module.js"></script>
     <script src="About/about.component.js"></script>
-    <script src="Checkout/checkout.module.js"></script>
-    <script src="Checkout/checkout.component.js"></script>
     <script src="Contact/contact.module.js"></script>
     <script src="Contact/contact.component.js"></script>
     <script src="app.module.js"></script>

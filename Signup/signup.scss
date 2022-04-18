@@ -1,4 +1,6 @@
 @import '../variable.scss';
+@include format;
+
 #signup-form {
     min-height: 100vh;
     display: flex;
@@ -6,6 +8,12 @@
     align-items: center;
     padding: 30px;
     font-style: normal;
+    .form-signin {
+        color: $black;
+    }
+    .error {
+        color: red;
+    }
     .signup-heading {
         font-weight: 500;
         font-size: 16px;
