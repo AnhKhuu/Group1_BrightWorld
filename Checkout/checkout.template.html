@@ -3,16 +3,16 @@
         <div class="col-lg-4 order-summary p-3">
             <h2>Order Summary</h2>
             <div class="product-info">
-                <div class="product-info p-2 p-lg-4 d-flex align-items-center justify-content-between">
-                    <img src="Sales/imgs/brand/sunco.png" alt="">
+                <div class="product-info p-2 p-lg-4 d-flex align-items-center justify-content-between" ng-repeat="product in myProduct as ProductInCart">
+                    <img ng-src="{{product.imageUrl}}" alt="">
                     <div class="product-detail px-2 px-md-3">
-                        <p class="mb-1 mb-md-2">This is product's name. As long as possible</p>
+                        <p class="mb-1 mb-md-2">{{product.name}}</p>
                         <div class="quantity mb-1 mb-md-2">
-                            <p>x1</p>
+                            <p>x{{product.productQuantity}}</p>
                         </div>
                         <div class="price">
-                            <div class="new-price">$800.000</div>
-                            <div class="old-price">$900.000</div>
+                            <div class="new-price">{{product.newPrice}}</div>
+                            <div class="old-price">{{product.oldPrice}}</div>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <form action="">
+            <form action="" name="myForm" class="myForm">
                 <div class="billing-info mb-lg-5 mb-3">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h2>Billing info</h2>
@@ -49,16 +49,33 @@
                         <div class="col-lg-6 pe-lg-5">
                             <div class="form-group mb-4">
                                 <p>First name</p>
-                                <input type="text" class="w-100" placeholder="Enter your first name">
+                                <input name="uFirstName" type="text" class="w-100" ng-model="myFirstName" ng-minlength="2" placeholder="Enter your first name" required autofocus pattern="[a-zA-Z ]{2,30}">
                             </div>
+                            <div class="erInput text-right">
+                                <span class="error" ng-show="myForm.uFirstName.$dirty && myForm.uFirstName.$error.required">First name must be required</span>
+                                <span class="error" ng-show="myForm.uFirstName.$dirty && myForm.uFirstName.$error.minlength">First name minimum 2 symbols</span>
+                            </div>
+
                             <div class="form-group mb-4">
                                 <p>Email</p>
-                                <input type="email" class="w-100" placeholder="Enter your email">
+                                <input type="email" class="w-100" name="uemail" ng-model="myEmail" placeholder="Enter your email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
                             </div>
+                            <div class="erInput text-right">
+                                <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.required">Email must be required</span>
+                                <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.email">Format email is missing</span>
+                            </div>
+
+
                             <div class="form-group mb-4">
                                 <p>Address</p>
-                                <input type="text" class="w-100" placeholder="Enter your address">
+                                <input type="text" class="w-100" name="uAddr" ng-model="uAddr" ng-minlength="50" placeholder="Enter your address" required pattern="[a-zA-Z ]{20,350}">
                             </div>
+                            <div class="erInput text-right">
+                                <span class="error" ng-show="myForm.uAddr.$dirty && myForm.uAddr.$error.required">Address name must be required</span>
+                                <span class="error" ng-show="myForm.uAddr.$dirty && myForm.uAddr.$error.minlength">Address name minimum 20 symbols</span>
+                            </div>
+
+
                             <div class="form-group mb-4">
                                 <p>Province/City</p>
                                 <select name="provinceCity" id="" class="w-100">
@@ -66,16 +83,28 @@
                                     <option value="province.name" ng-repeat="province in provinces">{{province.name}}</option>
                                 </select>
                             </div>
+
                         </div>
                         <div class="col-lg-6 pe-lg-5">
                             <div class="form-group mb-4">
                                 <p>Last name</p>
-                                <input type="text" class="w-100" placeholder="Enter your last name">
+                                <input type="text" class="w-100" name="uLastName" ng-model="myLastName" ng-minlength="2" placeholder="Enter your last name" required pattern="[a-zA-Z ]{2,50}">
                             </div>
+                            <div class="erInput text-right">
+                                <span class="error" ng-show="myForm.uLastName.$dirty && myForm.uLastName.$error.required">Last name must be required</span>
+                                <span class="error" ng-show="myForm.uLastName.$dirty && myForm.uLastName.$error.minlength">Last name minimum 2 symbols</span>
+                            </div>
+
+
                             <div class="form-group mb-4">
                                 <p>Phone</p>
-                                <input type="text" class="w-100" placeholder="Enter your phone number">
+                                <input type="text" class="w-100" name="uPhone" ng-model="uPhone" ng-minlength="10" placeholder="Enter your phone number" required pattern="[0-9 ]{10,14}">
                             </div>
+                            <div class="erInput text-right">
+                                <span class="error" ng-show="myForm.uPhone.$dirty && myForm.uPhone.$error.required">Phone must be required</span>
+                                <span class="error" ng-show="myForm.uPhone.$dirty && myForm.uPhone.$error.minlength">Phone minimum 10 digits</span>
+                            </div>
+
                             <div class="form-group mb-4">
                                 <p>Zip/Postal</p>
                                 <input type="text" class="w-100" placeholder="Enter zip or postal">

@@ -25,13 +25,6 @@
     #signup-login {
         max-width: 350px;
         flex-grow: 1;
-        input:invalid {
-            color: red;
-        }
-        input:valid {
-            // color: $black;
-            color: black;
-        }
     }
     .form-group {
         font-weight: 500;
@@ -56,13 +49,12 @@
     .form-input::placeholder {
         color: #999999;
     }
+
     .form-submit {
         @include yellow-btn;
         width: 100%;
     }
-    .form-submit:hover {
-        border: 1px solid #0d6adc;
-    }
+
     .form-footer {
         font-weight: 400;
         font-size: 12px;
@@ -70,12 +62,19 @@
         color: $black;
         margin-bottom: 10px;
     }
+
     .form-footer:hover {
         font-weight: bold;
     }
     .form-footer2 {
-        font-size: 12px;
         line-height: 15px;
+        a {
+            font-size: 12px;
+            &:last-of-type {
+                font-weight: 600;
+            }
+        }
+
         .form-createInfo {
             font-weight: 10;
             color: #938F8F;

@@ -15,7 +15,7 @@ app.run(function($rootScope, $http){
     $rootScope.addBuyNowBtn = function() {
         if($rootScope.myProduct.length>0 && $rootScope.myProduct.length<2)
         { 
-            $(".btn-bar-cart").append("<a href='#!Checkout' id='buyNow' class='btn buy-now w-100'>Buy now</a>")
+            $(".btn-bar-cart").append("<a href='#!Checkout' id='buyNow' class='btn buy-now w-100'>Check out</a>")
         }
     }
 
