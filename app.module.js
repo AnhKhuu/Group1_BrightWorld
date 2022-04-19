@@ -6,25 +6,38 @@ var app = angular.module('brightworldApp', [
     'contact'
 ]);
 
-app.run(function($rootScope, $http){
+app.run(function ($rootScope, $http) {
     $rootScope.myProduct = [];
     $http.get('products/addresses.json').then(function (response) {
         $rootScope.addresses = response.data;
     });
-    
-    $rootScope.addBuyNowBtn = function() {
-        if($rootScope.myProduct.length>0 && $rootScope.myProduct.length<2)
-        { 
+
+    $rootScope.addBuyNowBtn = function () {
+        if ($rootScope.myProduct.length > 0 && $rootScope.myProduct.length < 2) {
             $(".btn-bar-cart").append("<a href='#!Checkout' id='buyNow' class='btn buy-now w-100'>Check out</a>")
         }
     }
 
-    $rootScope.delete = function(i) {
+    $rootScope.delete = function (i) {
         $rootScope.myProduct.splice(i, 1);
-        if($rootScope.myProduct.length==0)
-        {
+        if ($rootScope.myProduct.length == 0) {
             $("#buyNow").detach();
         }
+    }
+
+    $rootScope.price = [];
+
+    for(let i=0; i<$rootScope.myProduct.length; i++)
+    {
+        $rootScope.price.push($rootScope.myProduct[i].newPrice)
+    }
+
+    $rootScope.subTotal = $rootScope.price.reduce((total, current) => total+current,0);
+
+    // When the user clicks on the button, scroll to the top of the document
+    $rootScope.topFunction = function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 })
 
@@ -92,8 +105,8 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
 
     $scope.add = function () {
         $scope.quantity++;
-        $scope.oldPriceCart = "$" + Math.round(parseFloat($scope.product.oldPrice.replace("$",""))*$scope.quantity*100)/100;
-        $scope.newPriceCart = "$" + Math.round(parseFloat($scope.product.newPrice.replace("$",""))*$scope.quantity*100)/100;
+        $scope.oldPriceCart = "$" + Math.round(parseFloat($scope.product.oldPrice.replace("$", "")) * $scope.quantity * 100) / 100;
+        $scope.newPriceCart = "$" + Math.round(parseFloat($scope.product.newPrice.replace("$", "")) * $scope.quantity * 100) / 100;
     }
 
     $scope.remove = function () {
@@ -102,12 +115,12 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
         } else {
             $scope.quantity = 1;
         }
-        $scope.oldPriceCart = "$" + Math.round(parseFloat($scope.product.oldPrice.replace("$",""))*$scope.quantity*100)/100;
-        $scope.newPriceCart = "$" + Math.round(parseFloat($scope.product.newPrice.replace("$",""))*$scope.quantity*100)/100;
+        $scope.oldPriceCart = "$" + Math.round(parseFloat($scope.product.oldPrice.replace("$", "")) * $scope.quantity * 100) / 100;
+        $scope.newPriceCart = "$" + Math.round(parseFloat($scope.product.newPrice.replace("$", "")) * $scope.quantity * 100) / 100;
     }
 
-    $scope.addToCart = function() {
-        var newProduct = { "imageUrl": $scope.product.imageUrl, "name": $scope.product.name, "oldPrice": $scope.oldPriceCart, "newPrice": $scope.newPriceCart, "productQuantity": $scope.quantity};
+    $scope.addToCart = function () {
+        var newProduct = { "imageUrl": $scope.product.imageUrl, "name": $scope.product.name, "oldPrice": $scope.oldPriceCart, "newPrice": $scope.newPriceCart, "productQuantity": $scope.quantity };
         $scope.myProduct.push(newProduct);
         $scope.addBuyNowBtn();
     }

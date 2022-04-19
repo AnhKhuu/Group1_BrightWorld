@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="Owlcarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="Owlcarousel/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./Homepage/homepage.css">
     <link rel="stylesheet" href="./ProductCategory/product-category.css">
@@ -32,8 +32,8 @@
 </head>
 
 <body ng-app="brightworldApp">
-    <div>
-        <section id="header" class="header">
+    <div id="header">
+        <section class="header">
             <nav class="d-flex justify-content-between align-items-center position-relative container-lg">
                 <a href="#/!">
                     <img src="./imgs/Logo.png" alt="Logo" class="header-logo">
@@ -252,6 +252,11 @@
                     </div>
                 </div>
             </div>
+            <button ng-click="topFunction()" id="myBtn" title="Go to top" class="up-to-top btn">
+                <span class="material-icons-outlined">
+                    north
+                </span>
+            </button>
     </div>
     <div class="text-center py-2">
         &copy Copyright by Group1
@@ -265,13 +270,11 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <scriptpr type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></scriptpr>
-    <script src="Owlcarousel/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
     <script src="Homepage/homepage.module.js"></script>
     <script src="Homepage/homepage.component.js"></script>
     <script src="Sales/sales.module.js"></script>
     <script src="Sales/sales.component.js"></script>
-    <!-- <script src="ProductDetail/product-detail.module.js"></script>
-    <script src="ProductDetail/product-detail.component.js"></script> -->
     <script src="About/about.module.js"></script>
     <script src="About/about.component.js"></script>
     <script src="Contact/contact.module.js"></script>

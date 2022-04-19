@@ -48,12 +48,8 @@ a {
           flex-grow: 1;
 }
 
-#signin-form #signin-login input:invalid {
-  color: red;
-}
-
 #signin-form #signin-login input:valid {
-  color: black;
+  color: #2E2C2C;
 }
 
 #signin-form .form-group {
