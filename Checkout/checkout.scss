@@ -1,4 +1,5 @@
 @import '../variable.scss';
+
 .checkout {
     .product-info {
         img {
@@ -7,39 +8,48 @@
             border-radius: 5px;
             object-fit: cover;
             object-position: center;
+
             @include on('lg') {
                 width: 128px;
                 height: 128px;
             }
         }
+
         p {
             @include lm-text;
             -webkit-line-clamp: 3;
         }
+
         .material-icons-outlined.close {
             cursor: pointer;
+
             &:hover {
                 color: #F14747 !important;
             }
         }
+
         .quantity {
             input {
                 width: 50px;
                 border: none;
             }
+
             div {
                 border: 1px solid $grey;
             }
+
             button {
                 padding: 2px 5px;
                 line-height: 1;
                 background-color: white;
+
                 &:first-of-type {
                     border-right: 1px solid $grey;
                     border-radius: 0;
                     font-size: 20px;
                     font-weight: 500;
                 }
+
                 &:last-of-type {
                     border-left: 1px solid $grey;
                     border-radius: 0;
@@ -49,67 +59,83 @@
             }
         }
     }
+
     .order-summary {
         height: max-content;
+
         @include on('lg') {
             order: 1;
             border: 1px solid $grey;
             border-radius: 5px;
         }
+
         .new-price {
             font-weight: 600;
             font-size: 18px;
         }
+
         .old-price {
             text-decoration: line-through;
             color: $grey;
         }
+
         .title {
             font-size: 16px;
         }
+
         .result {
             font-size: 18px;
             font-weight: 500;
         }
+
         .product-calculate {
             border-bottom: 1px solid $grey;
         }
     }
+
     h2 {
         font-weight: 600;
         text-align: center;
         font-size: 20px;
+
         @include on('lg') {
             font-size: 24px;
             text-align: start;
         }
     }
+
     .step {
         font-size: 12px;
         color: $grey;
     }
+
     .error {
         font-style: italic;
         color: red;
     }
+
     .form-group {
         p {
             font-size: 16px;
             font-weight: 500;
         }
-         ::placeholder {
+
+        ::placeholder {
             font-size: 14px;
             color: $grey;
         }
+
         input {
             background-color: transparent;
             border: none;
             border-bottom: 2px solid $grey;
+
             &:focus {
                 outline: none;
             }
         }
     }
+
     textarea {
         border-radius: 5px;
         border-color: $grey;
@@ -118,42 +144,49 @@
         box-sizing: border-box;
         width: 100%;
         height: 100px;
-  }
+    }
 
-  .step {
-    font-size: 12px;
-    color: $grey;
-  }
+    .step {
+        font-size: 12px;
+        color: $grey;
+    }
 
-  .trigger-ship {
-    border-radius: 5px;
-    border: 1px solid $grey;
-    width: fit-content;
-    @include custom-checkbox;
-  }
+    .trigger-ship {
+        border-radius: 5px;
+        border: 1px solid $grey;
+        width: fit-content;
+        @include custom-checkbox;
+    }
 
-  .form-group {
-    p {
-      font-size: 16px;
-      font-weight: 500;
+    .form-group {
+        p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        
     }
     .payment-method {
         @include custom-radio;
     }
-    .confirmation {
-        @include custom-checkbox;
 
     input, select {
-      background-color: transparent;
-      border: none;
-      border-bottom: 2px solid $grey;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $grey;
 
-      &:focus {
-        outline: none;
-      }
+        &:focus {
+            outline: none;
+        }
     }
+    
+    .confirmation {
+        @include custom-checkbox;
+    }
+
     button {
         @include yellow-btn;
+
         @include on('lg') {
             height: fit-content;
         }

@@ -55,14 +55,6 @@ a {
           flex-grow: 1;
 }
 
-#signup-form #signup-login input:invalid {
-  color: red;
-}
-
-#signup-form #signup-login input:valid {
-  color: black;
-}
-
 #signup-form .form-group {
   font-weight: 500;
   font-size: 16px;
@@ -122,10 +114,6 @@ a {
   background-color: #cc7f11;
 }
 
-#signup-form .form-submit:hover {
-  border: 1px solid #0d6adc;
-}
-
 #signup-form .form-footer {
   font-weight: 400;
   font-size: 12px;
@@ -139,8 +127,15 @@ a {
 }
 
 #signup-form .form-footer2 {
-  font-size: 12px;
   line-height: 15px;
+}
+
+#signup-form .form-footer2 a {
+  font-size: 12px;
+}
+
+#signup-form .form-footer2 a:last-of-type {
+  font-weight: 600;
 }
 
 #signup-form .form-footer2 .form-createInfo {

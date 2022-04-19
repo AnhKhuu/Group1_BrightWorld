@@ -3,16 +3,16 @@
         <div class="col-lg-4 order-summary p-3">
             <h2>Order Summary</h2>
             <div class="product-info">
-                <div class="product-info p-2 p-lg-4 d-flex align-items-center justify-content-between">
-                    <img src="Sales/imgs/brand/sunco.png" alt="">
+                <div class="product-info p-2 p-lg-4 d-flex align-items-center justify-content-between" ng-repeat="product in myProduct as ProductInCart">
+                    <img ng-src="{{product.imageUrl}}" alt="">
                     <div class="product-detail px-2 px-md-3">
-                        <p class="mb-1 mb-md-2">This is product's name. As long as possible</p>
+                        <p class="mb-1 mb-md-2">{{product.name}}</p>
                         <div class="quantity mb-1 mb-md-2">
-                            <p>x1</p>
+                            <p>x{{product.productQuantity}}</p>
                         </div>
                         <div class="price">
-                            <div class="new-price">$800.000</div>
-                            <div class="old-price">$900.000</div>
+                            <div class="new-price">{{product.newPrice}}</div>
+                            <div class="old-price">{{product.oldPrice}}</div>
                         </div>
                     </div>
                 </div>
