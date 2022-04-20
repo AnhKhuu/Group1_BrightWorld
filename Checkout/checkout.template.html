@@ -49,7 +49,7 @@
                         <div class="col-lg-6 pe-lg-5">
                             <div class="form-group mb-4">
                                 <p>First name</p>
-                                <input name="uFirstName" type="text" class="w-100" ng-model="myFirstName" ng-minlength="2" placeholder="Enter your first name" required autofocus pattern="[a-zA-Z ]{2,30}">
+                                <input name="uFirstName" type="text" class="w-100" ng-minlength="2" placeholder="Enter your first name" required autofocus pattern="[a-zA-Z ]{2,30}" value="{{firstName}}">
                             </div>
                             <div class="erInput text-right">
                                 <span class="error" ng-show="myForm.uFirstName.$dirty && myForm.uFirstName.$error.required">First name must be required</span>
@@ -58,7 +58,7 @@
 
                             <div class="form-group mb-4">
                                 <p>Email</p>
-                                <input type="email" class="w-100" name="uemail" ng-model="myEmail" placeholder="Enter your email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                                <input type="email" class="w-100" name="uemail" placeholder="Enter your email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" value="{{email}}">
                             </div>
                             <div class="erInput text-right">
                                 <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.required">Email must be required</span>
@@ -88,7 +88,7 @@
                         <div class="col-lg-6 pe-lg-5">
                             <div class="form-group mb-4">
                                 <p>Last name</p>
-                                <input type="text" class="w-100" name="uLastName" ng-model="myLastName" ng-minlength="2" placeholder="Enter your last name" required pattern="[a-zA-Z ]{2,50}">
+                                <input type="text" class="w-100" name="uLastName" ng-minlength="2" placeholder="Enter your last name" required pattern="[a-zA-Z ]{2,50}" value="{{lastName}}">
                             </div>
                             <div class="erInput text-right">
                                 <span class="error" ng-show="myForm.uLastName.$dirty && myForm.uLastName.$error.required">Last name must be required</span>

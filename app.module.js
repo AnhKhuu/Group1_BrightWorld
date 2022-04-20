@@ -87,6 +87,10 @@ app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
     $http.get('products/provinces.json').then(function (response) {
         $scope.provinces = response.data;
     });
+
+    $scope.firstName = localStorage.getItem("firstname");
+    $scope.lastName = localStorage.getItem("lastname");
+    $scope.email = localStorage.getItem("email");
 })
 
 app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $routeParams) {
