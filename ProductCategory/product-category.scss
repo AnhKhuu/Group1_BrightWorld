@@ -1,6 +1,11 @@
 @import '../variable.scss';
 
 .product-category {
+    .orderBy:hover {
+            cursor: pointer;
+            color: $yellow;
+        }
+
     .col-md-3 {
         display: none;
 

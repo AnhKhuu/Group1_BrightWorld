@@ -135,16 +135,16 @@
         <div class="col-md-9">
             <div class="filter-category my-3 position-relative d-flex align-items-center">
                 <div class="vl first"></div>
-                <label class="container-filter" for="relevance">Relevance
-                    <input type="radio" name="relevance" id="relevance">
+                <label class="container-filter orderBy" for="price">Price
+                    <input type="radio" name="filter" id="price" value="price" ng-model="price">
                 </label>
                 <div class="vl"></div>
-                <label class="container-filter" for="latest">Latest
-                    <input type="radio" name="latest" id="latest">
+                <label class="container-filter orderBy" for="latest">Latest
+                    <input type="radio" name="filter" id="latest" value="-publishDate" ng-model="publishDate">
                 </label>
                 <div class="vl"></div>
-                <label class="container-filter" for="topsales">Top Sales
-                    <input type="radio" name="topsales" id="topsales">
+                <label class="container-filter orderBy" for="topsales">Top Sales
+                    <input type="radio" name="filter" id="topsales" value="-sold" ng-model="sold">
                 </label>
                 <div class="vl last"></div>
                 <span class="material-icons-outlined" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
@@ -318,7 +318,7 @@
             </div>
             <span>Number of results: {{ filteredResult.length }}</span>
             <div class="product-list">
-                <div ng-repeat="product in (products | filter: search | filter: filterByBrandCategory | filter: filterByTypeCategory | filter: filterByPriceCategory) as filteredResult">
+                <div ng-repeat="product in (products | filter: search | filter: filterByBrandCategory | filter: filterByTypeCategory | orderBy: price | orderBy: publishDate | orderBy: sold) as filteredResult">
                     <a href="#!/Product-category/{{product.id}}" class="item">
                         <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
                         <p>{{product.name}}</p>

@@ -6,6 +6,11 @@
   /* Hide the browser's default radio button */
 }
 
+.product-category .orderBy:hover {
+  cursor: pointer;
+  color: #FF9F15;
+}
+
 .product-category .col-md-3 {
   display: none;
 }
