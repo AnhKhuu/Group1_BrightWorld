@@ -551,7 +551,7 @@ input:focus {
   border-radius: 50%;
   position: fixed;
   right: 16px;
-  bottom: 16px;
+  bottom: 58px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,6 +561,7 @@ input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 10;
 }
 
 .footer .up-to-top:hover {
@@ -569,6 +570,12 @@ input:focus {
 
 .footer .up-to-top span {
   color: #FFFFF8;
+}
+
+@media (min-width: 992px) {
+  .footer .up-to-top {
+    bottom: 16px;
+  }
 }
 
 .footer .subscribe {

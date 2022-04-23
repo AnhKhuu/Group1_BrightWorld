@@ -26,12 +26,9 @@ app.run(function ($rootScope, $http) {
     }
 
     $rootScope.price = [];
-
-    for (let i = 0; i < $rootScope.myProduct.length; i++) {
-        $rootScope.price.push($rootScope.myProduct[i].newPrice)
-    }
-
-    $rootScope.subTotal = $rootScope.price.reduce((total, current) => total + current, 0);
+    $rootScope.subTotal = [0];
+    $rootScope.tax = [0];
+    $rootScope.total = [0];
 
     // When the user clicks on the button, scroll to the top of the document
     $rootScope.topFunction = function () {
@@ -80,6 +77,11 @@ app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http
             map(function (product) { return product.type; }).
             filter(function (cat, idx, arr) { return arr.indexOf(cat) === idx; });
     }
+
+    //Toggle heart
+    $scope.favorite = function (index) {
+
+    }
 })
 
 app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
@@ -102,7 +104,9 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
         $scope.setImage($scope.product.images[0]);
         $scope.reviews = $scope.product.reviewers;
         $scope.ratingStaticStar = $scope.product.starRating;
-        $scope.quantity = parseInt($scope.product.productQuantity)
+        $scope.quantity = parseInt($scope.product.productQuantity);
+        $scope.newPriceCart = parseFloat($scope.product.newPrice.replace("$", ""));
+        $scope.oldPriceCart = parseFloat($scope.product.oldPrice.replace("$", ""));
     });
 
     $scope.rating = 0;
@@ -113,8 +117,12 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
 
     $scope.add = function () {
         $scope.quantity++;
-        $scope.oldPriceCart = "$" + Math.round(parseFloat($scope.product.oldPrice.replace("$", "")) * $scope.quantity * 100) / 100;
-        $scope.newPriceCart = "$" + Math.round(parseFloat($scope.product.newPrice.replace("$", "")) * $scope.quantity * 100) / 100;
+        $scope.newPriceCart = Math.round(parseFloat($scope.product.newPrice.replace("$", "")) * $scope.quantity * 100) / 100;
+        if ($scope.product.oldPrice) {
+            $scope.oldPriceCart = Math.round(parseFloat($scope.product.oldPrice.replace("$", "")) * $scope.quantity * 100) / 100;
+        } else {
+            $scope.oldPriceCart = "";
+        }
     }
 
     $scope.remove = function () {
@@ -123,14 +131,30 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
         } else {
             $scope.quantity = 1;
         }
-        $scope.oldPriceCart = "$" + Math.round(parseFloat($scope.product.oldPrice.replace("$", "")) * $scope.quantity * 100) / 100;
-        $scope.newPriceCart = "$" + Math.round(parseFloat($scope.product.newPrice.replace("$", "")) * $scope.quantity * 100) / 100;
+        $scope.newPriceCart = Math.round(parseFloat($scope.product.newPrice.replace("$", "")) * $scope.quantity * 100) / 100;
+        if ($scope.product.oldPrice) {
+            $scope.oldPriceCart = Math.round(parseFloat($scope.product.oldPrice.replace("$", "")) * $scope.quantity * 100) / 100;
+        } else {
+            $scope.oldPriceCart = "";
+        }
     }
 
     $scope.addToCart = function () {
-        var newProduct = { "imageUrl": $scope.product.imageUrl, "name": $scope.product.name, "oldPrice": $scope.oldPriceCart, "newPrice": $scope.newPriceCart, "productQuantity": $scope.quantity };
+        var newProduct = { "imageUrl": $scope.product.imageUrl, "name": $scope.product.name, "oldPrice":"$" + $scope.oldPriceCart, "newPrice":"$" + $scope.newPriceCart, "productQuantity": $scope.quantity };
         $scope.myProduct.push(newProduct);
         $scope.addBuyNowBtn();
+
+        $scope.price.push(parseFloat(newProduct.newPrice.replace("$","")))
+    
+        console.log($scope.price);
+
+        var subTotalCal = Math.round(parseFloat($scope.price.reduce((total, current) => total + current, 0))*100)/100
+        var tax = subTotalCal*110/100;
+        var total = tax + 5;
+
+        $scope.subTotal.unshift("$"+subTotalCal);
+        $scope.tax.unshift("$"+tax);
+        $scope.total.unshift("$"+total);
     }
 
     $http.get('products/products.json').then(function (response) {

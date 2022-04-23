@@ -20,21 +20,21 @@
             <div class="product-calculate mb-3">
                 <div class="d-flex justify-content-between">
                     <p class="title">Subtotal</p>
-                    <p class="result">{{subTotal}}</p>
+                    <p class="result">{{subTotal[0]}}</p>
                 </div>
                 <div class="d-flex justify-content-between">
                     <p class="tax">Tax</p>
-                    <p class="result">$16.000</p>
+                    <p class="result">10% x {{subTotal[0]}}</p>
                 </div>
                 <div class="d-flex justify-content-between">
                     <p class="title">Shipping</p>
-                    <p class="result">$16.000</p>
+                    <p class="result">$5</p>
                 </div>
             </div>
             <div class="product-total">
                 <div class="d-flex justify-content-between">
                     <p class="title">Total</p>
-                    <p class="result">$17.000</p>
+                    <p class="result">{{total[0]}}</p>
                 </div>
             </div>
         </div>
@@ -68,11 +68,11 @@
 
                             <div class="form-group mb-4">
                                 <p>Address</p>
-                                <input type="text" class="w-100" name="uAddr" ng-model="uAddr" ng-minlength="50" placeholder="Enter your address" required pattern="[a-zA-Z ]{20,350}">
+                                <input type="text" class="w-100" name="uAddr" ng-model="uAddr" ng-minlength="20" placeholder="Enter your address" required pattern="[a-zA-Z ]{20,350}">
                             </div>
                             <div class="erInput text-right">
-                                <span class="error" ng-show="myForm.uAddr.$dirty && myForm.uAddr.$error.required">Address name must be required</span>
-                                <span class="error" ng-show="myForm.uAddr.$dirty && myForm.uAddr.$error.minlength">Address name minimum 20 symbols</span>
+                                <span class="error" ng-show="myForm.uAddr.$dirty && myForm.uAddr.$error.required">Address must be required</span>
+                                <span class="error" ng-show="myForm.uAddr.$dirty && myForm.uAddr.$error.minlength">Address minimum 20 symbols</span>
                             </div>
 
 
