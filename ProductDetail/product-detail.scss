@@ -111,14 +111,10 @@
         }
     }
 
-    .star-rating {
-        @include star;
-        @include star-outline;
-    }
-    
     .material-icons {
         font-size: 18px;
     }
+    
     .product-information {
         .product-name {
             font-size: 16px;
@@ -317,6 +313,17 @@
     }
 
     form {
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+
+            @include on("lg") {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .comment {
         h3 {
             font-size: 18px;
             font-weight: 600;

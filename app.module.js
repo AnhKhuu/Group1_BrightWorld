@@ -27,15 +27,14 @@ app.run(function ($rootScope, $http) {
 
     $rootScope.price = [];
 
-    for(let i=0; i<$rootScope.myProduct.length; i++)
-    {
+    for (let i = 0; i < $rootScope.myProduct.length; i++) {
         $rootScope.price.push($rootScope.myProduct[i].newPrice)
     }
 
-    $rootScope.subTotal = $rootScope.price.reduce((total, current) => total+current,0);
+    $rootScope.subTotal = $rootScope.price.reduce((total, current) => total + current, 0);
 
     // When the user clicks on the button, scroll to the top of the document
-    $rootScope.topFunction = function() {
+    $rootScope.topFunction = function () {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
@@ -94,7 +93,6 @@ app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
 })
 
 app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $routeParams) {
-
     $scope.setImage = function setImage(imageUrl) {
         $scope.mainImageUrl = imageUrl;
     };
@@ -103,9 +101,15 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
         $scope.product = response.data;
         $scope.setImage($scope.product.images[0]);
         $scope.reviews = $scope.product.reviewers;
-        $scope.ratings = $scope.product.starRating;
-        $scope.quantity = parseInt($scope.product.productQuantity);
+        $scope.ratingStaticStar = $scope.product.starRating;
+        $scope.quantity = parseInt($scope.product.productQuantity)
     });
+
+    $scope.rating = 0;
+    $scope.ratings = [{
+        current: 3,
+        max: 5
+    }];
 
     $scope.add = function () {
         $scope.quantity++;
@@ -135,7 +139,7 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
 
     $scope.addReview = function () {
         var userName = localStorage.getItem("firstname")
-        var newReview = { "name": userName, "review": $scope.myReview, "avatarUrl": "imgs/ava/user.png" };
+        var newReview = { "name": userName, "review": $scope.myReview, "avatarUrl": "imgs/ava/user.png", "starRating": $scope.ratings.current };
         $scope.reviews.push(newReview);
     }
 
@@ -177,3 +181,92 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
         )
     }, 1000);
 })
+
+app.directive('starRating', function () {
+    return {
+        restrict: 'A',
+        template: '<ul class="rating cursorPointer">' +
+            '<li ng-repeat="star in stars" ng-class="star" ng-click="toggle($index)">' +
+            '\u2605' +
+            '</li>' +
+            '</ul>',
+        scope: {
+            ratingValue: '=',
+            max: '=',
+            onRatingSelected: '&'
+        },
+        link: function (scope, elem, attrs) {
+
+            var updateStars = function () {
+                scope.stars = [];
+                for (var i = 0; i < scope.max; i++) {
+                    scope.stars.push({
+                        filled: i < scope.ratingValue
+                    });
+                }
+            };
+
+            scope.toggle = function (index) {
+                scope.ratingValue = index + 1;
+                scope.onRatingSelected({
+                    rating: index + 1
+                });
+            };
+
+            scope.$watch('ratingValue', function (oldVal, newVal) {
+                if (newVal) {
+                    updateStars();
+                }
+            });
+        }
+    }
+});
+
+app.controller('StarStaticCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+    $http.get('products/' + $routeParams.productId + '.json').then(function (response) {
+        $scope.product = response.data;
+        $scope.ratingStar = parseInt($scope.product.starRating);
+
+        $scope.ratings = [{
+            current: $scope.ratingStar,
+            max: 5
+        }];
+    });
+}]);
+
+app.controller('StarReviewCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+    $http.get('products/' + $routeParams.productId + '.json').then(function (response) {
+        $scope.product = response.data;
+        $scope.reviews = $scope.product.reviewers;
+        $scope.reviewStar = parseInt($scope.reviews[0].starRating);
+        console.log($scope.reviewStar)
+
+        $scope.ratingReviews = [{
+            current: $scope.reviewStar,
+            max: 5
+        }];
+    });
+}]);
+
+app.directive('starStaticRating', function () {
+    return {
+        restrict: 'A',
+        template: '<ul class="rating">' +
+            '<li ng-repeat="star in stars" ng-class="star">' +
+            '\u2605' +
+            '</li>' +
+            '</ul>',
+        scope: {
+            ratingValue: '=',
+            max: '='
+        },
+        link: function (scope, elem, attrs) {
+            scope.stars = [];
+            for (var i = 0; i < scope.max; i++) {
+                scope.stars.push({
+                    filled: i < scope.ratingValue
+                });
+            }
+        }
+    }
+});

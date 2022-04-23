@@ -33,12 +33,6 @@
             "avatarUrl": "imgs/ava/reviewer-4.jpg",
             "starRating": "3.6",
             "review": "These bulbs are really nice. I'm glad i tried them."
-        },
-        {
-            "name": "Kevin",
-            "avatarUrl": "imgs/ava/reviewer-5.jpg",
-            "starRating": "4.7",
-            "review": "These bulbs are also dimmable. I really like this"
         }
     ],
     "documentUrl": "document/viribright-60w.pdf",

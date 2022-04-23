@@ -456,6 +456,46 @@ input {
     }
 }
 
+.star-rating {
+    @include star;
+    @include star-outline;
+
+    .rating {
+        color: #a9a9a9;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul.rating {
+        display: inline-block;
+    }
+
+    .rating li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 1px;
+        text-align: center;
+        font-weight: bold;
+        font-size:20px;
+        color: $grey;
+    }
+
+    .rating .filled {
+        color: #FDBC15;
+    }
+
+    .cursorPointer {
+        li {
+            cursor: pointer;
+        }
+    }
+
+    .clear{
+      margin-top:20px;
+    }
+}
+
+
 .footer {
     .up-to-top {
         background-color: $yellow;

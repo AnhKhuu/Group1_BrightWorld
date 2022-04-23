@@ -1,7 +1,7 @@
 <section class="product-detail container-lg my-3 my-lg-5" ng-controller="ProductDetailCtrl">
   <div class="row">
     <div class="col-lg-6">
-      <img ng-src="{{mainImageUrl}}" class="w-100 img-desktop"/>
+      <img ng-src="{{mainImageUrl}}" class="w-100 img-desktop" />
       <div class="owl-carousel owl-theme product-detail-carousel">
         <div class="item" ng-repeat="img in product.images">
           <img ng-src="{{img}}" alt="">
@@ -18,22 +18,10 @@
       <div class="d-flex product-sub-information align-items-center justify-content-between">
         <div class="vl first"></div>
         <div class="star-information d-flex align-items-center">
-          <p class="mb-1 me-1">{{ratings}}</p>
-          <span class="star-rating" id="productRating">
-            <span class="material-icons star">
-              star
-            </span>
-            <span class="material-icons star">
-              star
-            </span>
-            <span class="material-icons star">
-              star
-            </span>
-            <span class="material-icons star">
-              star
-            </span>
-            <span class="material-icons star-outline">
-              star_outline
+          <p class="my-2 me-1">{{ratingStaticStar}}</p>
+          <span class="star-rating" id="productRating" ng-controller="StarStaticCtrl">
+            <span ng-repeat="rating in ratings">
+              <div star-static-rating rating-value="rating.current" max="rating.max"></div>
             </span>
           </span>
         </div>
@@ -77,7 +65,8 @@
         <label for="quantity">
           <h2>Quantity</h2>
           <div>
-            <button class="btn" ng-click="add()">+</button><span class="px-4">{{quantity}}</span><button class="btn" ng-click="remove()">-</button>
+            <button class="btn" ng-click="add()">+</button><span class="px-4">{{quantity}}</span><button class="btn"
+              ng-click="remove()">-</button>
           </div>
         </label>
       </div>
@@ -99,20 +88,10 @@
       <div class="product-rating p-2 p-lg-3">
         <h2>Product Ratings</h2>
         <span class="star-rating">
-          <span class="material-icons star">
-            star
-          </span>
-          <span class="material-icons star">
-            star
-          </span>
-          <span class="material-icons star">
-            star
-          </span>
-          <span class="material-icons star">
-            star
-          </span>
-          <span class="material-icons star-outline">
-            star_outline
+          <span class="star-rating" id="productRating" ng-controller="StarStaticCtrl">
+            <span ng-repeat="rating in ratings">
+              <div star-static-rating rating-value="rating.current" max="rating.max"></div>
+            </span>
           </span>
         </span>
         <div class="reviewer">
@@ -123,24 +102,14 @@
             <div class="reviewer-brief p-2 p-lg-3">
               <h3 class="reviewer-name">{{reviewer.name}}</h3>
               <span class="star-rating">
-                <span class="material-icons star">
-                  star
-                </span>
-                <span class="material-icons star">
-                  star
-                </span>
-                <span class="material-icons star">
-                  star
-                </span>
-                <span class="material-icons star">
-                  star
-                </span>
-                <span class="material-icons star-outline">
-                  star_outline
+                <span class="star-rating" id="productRating" ng-controller="StarReviewCtrl">
+                  <span ng-repeat="rating in ratingReviews">
+                    <div star-static-rating rating-value="rating.current" max="rating.max"></div>
+                  </span>
                 </span>
               </span>
               <p class="reviewer-cmt m-0 p-0">
-              {{reviewer.review}}
+                {{reviewer.review}}
               </p>
             </div>
           </div>
@@ -149,7 +118,7 @@
       <form class="my-3">
         <h3>Your rating</h3>
         <span class="star-rating">
-          <span class="material-icons star">
+          <!-- <span class="material-icons star">
             star
           </span>
           <span class="material-icons star">
@@ -163,58 +132,68 @@
           </span>
           <span class="material-icons star-outline">
             star_outline
-          </span>
-        </span>
-        <h3>Your review</h3>
-        <textarea name="review" id="review" ng-model="myReview" class="p-2 p-lg-3" placeholder="Please let us know how do you feel about this product...">
-              </textarea>
-        <button class="px-3 d-flex align-items-center justify-content-center mt-2 mb-4" ng-click="addReview()">
-          Submit
-        </button>
-      </form>
-    </div>
-    <div class="related-product">
-      <div class="d-flex justify-content-between align-items-center">
-        <h1 class="mb-3">RELATED PRODUCT</h1>
-      </div>
-      <section class="product-carousel">
-        <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
-            <div ng-repeat="product in relatedProduct">
-                <a href="#!/Homepage/{{product.id}}" class="item">
-                    <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
-                    <p>{{product.name}}</p>
-                    <div class="price">
-                        <span class="old-price">{{product.oldPrice}}</span>
-                        <span class="new-price">{{product.newPrice}}</span>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between  mt-2">
-                        <span>
-                            <span class="material-icons star">
-                                star
-                            </span>
-                            <span class="material-icons star">
-                                star
-                            </span>
-                            <span class="material-icons star">
-                                star
-                            </span>
-                            <span class="material-icons star">
-                                star
-                            </span>
-                            <span class="material-icons star">
-                                star
-                            </span>
-                        </span>
-                        <span>
-                            <span class="material-icons heart-outline">
-                                favorite_border
-                            </span>
-                        </span>
-                    </div>
-                </a>
+          </span> -->
+          <div class=col-md-12>
+            <div ng-repeat="rating in ratings">
+              <div star-rating rating-value="rating.current" max="rating.max"
+                on-rating-selected="getSelectedRating(rating)"></div>
             </div>
-        </div>
-    </section>
+          </div>
     </div>
+    </span>
+    <div class="comment">
+      <h3>Your review</h3>
+      <textarea name="review" id="review" ng-model="myReview" class="p-2 p-lg-3"
+        placeholder="Please let us know how do you feel about this product...">
+                </textarea>
+      <button class="px-3 submit-btn d-flex align-items-center justify-content-center mt-2 mb-4" ng-click="addReview()">
+        Submit
+      </button>
+    </div>
+    </form>
+  </div>
+  <div class="related-product">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="mb-3">RELATED PRODUCT</h1>
+    </div>
+    <section class="product-carousel">
+      <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
+        <div ng-repeat="product in relatedProduct">
+          <a href="#!/Homepage/{{product.id}}" class="item">
+            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+            <p>{{product.name}}</p>
+            <div class="price">
+              <span class="old-price">{{product.oldPrice}}</span>
+              <span class="new-price">{{product.newPrice}}</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between  mt-2">
+              <span>
+                <span class="material-icons star">
+                  star
+                </span>
+                <span class="material-icons star">
+                  star
+                </span>
+                <span class="material-icons star">
+                  star
+                </span>
+                <span class="material-icons star">
+                  star
+                </span>
+                <span class="material-icons star">
+                  star
+                </span>
+              </span>
+              <span>
+                <span class="material-icons heart-outline">
+                  favorite_border
+                </span>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
   </div>
 </section>

@@ -33,14 +33,8 @@
         {
             "name": "Ronal",
             "avatarUrl": "imgs/ava/reviewer-19.jpg",
-            "starRating": "4.0",
+            "starRating": "5.0",
             "review": "So far so good with these light bulbs! Not only are they high quality bulbs made with quality materials, but they are also really durable! Yes, they are bulbs, but they are built well enough that they aren't super fragile either! They are easy to install too. They twist in effortlessly which I like. And, they look modern and nice too! "
-        },
-        {
-            "name": "Messi",
-            "avatarUrl": "imgs/ava/reviewer-20.jpg",
-            "starRating": "3.9",
-            "review": "Great product, very durable so it wont break if you drop the bulb. No flicker"
         }
     ],
     "documentUrl": "document/alpena-spotroamer-12-24v.pdf",

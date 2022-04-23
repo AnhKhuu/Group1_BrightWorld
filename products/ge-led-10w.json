@@ -32,12 +32,6 @@
                 "avatarUrl": "imgs/ava/reviewer.jpg",
                 "starRating": "4.2",
                 "review": "My bulbs were wet with cleaner fluid"
-            },
-            {
-                "name": "Daniel",
-                "avatarUrl": "imgs/ava/reviewer-2.jpg",
-                "starRating": "3.9",
-                "review": "The bulbs are very bright and are dimmable"
             }
         ],
     "documentUrl": "document/ge-led-10w.pdf",

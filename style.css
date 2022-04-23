@@ -504,6 +504,46 @@ input:focus {
   display: block;
 }
 
+.star-rating .material-icons.star {
+  color: #FDBC15;
+}
+
+.star-rating .material-icons.star-outline {
+  color: #D1D1D1;
+}
+
+.star-rating .rating {
+  color: #a9a9a9;
+  margin: 0;
+  padding: 0;
+}
+
+.star-rating ul.rating {
+  display: inline-block;
+}
+
+.star-rating .rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #999999;
+}
+
+.star-rating .rating .filled {
+  color: #FDBC15;
+}
+
+.star-rating .cursorPointer li {
+  cursor: pointer;
+}
+
+.star-rating .clear {
+  margin-top: 20px;
+}
+
 .footer .up-to-top {
   background-color: #FF9F15;
   width: 40px;
