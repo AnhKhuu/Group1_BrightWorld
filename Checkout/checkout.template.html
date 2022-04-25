@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <form action="" name="myForm" class="myForm">
+            <form name="myForm" class="myForm">
                 <div class="billing-info mb-lg-5 mb-3">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h2>Billing info</h2>
@@ -48,61 +48,56 @@
                     <div class="row">
                         <div class="col-lg-6 pe-lg-5">
                             <div class="form-group mb-4">
-                                <p>First name</p>
-                                <input name="uFirstName" type="text" class="w-100" ng-minlength="2" placeholder="Enter your first name" required autofocus pattern="[a-zA-Z ]{2,30}" value="{{firstName}}">
+                                <p>First name <span class="required">*</span></p>
+                                <input name="uFirstName" type="text" class="w-100" placeholder="Enter your first name" required autofocus pattern="[a-zA-Z ]{2,30}" ng-model="firstName">
                             </div>
                             <div class="erInput text-right">
-                                <span class="error" ng-show="myForm.uFirstName.$dirty && myForm.uFirstName.$error.required">First name must be required</span>
-                                <span class="error" ng-show="myForm.uFirstName.$dirty && myForm.uFirstName.$error.minlength">First name minimum 2 symbols</span>
+                                <span class="error" ng-show="myForm.uFirstName.$touched && myForm.uFirstName.$error.required">First name must be required</span>
                             </div>
 
                             <div class="form-group mb-4">
-                                <p>Email</p>
-                                <input type="email" class="w-100" name="uemail" placeholder="Enter your email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" value="{{email}}">
+                                <p>Email <span class="required">*</span></p>
+                                <input type="email" class="w-100" name="uemail" placeholder="Enter your email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" ng-model="email">
                             </div>
                             <div class="erInput text-right">
-                                <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.required">Email must be required</span>
-                                <span class="error" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.email">Format email is missing</span>
+                                <span class="error d-block" ng-show="myForm.uemail.$touched && myForm.uemail.$error.required">Email must be required</span>
+                                <span class="error d-block" ng-show="myForm.uemail.$touched && myForm.uemail.$invalid">Please enter a valid email</span>
                             </div>
 
 
                             <div class="form-group mb-4">
-                                <p>Address</p>
-                                <input type="text" class="w-100" name="uAddr" ng-model="uAddr" ng-minlength="20" placeholder="Enter your address" required pattern="[a-zA-Z ]{20,350}">
+                                <p>Address <span class="required">*</span></p>
+                                <input type="text" class="w-100" name="uAddr" ng-model="uAddr" ng-minlength="10" placeholder="Enter your address" required pattern="[a-zA-Z ]{20,350}">
                             </div>
                             <div class="erInput text-right">
-                                <span class="error" ng-show="myForm.uAddr.$dirty && myForm.uAddr.$error.required">Address must be required</span>
-                                <span class="error" ng-show="myForm.uAddr.$dirty && myForm.uAddr.$error.minlength">Address minimum 20 symbols</span>
+                                <span class="error" ng-show="myForm.uAddr.$touched && myForm.uAddr.$error.required">Address must be required</span>
+                                <span class="error" ng-show="myForm.uAddr.$touched && myForm.uAddr.$error.minlength">Address minimum 10 symbols</span>
                             </div>
-
 
                             <div class="form-group mb-4">
                                 <p>Province/City</p>
-                                <select name="provinceCity" id="" class="w-100">
+                                <select name="provinceCity" class="w-100">
                                     <option value="Choose a province or city">Choose a province or city</option>
                                     <option value="province.name" ng-repeat="province in provinces">{{province.name}}</option>
                                 </select>
                             </div>
-
                         </div>
                         <div class="col-lg-6 pe-lg-5">
                             <div class="form-group mb-4">
-                                <p>Last name</p>
-                                <input type="text" class="w-100" name="uLastName" ng-minlength="2" placeholder="Enter your last name" required pattern="[a-zA-Z ]{2,50}" value="{{lastName}}">
+                                <p>Last name <span class="required">*</span></p>
+                                <input type="text" class="w-100" name="uLastName" placeholder="Enter your last name" required pattern="[a-zA-Z ]{2,50}" ng-model="lastName">
                             </div>
                             <div class="erInput text-right">
-                                <span class="error" ng-show="myForm.uLastName.$dirty && myForm.uLastName.$error.required">Last name must be required</span>
-                                <span class="error" ng-show="myForm.uLastName.$dirty && myForm.uLastName.$error.minlength">Last name minimum 2 symbols</span>
+                                <span class="error" ng-show="myForm.uLastName.$touched && myForm.uLastName.$error.required">Last name must be required</span>
                             </div>
-
-
                             <div class="form-group mb-4">
-                                <p>Phone</p>
+                                <p>Phone <span class="required">*</span></p>
                                 <input type="text" class="w-100" name="uPhone" ng-model="uPhone" ng-minlength="10" placeholder="Enter your phone number" required pattern="[0-9 ]{10,14}">
                             </div>
                             <div class="erInput text-right">
-                                <span class="error" ng-show="myForm.uPhone.$dirty && myForm.uPhone.$error.required">Phone must be required</span>
-                                <span class="error" ng-show="myForm.uPhone.$dirty && myForm.uPhone.$error.minlength">Phone minimum 10 digits</span>
+                                <span class="error d-block" ng-show="myForm.uPhone.$touched && myForm.uPhone.$error.required">Phone must be required</span>
+                                <span class="error d-block" ng-show="myForm.uPhone.$touched && myForm.uPhone.$error.minlength">Phone minimum 10 digits</span>
+                                <span class="error d-block" ng-show="myForm.uPhone.$touched && myForm.uPhone.$invalid">Please enter a valid phone number</span>
                             </div>
 
                             <div class="form-group mb-4">
@@ -153,7 +148,7 @@
                     </div>
                     <label class="container-filter d-flex align-items-center">
                         <span class="brand-name">Payment on delivery</span>
-                        <input type="radio" name="payment">
+                        <input type="radio" name="payment" checked="checked">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container-filter d-flex align-items-center">
@@ -247,11 +242,11 @@
                     </div>
                     <label class="container-filter d-flex align-items-center">
                         <span>I agree with our terms and conditions and privacy policy</span>
-                        <input type="checkbox">
+                        <input type="checkbox" name="term" checked="checked" required>
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <button class="px-3 py-lg-3 px-lg-5">Commplete Order</button>
+                <input type="submit" ng-click="completeOrder()" value="Commplete Order" class="py-2 px-5 complete-order d-flex align-items-center justify-content-center" ng-disabled="myForm.uFirstName.$error.required || myForm.uemail.$error.required || myForm.uemail.$invalid || myForm.uAddr.$error.required || myForm.uAddr.$error.minlength || myForm.uLastName.$error.required || myForm.uPhone.$error.required || myForm.uPhone.$error.minlength || myForm.uPhone.$invalid">
             </form>
         </div>
     </div>

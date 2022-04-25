@@ -89,6 +89,10 @@ app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
         $scope.provinces = response.data;
     });
 
+    $scope.completeOrder = function () {  
+        alert("Order successfully!")
+    }
+
     $scope.firstName = localStorage.getItem("firstname");
     $scope.lastName = localStorage.getItem("lastname");
     $scope.email = localStorage.getItem("email");

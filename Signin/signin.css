@@ -110,8 +110,10 @@ a {
   background-color: #cc7f11;
 }
 
-#signin-form .form-submit:hover {
-  border: 1px solid #0d6adc;
+#signin-form .form-submit[disabled=disabled] {
+  cursor: default;
+  background-color: #FF9F15;
+  opacity: 50%;
 }
 
 #signin-form .form-footer a {

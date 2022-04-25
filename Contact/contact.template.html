@@ -1,4 +1,23 @@
 <section class="contact container-lg">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
     <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319350036697!2d106.6640856147185!3d10.786834792314467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1sen!2smm!4v1650249808301!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="row my-4">
         <div class="col-lg-4" ng-repeat="address in $ctrl.addresses">
@@ -34,58 +53,75 @@
     <div class="row justify-content-center mb-4 mb-lg-5">
         <div class="col-lg-8">
             <h1 class="text-center">Send information</h1>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="form-group mb-4">
-                        <p>First name</p>
-                        <input type="text" class="w-100" placeholder="Enter your first name" value="{{$ctrl.firstName}}">
+            <form action="" name="myContactForm">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group mb-4">
+                            <p>First name <span class="required">*</span></p>
+                            <input name="firstName" type="text" class="w-100" placeholder="Enter your first name" ng-model="$ctrl.firstName" required>
+                            <div class="erInput text-right">
+                                <span class="error" ng-show="myContactForm.firstName.$touched && myContactForm.firstName.$error.required">First name must be required</span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <p>Email <span class="required">*</span></p>
+                            <input name="email" type="text" class="w-100" placeholder="Enter your email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ng-model="$ctrl.email" required>
+                            <div class="erInput text-right">
+                                <span class="error d-block" ng-show="myContactForm.email.$touched && myContactForm.email.$error.required">Email must be required</span>
+                                <span class="error d-block" ng-show="myContactForm.email.$touched && myContactForm.email.$invalid">Please enter a valid email</span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <p>Subject</p>
+                            <select name="subject" id="" class="w-100">
+                                <option value="Choose your subject">Choose your subject</option>
+                                <option value="Product consulting">Product consulting</option>
+                                <option value="Product price">Product price</option>
+                                <option value="Lighting design">Lighting design</option>
+                                <option value="Job application">Job application</option>
+                                <option value="Agent resitration">Agent resitration</option>
+                                <option value="Buy in bulk">Buy in bulk</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group mb-4">
-                        <p>Email</p>
-                        <input type="text" class="w-100" placeholder="Enter your email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" value="{{$ctrl.email}}">
-                    </div>
-                    <div class="form-group mb-4">
-                        <p>Subject</p>
-                        <select name="subject" id="" class="w-100">
-                            <option value="Choose your subject">Choose your subject</option>
-                            <option value="Product consulting">Product consulting</option>
-                            <option value="Product price">Product price</option>
-                            <option value="Lighting design">Lighting design</option>
-                            <option value="Job application">Job application</option>
-                            <option value="Agent resitration">Agent resitration</option>
-                            <option value="Buy in bulk">Buy in bulk</option>
-                            <option value="Other">Other</option>
-                        </select>
+                    <div class="col-lg-6">
+                        <div class="form-group mb-4">
+                            <p>Last name <span class="required">*</span></p>
+                            <input name="lastName" type="text" class="w-100" placeholder="Enter your last name" ng-model="$ctrl.lastName" required>
+                            <div class="erInput text-right">
+                                <span class="error" ng-show="myContactForm.lastName.$touched && myContactForm.lastName.$error.required">Last name must be required</span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <p>Phone <span class="required">*</span></p>
+                            <input name="phone" type="text" class="w-100" placeholder="Enter your phone number" required pattern="[0-9 ]{10,14}" ng-minlength="10" ng-model="phone">
+                            <div class="erInput text-right">
+                                <span class="error d-block" ng-show="myContactForm.phone.$touched && myContactForm.phone.$error.required">Phone must be required</span>
+                                <span class="error d-block" ng-show="myContactForm.phone.$touched && myContactForm.phone.$error.minlength">Phone minimum 10 digits</span>
+                                <span class="error d-block" ng-show="myContactForm.phone.$touched && myContactForm.phone.$invalid">Please enter a valid phone number</span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <p>Province/City</p>
+                            <select name="provinceCity" id="" class="w-100">
+                                <option value="Choose a province or city">Choose a province or city</option>
+                                <option value="province.name" ng-repeat="province in $ctrl.provinces">{{province.name}}</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="form-group mb-4">
-                        <p>Last name</p>
-                        <input type="text" class="w-100" placeholder="Enter your last name" value="{{$ctrl.lastName}}">
-                    </div>
-                    <div class="form-group mb-4">
-                        <p>Phone</p>
-                        <input type="text" class="w-100" placeholder="Enter your phone number">
-                    </div>
-                    <div class="form-group mb-4">
-                        <p>Province/City</p>
-                        <select name="provinceCity" id="" class="w-100">
-                            <option value="Choose a province or city">Choose a province or city</option>
-                            <option value="province.name" ng-repeat="province in $ctrl.provinces">{{province.name}}</option>
-                        </select>
-                    </div>
+                <div class="form-group mb-4">
+                    <p>Content</p>
+                    <textarea name="content" class="p-3" placeholder="Let's say your concern..."></textarea>
                 </div>
-            </div>
-            <div class="form-group mb-4">
-                <p>Content</p>
-                <textarea class="p-3" placeholder="Let's say your concern..."></textarea>
-            </div>
-            <label>
-                <input type="file">
-            </label>
-            <div class="w-100 d-flex justify-content-center mt-3 mt-lg-4">
-                <button class="py-2 px-5">Send information</button>
-            </div>
+                <label>
+                    <input type="file">
+                </label>
+                <div class="w-100 d-flex justify-content-center mt-3 mt-lg-4">
+                    <input value="Send information" ng-click="sendInformation()" class="py-2 px-5 send-information" type="submit" ng-disabled="myContactForm.firstName.$error.required || myContactForm.email.$error.required || myContactForm.email.$invalid || myContactForm.lastName.$error.required || myContactForm.phone.$error.required || myContactForm.phone.$error.minlength || myContactForm.phone.$invalid">
+                </div>
+            </form>
         </div>
     </div>
 </section>

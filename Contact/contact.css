@@ -58,7 +58,7 @@
   height: 100px;
 }
 
-.contact button {
+.contact .send-information {
   color: #FFFFF8;
   height: 40px;
   font-size: 16px;
@@ -83,8 +83,14 @@
   height: fit-content;
 }
 
-.contact button:hover {
+.contact .send-information:hover {
   background-color: #cc7f11;
+}
+
+.contact .send-information[disabled=disabled] {
+  background-color: #FF9F15;
+  cursor: default;
+  opacity: 50%;
 }
 
 .contact div span:nth-child(2),

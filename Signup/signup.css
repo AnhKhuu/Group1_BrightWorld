@@ -114,6 +114,12 @@ a {
   background-color: #cc7f11;
 }
 
+#signup-form .form-submit[disabled=disabled] {
+  background-color: #FF9F15;
+  opacity: 50%;
+  cursor: default;
+}
+
 #signup-form .form-footer {
   font-weight: 400;
   font-size: 12px;

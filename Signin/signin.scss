@@ -59,8 +59,11 @@
         @include yellow-btn;
     }
 
-    .form-submit:hover {
-        border: 1px solid #0d6adc;
+    .form-submit[disabled=disabled]
+    {
+        cursor: default;
+        background-color: $yellow;
+        opacity: 50%;
     }
 
     .form-footer {

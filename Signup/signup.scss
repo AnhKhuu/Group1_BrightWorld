@@ -55,6 +55,13 @@
         width: 100%;
     }
 
+    .form-submit[disabled=disabled]
+    {
+        background-color: $yellow;
+        opacity: 50%;
+        cursor: default;
+    }
+
     .form-footer {
         font-weight: 400;
         font-size: 12px;

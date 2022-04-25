@@ -544,6 +544,15 @@ input:focus {
   margin-top: 20px;
 }
 
+.required {
+  color: red;
+}
+
+.error {
+  font-style: italic;
+  color: red;
+}
+
 .footer .up-to-top {
   background-color: #FF9F15;
   width: 40px;

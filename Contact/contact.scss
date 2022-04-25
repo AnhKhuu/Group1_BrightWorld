@@ -44,13 +44,19 @@
           }
       }
 
-      button {
+      .send-information {
           @include yellow-btn;
           display: flex;
           align-items: center;
           justify-content: center;
           height: fit-content;
       }
+
+      .send-information[disabled=disabled] {
+        background-color: $yellow;
+        cursor: default;
+        opacity: 50%;
+      } 
     
     div {
         span:nth-child(2),

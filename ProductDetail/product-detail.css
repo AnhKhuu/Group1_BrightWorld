@@ -343,6 +343,7 @@
 @media (min-width: 992px) {
   .product-detail .product-information .btn-bar .buy-now {
     font-size: 20px;
+    border-radius: 5px !important;
   }
 }
 
