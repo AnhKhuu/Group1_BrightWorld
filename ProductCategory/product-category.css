@@ -577,6 +577,17 @@
   }
 }
 
+.product-category .item .img-container {
+  overflow: hidden;
+  width: initial;
+  height: auto;
+}
+
+.product-category .item:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .product-category .item img {
   max-width: 100%;
   -o-object-fit: cover;
@@ -584,6 +595,8 @@
   -o-object-position: center;
      object-position: center;
   border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .product-category .item p {
@@ -646,6 +659,7 @@
 
 .product-category .item .heart-outline {
   color: #F14747;
+  cursor: pointer;
 }
 
 .product-category .item .star {

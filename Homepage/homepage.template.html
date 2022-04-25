@@ -17,8 +17,10 @@
         <section class="product-carousel">
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredBestSellers">
-                    <a href="#!/Homepage/{{product.id}}" class="item">
-                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                    <div class="item">
+                        <a href="#!/Homepage/{{product.id}}" class="d-block img-container">
+                            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        </a>
                         <p>{{product.name}}</p>
                         <div class="price">
                             <span class="old-price">{{product.oldPrice}}</span>
@@ -42,13 +44,13 @@
                                     star
                                 </span>
                             </span>
-                            <span>
+                            <span class="favorite" ng-click="$ctrl.favorite($event)">
                                 <span class="material-icons heart-outline">
                                     favorite_border
                                 </span>
                             </span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -60,8 +62,10 @@
         <section class="product-carousel">
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredForYou">
-                    <a href="#!/Homepage/{{product.id}}" class="item">
-                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                    <div class="item">
+                        <a href="#!/Homepage/{{product.id}}" class="d-block img-container">
+                            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        </a>
                         <p>{{product.name}}</p>
                         <div class="price">
                             <span class="old-price">{{product.oldPrice}}</span>
@@ -85,13 +89,13 @@
                                     star
                                 </span>
                             </span>
-                            <span>
+                            <span class="favorite" ng-click="$ctrl.favorite($event)">
                                 <span class="material-icons heart-outline">
                                     favorite_border
                                 </span>
                             </span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -103,8 +107,10 @@
         <section class="product-carousel">
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredNewItems">
-                    <a href="#!/Homepage/{{product.id}}" class="item">
-                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                    <div class="item">
+                        <a href="#!/Homepage/{{product.id}}" class="d-block img-container">
+                            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        </a>
                         <p>{{product.name}}</p>
                         <div class="price">
                             <span class="old-price">{{product.oldPrice}}</span>
@@ -128,13 +134,13 @@
                                     star
                                 </span>
                             </span>
-                            <span>
+                            <span class="favorite" ng-click="$ctrl.favorite($event)">
                                 <span class="material-icons heart-outline">
                                     favorite_border
                                 </span>
                             </span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>

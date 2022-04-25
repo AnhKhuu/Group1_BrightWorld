@@ -4,6 +4,20 @@ angular.
     templateUrl: 'Homepage/homepage.template.html',
     controller: ['$http',function HomepageCtrl($http) {
       var self = this;
+
+      self.favoriteVar = false
+      self.favorite = function ($event) {
+        self.favoriteVar = !self.favoriteVar
+        var element = angular.element($event.target);
+        if(self.favoriteVar == true)
+        {
+          element.empty();
+          element.append('<span class="material-icons heart-outline">favorite</span>')
+        } else {
+          element.empty();
+          element.append('<span class="material-icons heart-outline">favorite_border</span>')
+        }
+      }
   
       $http.get('products/products.json').then(function(response) {
         self.filteredBestSellers = response.data.filter(function(x){ return parseInt(x.sold) >= 120});

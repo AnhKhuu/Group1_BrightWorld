@@ -4,6 +4,20 @@ angular.
     templateUrl: 'Sales/sales.template.html',
     controller: ['$http',function SalesCtrl($http) {
       var self = this;
+      
+      self.favoriteVar = false
+      self.favorite = function ($event) {
+        self.favoriteVar = !self.favoriteVar
+        var element = angular.element($event.target);
+        if(self.favoriteVar == true)
+        {
+          element.empty();
+          element.append('<span class="material-icons heart-outline">favorite</span>')
+        } else {
+          element.empty();
+          element.append('<span class="material-icons heart-outline">favorite_border</span>')
+        }
+      }
   
       $http.get('products/products.json').then(function(response) {
         self.filteredBulb = response.data.filter(function(x){ return x.type == "Bulb Lights" && x.hasOwnProperty("sale")});

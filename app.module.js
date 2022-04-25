@@ -42,6 +42,19 @@ app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http
         $scope.products = response.data;
     });
 
+    $scope.favoriteVar = false
+    $scope.favorite = function ($event) {
+        $scope.favoriteVar = !$scope.favoriteVar
+        var element = angular.element($event.target);
+        if ($scope.favoriteVar == true) {
+            element.empty();
+            element.append('<span class="material-icons heart-outline">favorite</span>')
+        } else {
+            element.empty();
+            element.append('<span class="material-icons heart-outline">favorite_border</span>')
+        }
+    }
+
     // Filter By Brand
     $scope.filterBrand = [];
     $scope.filterByBrandCategory = filterByBrandCategory;
@@ -77,11 +90,6 @@ app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http
             map(function (product) { return product.type; }).
             filter(function (cat, idx, arr) { return arr.indexOf(cat) === idx; });
     }
-
-    //Toggle heart
-    $scope.favorite = function (index) {
-
-    }
 })
 
 app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
@@ -89,7 +97,7 @@ app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
         $scope.provinces = response.data;
     });
 
-    $scope.completeOrder = function () {  
+    $scope.completeOrder = function () {
         alert("Order successfully!")
     }
 
@@ -144,21 +152,21 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
     }
 
     $scope.addToCart = function () {
-        var newProduct = { "imageUrl": $scope.product.imageUrl, "name": $scope.product.name, "oldPrice":"$" + $scope.oldPriceCart, "newPrice":"$" + $scope.newPriceCart, "productQuantity": $scope.quantity };
+        var newProduct = { "imageUrl": $scope.product.imageUrl, "name": $scope.product.name, "oldPrice": "$" + $scope.oldPriceCart, "newPrice": "$" + $scope.newPriceCart, "productQuantity": $scope.quantity };
         $scope.myProduct.push(newProduct);
         $scope.addBuyNowBtn();
 
-        $scope.price.push(parseFloat(newProduct.newPrice.replace("$","")))
-    
+        $scope.price.push(parseFloat(newProduct.newPrice.replace("$", "")))
+
         console.log($scope.price);
 
-        var subTotalCal = Math.round(parseFloat($scope.price.reduce((total, current) => total + current, 0))*100)/100
-        var tax = subTotalCal*110/100;
+        var subTotalCal = Math.round(parseFloat($scope.price.reduce((total, current) => total + current, 0)) * 100) / 100
+        var tax = subTotalCal * 110 / 100;
         var total = tax + 5;
 
-        $scope.subTotal.unshift("$"+subTotalCal);
-        $scope.tax.unshift("$"+tax);
-        $scope.total.unshift("$"+total);
+        $scope.subTotal.unshift("$" + subTotalCal);
+        $scope.tax.unshift("$" + tax);
+        $scope.total.unshift("$" + total);
     }
 
     $http.get('products/products.json').then(function (response) {

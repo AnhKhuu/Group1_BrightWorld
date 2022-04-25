@@ -24,6 +24,17 @@
   padding: 8px;
 }
 
+.product-carousel .item .img-container {
+  overflow: hidden;
+  width: initial;
+  height: auto;
+}
+
+.product-carousel .item:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .product-carousel .item .sale {
   color: #FF9F15;
   font-size: 12px;
@@ -37,6 +48,8 @@
   -o-object-position: center;
      object-position: center;
   border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .product-carousel .item p {
@@ -92,6 +105,7 @@
 
 .product-carousel .item .heart-outline {
   color: #F14747;
+  cursor: pointer;
 }
 
 .product-carousel .item .star {

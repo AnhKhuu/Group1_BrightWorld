@@ -319,8 +319,10 @@
             <span>Number of results: {{ filteredResult.length }}</span>
             <div class="product-list">
                 <div ng-repeat="product in (products | filter: search | filter: filterByBrandCategory | filter: filterByTypeCategory | orderBy: price | orderBy: publishDate | orderBy: sold) as filteredResult">
-                    <a href="#!/Product-category/{{product.id}}" class="item">
-                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                    <div class="item">
+                        <a class="img-container d-block" href="#!/Product-category/{{product.id}}">
+                            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        </a>
                         <p>{{product.name}}</p>
                         <div class="price">
                             <span class="old-price">{{product.oldPrice}}</span>
@@ -344,13 +346,13 @@
                                     star
                                 </span>
                             </span>
-                            <span>
+                            <span class="favorite" ng-click="favorite($event)">
                                 <span class="material-icons heart-outline">
                                     favorite_border
                                 </span>
                             </span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>

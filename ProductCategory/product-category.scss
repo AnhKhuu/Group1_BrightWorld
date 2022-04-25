@@ -240,11 +240,23 @@
             min-height: 440.73px;
         }
 
+        .img-container {
+            overflow: hidden;
+            width: initial;
+            height: auto;
+        }
+
+        &:hover img{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
         img {
             max-width: 100%;
             object-fit: cover;
             object-position: center;
             border-radius: 5px;
+            transition: all 0.5s;
         }
 
         p {
@@ -294,6 +306,7 @@
 
         .heart-outline {
             color: #F14747;
+            cursor: pointer;
         }
 
         .star {

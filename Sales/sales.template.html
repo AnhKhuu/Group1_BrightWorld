@@ -16,7 +16,9 @@
         </div>
         <div class="brand mb-4 mb-lg-5">
             <a href="" class="d-flex justify-content-center align-items-center" ng-repeat="brand in $ctrl.brands">
-                <img ng-src="{{brand.imageUrl}}" alt="">
+                <div class="img-container">
+                    <img ng-src="{{brand.imageUrl}}" alt="">
+                </div>
             </a>
         </div>
 
@@ -27,8 +29,10 @@
         <section class="product-carousel">
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredBulb">
-                    <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
-                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                    <div class="product-item position-relative">
+                        <a class="img-container d-block" href="#!/Homepage/{{product.id}}">
+                            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        </a>
                         <span class="sale-tag position-absolute">{{product.sale}}</span>
                         <p>{{product.name}}</p>
                         <div class="price">
@@ -53,13 +57,13 @@
                                     star
                                 </span>
                             </span>
-                            <span>
+                            <span class="favorite" ng-click="$ctrl.favorite($event)">
                                 <span class="material-icons heart-outline">
                                     favorite_border
                                 </span>
                             </span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -72,7 +76,9 @@
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredSpot">
                     <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
-                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <div class="img-container">
+                            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        </div>
                         <span class="sale-tag position-absolute">{{product.sale}}</span>
                         <p>{{product.name}}</p>
                         <div class="price">
@@ -116,7 +122,9 @@
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredSmart">
                     <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
-                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <div class="img-container">
+                            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        </div>
                         <span class="sale-tag position-absolute">{{product.sale}}</span>
                         <p>{{product.name}}</p>
                         <div class="price">
@@ -160,7 +168,9 @@
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredDecoration">
                     <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
-                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        <div class="img-container">
+                            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                        </div>
                         <span class="sale-tag position-absolute">{{product.sale}}</span>
                         <p>{{product.name}}</p>
                         <div class="price">
