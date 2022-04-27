@@ -22,6 +22,13 @@ a:hover {
   color: #FF9F15;
 }
 
+.active {
+  color: #FF9F15;
+  border-bottom: #FF9F15;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 input:focus {
   outline: 1px solid #FF9F15;
 }

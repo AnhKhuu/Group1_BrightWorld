@@ -51,7 +51,7 @@
   }
 }
 
-.sales .brand a {
+.sales .brand .brand-container {
   border-radius: 5px;
   background-color: #FFFFF8;
   height: 36px;
@@ -60,7 +60,7 @@
 }
 
 @media (min-width: 992px) {
-  .sales .brand a {
+  .sales .brand .brand-container {
     height: 40px;
   }
 }

@@ -16,5 +16,9 @@ angular.
       $http.get('products/provinces.json').then(function(response) {
         self.provinces = response.data;
       });
+
+      self.sendInformation = function() {
+        alert("Send succ")
+      }
     }]
   });

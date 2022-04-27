@@ -18,6 +18,12 @@ a {
     }
 }
 
+.active {
+    color: $yellow;
+    border-bottom: $yellow;
+    transition: all 0.5s;
+}
+
 input {
     &:focus {
         outline: 1px solid $yellow;

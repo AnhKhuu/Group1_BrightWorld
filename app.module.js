@@ -25,6 +25,12 @@ app.run(function ($rootScope, $http) {
         }
     }
 
+    $rootScope.active = function ($event) {
+        var element = angular.element($event.target);
+        $(".active").removeClass("active")
+        element.addClass("active");
+    }
+
     $rootScope.price = [];
     $rootScope.subTotal = [0];
     $rootScope.tax = [0];
@@ -35,18 +41,12 @@ app.run(function ($rootScope, $http) {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
-})
 
-app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http) {
-    $http.get('products/products.json').then(function (response) {
-        $scope.products = response.data;
-    });
-
-    $scope.favoriteVar = false
-    $scope.favorite = function ($event) {
-        $scope.favoriteVar = !$scope.favoriteVar
+    $rootScope.favoriteVar = false
+    $rootScope.favorite = function ($event) {
+        $rootScope.favoriteVar = !$rootScope.favoriteVar
         var element = angular.element($event.target);
-        if ($scope.favoriteVar == true) {
+        if ($rootScope.favoriteVar == true) {
             element.empty();
             element.append('<span class="material-icons heart-outline">favorite</span>')
         } else {
@@ -54,6 +54,12 @@ app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http
             element.append('<span class="material-icons heart-outline">favorite_border</span>')
         }
     }
+})
+
+app.controller("ProductCategoryCtrl", function ProductCategoryCtrl($scope, $http) {
+    $http.get('products/products.json').then(function (response) {
+        $scope.products = response.data;
+    });
 
     // Filter By Brand
     $scope.filterBrand = [];
@@ -97,8 +103,12 @@ app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
         $scope.provinces = response.data;
     });
 
-    $scope.completeOrder = function () {
-        alert("Order successfully!")
+    $scope.orderSuccess = function() {
+        $scope.myProduct = [];
+        $scope.price = [];
+        $scope.subTotal = [0];
+        $scope.tax = [0];
+        $scope.total = [0];
     }
 
     $scope.firstName = localStorage.getItem("firstname");

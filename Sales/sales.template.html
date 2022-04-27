@@ -15,11 +15,11 @@
             <h1>TOP BRANDS</h1>
         </div>
         <div class="brand mb-4 mb-lg-5">
-            <a href="" class="d-flex justify-content-center align-items-center" ng-repeat="brand in $ctrl.brands">
+            <div class="d-flex justify-content-center align-items-center brand-container" ng-repeat="brand in $ctrl.brands">
                 <div class="img-container">
                     <img ng-src="{{brand.imageUrl}}" alt="">
                 </div>
-            </a>
+            </div>
         </div>
 
         <!-- BULB -->
@@ -34,7 +34,9 @@
                             <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
                         </a>
                         <span class="sale-tag position-absolute">{{product.sale}}</span>
-                        <p>{{product.name}}</p>
+                        <a href="#!/Homepage/{{product.id}}">
+                            <p>{{product.name}}</p>
+                        </a>
                         <div class="price">
                             <span class="old-price">{{product.oldPrice}}</span>
                             <span class="new-price">{{product.newPrice}}</span>
@@ -75,12 +77,14 @@
         <section class="product-carousel">
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredSpot">
-                    <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
+                    <div class="product-item position-relative brand-contaienr">
                         <div class="img-container">
                             <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
                         </div>
                         <span class="sale-tag position-absolute">{{product.sale}}</span>
-                        <p>{{product.name}}</p>
+                        <a href="#!/Homepage/{{product.id}}">
+                            <p>{{product.name}}</p>
+                        </a>
                         <div class="price">
                             <span class="old-price">{{product.oldPrice}}</span>
                             <span class="new-price">{{product.newPrice}}</span>
@@ -109,7 +113,7 @@
                                 </span>
                             </span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -121,12 +125,14 @@
         <section class="product-carousel">
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredSmart">
-                    <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
+                    <div class="product-item position-relative brand-contaienr">
                         <div class="img-container">
                             <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
                         </div>
                         <span class="sale-tag position-absolute">{{product.sale}}</span>
-                        <p>{{product.name}}</p>
+                        <a href="#!/Homepage/{{product.id}}">
+                            <p>{{product.name}}</p>
+                        </a>
                         <div class="price">
                             <span class="old-price">{{product.oldPrice}}</span>
                             <span class="new-price">{{product.newPrice}}</span>
@@ -155,7 +161,7 @@
                                 </span>
                             </span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -167,12 +173,14 @@
         <section class="product-carousel">
             <div class="owl-carousel owl-theme owl-product-carousel mb-4 mb-lg-5">
                 <div ng-repeat="product in $ctrl.filteredDecoration">
-                    <a href="#!/Homepage/{{product.id}}" class="product-item position-relative">
+                    <div class="product-item position-relative brand-contaienr">
                         <div class="img-container">
                             <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
                         </div>
                         <span class="sale-tag position-absolute">{{product.sale}}</span>
-                        <p>{{product.name}}</p>
+                        <a href="#!/Homepage/{{product.id}}">
+                            <p>{{product.name}}</p>
+                        </a>
                         <div class="price">
                             <span class="old-price">{{product.oldPrice}}</span>
                             <span class="new-price">{{product.newPrice}}</span>
@@ -201,7 +209,7 @@
                                 </span>
                             </span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>

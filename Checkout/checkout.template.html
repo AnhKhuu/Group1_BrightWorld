@@ -1,4 +1,20 @@
 <section class="checkout container-lg my-4 my-lg-5" ng-controller="CheckoutCtrl">
+    <div class="modal fade" id="OrderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Order successfully</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Thanks for your order. It will be deliveried to you around 2-4 days.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="row">
         <div class="col-lg-4 order-summary p-3">
             <h2>Order Summary</h2>
@@ -39,7 +55,7 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <form name="myForm" class="myForm">
+            <form name="myForm" class="myForm" onsubmit="return">
                 <div class="billing-info mb-lg-5 mb-3">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h2>Billing info</h2>
@@ -67,7 +83,7 @@
 
                             <div class="form-group mb-4">
                                 <p>Address <span class="required">*</span></p>
-                                <input type="text" class="w-100" name="uAddr" ng-model="uAddr" ng-minlength="10" placeholder="Enter your address" required pattern="[a-zA-Z ]{20,350}">
+                                <input type="text" class="w-100" name="uAddr" ng-model="uAddr" ng-minlength="10" placeholder="Enter your address" required>
                             </div>
                             <div class="erInput text-right">
                                 <span class="error" ng-show="myForm.uAddr.$touched && myForm.uAddr.$error.required">Address must be required</span>
@@ -246,7 +262,7 @@
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <input type="submit" ng-click="completeOrder()" value="Commplete Order" class="py-2 px-5 complete-order d-flex align-items-center justify-content-center" ng-disabled="myForm.uFirstName.$error.required || myForm.uemail.$error.required || myForm.uemail.$invalid || myForm.uAddr.$error.required || myForm.uAddr.$error.minlength || myForm.uLastName.$error.required || myForm.uPhone.$error.required || myForm.uPhone.$error.minlength || myForm.uPhone.$invalid">
+                <input type="submit" ng-click="orderSuccess()" data-bs-toggle="modal" data-bs-target="#OrderModal" value="Commplete Order" class="py-2 px-5 complete-order d-flex align-items-center justify-content-center" ng-disabled="myForm.uFirstName.$error.required || myForm.uemail.$error.required || myForm.uemail.$invalid || myForm.uAddr.$error.required || myForm.uAddr.$error.minlength || myForm.uLastName.$error.required || myForm.uPhone.$error.required || myForm.uPhone.$error.minlength || myForm.uPhone.$invalid">
             </form>
         </div>
     </div>

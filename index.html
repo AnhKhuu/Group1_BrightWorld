@@ -92,11 +92,11 @@
                 </div>
                 <div class="position-absolute collapse" id="collapseNav">
                     <div>
-                        <a href="#/!" class="">
+                        <a href="#/!" class="active" ng-click="active($event)">
                             HOME
                         </a>
                         <div class="d-flex justify-content-between">
-                            <a href="#!Product-category">PRODUCT</a>
+                            <a href="#!Product-category" ng-click="active($event)">PRODUCT</a>
                             <!-- <span class="material-icons-outlined" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSubMenuLev1" aria-expanded="false"
                                 aria-controls="collapseSubMenuLev1">expand_more</span> -->
@@ -132,9 +132,9 @@
                                     aria-controls="collapseSubMenuLev2-1">expand_more</span>
                             </div>
                         </div>
-                        <a class="" href="#!Sales">SALES</a>
-                        <a class="" href="#!Contact">CONTACT</a>
-                        <a class="" href="#!About">ABOUT</a>
+                        <a class="" href="#!Sales" ng-click="active($event)">SALES</a>
+                        <a class="" href="#!Contact" ng-click="active($event)">CONTACT</a>
+                        <a class="" href="#!About" ng-click="active($event)">ABOUT</a>
                     </div>
                 </div>
                 <div class="position-absolute collapse w-100 px-3 py-2 search-mobile" id="collapseSearch">
@@ -151,10 +151,10 @@
         <nav class="sub-menu">
             <div
                 class="d-flex justify-content-around align-items-center container-lg sub-menu-layout position-relative">
-                <a href="#/!">HOME</a>
+                <a href="#/!"class="active" ng-click="active($event)">HOME</a>
                 <span>
                     <div class="d-flex align-items-center">
-                        <a href="#!Product-category" class="me-2">PRODUCT</a>
+                        <a href="#!Product-category" class="me-2" ng-click="active($event)">PRODUCT</a>
                         <!-- <span class="material-icons-outlined" data-bs-toggle="collapse"
                             data-bs-target="#collapseSubMenuLev1Desktop" aria-expanded="false"
                             aria-controls="collapseSubMenuLev1Desktop">expand_more</span> -->
@@ -192,9 +192,9 @@
                         </div>
                     </div>
                 </span>
-                <a class="#!Sales" href="#!Sales">SALES</a>
-                <a class="#!Contact" href="#!Contact">CONTACT</a>
-                <a class="#!About" href="#!About">ABOUT</a>
+                <a ng-click="active($event)" class="#!Sales" href="#!Sales">SALES</a>
+                <a ng-click="active($event)" class="#!Contact" href="#!Contact">CONTACT</a>
+                <a ng-click="active($event)" class="#!About" href="#!About">ABOUT</a>
             </div>
         </nav>
         <section>
