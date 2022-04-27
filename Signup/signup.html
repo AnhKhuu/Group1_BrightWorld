@@ -40,7 +40,7 @@
             </div>
             <div class="erInput text-right mb-3">
                 <span class="error d-block" ng-show="myForm.uemail.$dirty && myForm.uemail.$error.required">Email must be required</span>
-                <span class="error d-block" ng-show="myForm.uemail.$dirty && myForm.uemail.$invalid">Please enter a valid email</span>
+                <span class="error d-block" ng-show="myForm.uemail.$dirty && myForm.uemail.$invalid">Please enter a valid email (ex: abc@example.com)</span>
             </div>
             <div class="form-group">
                 Password <br>
@@ -48,7 +48,7 @@
             </div>
             <div class="erInput text-right mb-3">
                 <span class="error d-block" ng-show="myForm.upass.$dirty && myForm.upass.$error.required">Password must be required</span>
-                <span class="error d-block" ng-show="myForm.upass.$dirty && myForm.upass.$invalid">Please enter a valid password</span>
+                <span class="error d-block" ng-show="myForm.upass.$dirty && myForm.upass.$invalid">Password must contain at least one non-alphabetic character and 8 characters, capital and lower-case letters and numbers </span>
             </div>
             <div class="mb-3">
                 <button type="submit" value="Sign up" class="form-submit" ng-disabled="myForm.uFirstName.$error.required || myForm.uFirstName.$error.minlength || myForm.uLastName.$error.required || myForm.uLastName.$error.minlength || myForm.uemail.$error.required || myForm.uemail.$invalid || myForm.upass.$error.required || myForm.upass.$invalid" >Sign up</button>

@@ -104,7 +104,7 @@ app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
     });
 
     $scope.orderSuccess = function() {
-        $scope.myProduct = [];
+        $scope.myProduct.splice(0, $scope.myProduct.length)
         $scope.price = [];
         $scope.subTotal = [0];
         $scope.tax = [0];
