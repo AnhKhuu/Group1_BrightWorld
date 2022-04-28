@@ -285,13 +285,13 @@ app.controller('StarReviewCtrl', ['$scope', '$http', '$routeParams', function ($
         $scope.product = response.data;
         $scope.reviews = $scope.product.reviewers;
         $scope.reviewStar = parseInt($scope.reviews[0].starRating);
-        console.log($scope.reviewStar)
 
         $scope.ratingReviews = [{
             current: $scope.reviewStar,
             max: 5
         }];
     });
+
 }]);
 
 app.directive('starStaticRating', function () {
