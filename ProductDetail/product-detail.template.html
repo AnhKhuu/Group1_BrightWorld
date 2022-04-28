@@ -95,15 +95,15 @@
           </span>
         </span>
         <div class="reviewer">
-          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in reviews">
+          <div class="d-flex justify-content-between mb-2 mb-lg-3" ng-repeat="reviewer in reviewers">
             <div class="reviewer-ava">
               <img ng-src="{{reviewer.avatarUrl}}" alt="">
             </div>
             <div class="reviewer-brief p-2 p-lg-3">
               <h3 class="reviewer-name">{{reviewer.name}}</h3>
-              <span class="star-rating" ng-repeat = "">
-                <span class="star-rating" id="productRating" ng-controller="StarReviewCtrl">
-                  <span ng-repeat="rating in ratingReviews">
+              <span class="star-rating">
+                <span class="star-rating" id="productRating">
+                  <span ng-repeat="rating in reviewer.starRating">
                     <div star-static-rating rating-value="rating.current" max="rating.max"></div>
                   </span>
                 </span>

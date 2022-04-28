@@ -103,7 +103,7 @@ app.controller("CheckoutCtrl", function CheckoutCtrl($scope, $http) {
         $scope.provinces = response.data;
     });
 
-    $scope.orderSuccess = function() {
+    $scope.orderSuccess = function () {
         $scope.myProduct.splice(0, $scope.myProduct.length)
         $scope.price = [];
         $scope.subTotal = [0];
@@ -129,7 +129,27 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
         $scope.quantity = parseInt($scope.product.productQuantity);
         $scope.newPriceCart = parseFloat($scope.product.newPrice.replace("$", ""));
         $scope.oldPriceCart = parseFloat($scope.product.oldPrice.replace("$", ""));
+
+        $scope.reviewStar = parseInt($scope.reviews[0].starRating);
+
+        $scope.reviewers = [
+            {
+                "name": $scope.reviews[0].name,
+                "review": $scope.reviews[0].review,
+                "avatarUrl": $scope.reviews[0].avatarUrl,
+                "starRating": [{
+                    current: $scope.reviewStar,
+                    max: 5
+                }]
+            }
+        ]
     });
+
+    $scope.yourRating = 0;
+
+    $scope.getSelectedRating = function (rating) {
+        $scope.yourRating = rating;
+    }
 
     $scope.rating = 0;
     $scope.ratings = [{
@@ -185,8 +205,13 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
 
     $scope.addReview = function () {
         var userName = localStorage.getItem("firstname")
-        var newReview = { "name": userName, "review": $scope.myReview, "avatarUrl": "imgs/ava/user.png", "starRating": $scope.ratings.current };
-        $scope.reviews.push(newReview);
+        var newReview = { "name": userName, "review": $scope.myReview, "avatarUrl": "imgs/ava/user.png", "starRating": [
+            {
+                current: $scope.yourRating,
+                max: 5
+            }
+        ] };
+        $scope.reviewers.push(newReview);
     }
 
     setTimeout(function () {
@@ -278,20 +303,6 @@ app.controller('StarStaticCtrl', ['$scope', '$http', '$routeParams', function ($
             max: 5
         }];
     });
-}]);
-
-app.controller('StarReviewCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
-    $http.get('products/' + $routeParams.productId + '.json').then(function (response) {
-        $scope.product = response.data;
-        $scope.reviews = $scope.product.reviewers;
-        $scope.reviewStar = parseInt($scope.reviews[0].starRating);
-
-        $scope.ratingReviews = [{
-            current: $scope.reviewStar,
-            max: 5
-        }];
-    });
-
 }]);
 
 app.directive('starStaticRating', function () {
