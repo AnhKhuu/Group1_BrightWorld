@@ -105,6 +105,21 @@
         }
     }
 
+    .tooltip-compare {
+        background-color: #FFECD0;
+        color: $yellow;
+        border-radius: 10px;
+        font-size: 10px;
+        top: 10px;
+        right: 35px;
+        z-index: 11;
+        display: none;
+    }
+
+    .add-to-compare:hover + .tooltip-compare {
+        display: block;
+    }
+
     .col-md-3 {
         display: none;
 

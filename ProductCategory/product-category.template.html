@@ -406,10 +406,11 @@
                     <div class="item position-relative">
                         <span class="add-to-compare d-flex align-items-center justify-content-center position-absolute"
                             ng-click="addToCompare(product, $index)">
-                            <span class="material-icons">
+                            <span class="material-icons add-icon">
                                 add_circle
                             </span>
                         </span>
+                        <div class="tooltip-compare p-1 position-absolute">Add product to compare</div>
                         <a class="img-container d-block" href="#!/Product-category/{{product.id}}">
                             <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
                         </a>

@@ -157,6 +157,21 @@
   background-color: #FFECD0;
 }
 
+.product-category .tooltip-compare {
+  background-color: #FFECD0;
+  color: #FF9F15;
+  border-radius: 10px;
+  font-size: 10px;
+  top: 10px;
+  right: 35px;
+  z-index: 11;
+  display: none;
+}
+
+.product-category .add-to-compare:hover + .tooltip-compare {
+  display: block;
+}
+
 .product-category .col-md-3 {
   display: none;
 }
