@@ -1,11 +1,91 @@
 <section class="product-category container my-3 my-lg-5" ng-controller="ProductCategoryCtrl">
+    <div class="detail-compare-modal position-fixed p-2 p-md-3">
+        <div class="w-100 d-flex justify-content-end" ng-click="closeCompare()">
+            <span class="material-icons">
+                close
+            </span>
+        </div>
+        <div class="table-container">
+            <table border="1">
+                <tr>
+                    <td class="font-weight-bold">Features</td>
+                    <td ng-repeat="product in compareProduct">
+                        <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Name</td>
+                    <td ng-repeat="product in compareProduct">
+                        {{product.name}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Price</td>
+                    <td ng-repeat="product in compareProduct">
+                        {{product.newPrice}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Star Rating</td>
+                    <td ng-repeat="product in compareProduct">
+                        {{product.starRating}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Brand</td>
+                    <td ng-repeat="product in compareProduct">
+                        {{product.brand}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Sold</td>
+                    <td ng-repeat="product in compareProduct">
+                        {{product.sold}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Description</td>
+                    <td class="text-start" ng-repeat="product in compareProduct">
+                        <ul>
+                            <li ng-repeat="description in product.productDescription">{{description}}</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="compare-modal position-fixed p-2 p-md-3">
+        <div class="d-flex justify-content-between align-items-center mb-1 mb-md-2">
+            <p class="mb-0">
+                Maximum of 3 products are allowed for comparison
+            </p>
+            <button class="p-2" ng-disabled="ableToCompare" ng-click="compare()">Compare</button>
+        </div>
+        <div class="compare-products">
+            <div class="item position-relative" ng-repeat="product in compareProduct">
+                <span class="add-to-compare d-flex align-items-center justify-content-center position-absolute"
+                    ng-click="removeFromCompare($index)">
+                    <span class="material-icons">
+                        cancel
+                    </span>
+                </span>
+                <a class="img-container d-block" href="#!/Product-category/{{product.id}}">
+                    <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+                </a>
+                <a href="#!/Product-category/{{product.id}}">
+                    <p>{{product.name}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-3 filter-desktop">
             <h1 class="mb-3">Filter</h1>
             <div class="mb-3 mb-lg-5 filter-brand">
                 <h2>Types</h2>
                 <div>
-                    <label class="container-filter d-flex align-items-center justify-content-between" ng-repeat="type in getTypeCategories()">
+                    <label class="container-filter d-flex align-items-center justify-content-between"
+                        ng-repeat="type in getTypeCategories()">
                         <span class="brand-name">{{type}}</span>
                         <input type="checkbox" ng-model="filterType[type]">
                         <span class="checkmark"></span>
@@ -147,14 +227,16 @@
                     <input type="radio" name="filter" id="topsales" value="-sold" ng-model="sold">
                 </label>
                 <div class="vl last"></div>
-                <span class="material-icons-outlined" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+                <span class="material-icons-outlined" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
                     filter_alt
                 </span>
                 <div class="collapse position-absolute" id="collapseFilter">
                     <div class="mb-3 mb-lg-5 filter-type">
                         <h2>Types</h2>
                         <div>
-                            <label class="container-filter d-flex align-items-center justify-content-between" ng-repeat="type in getTypeCategories()">
+                            <label class="container-filter d-flex align-items-center justify-content-between"
+                                ng-repeat="type in getTypeCategories()">
                                 <span class="brand-name">{{type}}</span>
                                 <input type="checkbox" ng-model="filterType[type]">
                                 <span class="checkmark"></span>
@@ -165,7 +247,8 @@
                     <div class="mb-3 mb-lg-5 filter-brand">
                         <h2>Brands</h2>
                         <div>
-                            <label class="container-filter d-flex align-items-center" ng-repeat="brand in getBrandCategories()">
+                            <label class="container-filter d-flex align-items-center"
+                                ng-repeat="brand in getBrandCategories()">
                                 <span class="brand-name">{{brand}}</span>
                                 <input type="checkbox" ng-model="filterBrand[brand]">
                                 <span class="checkmark"></span>
@@ -318,8 +401,15 @@
             </div>
             <span>Number of results: {{ filteredResult.length }}</span>
             <div class="product-list">
-                <div ng-repeat="product in (products | filter: search | filter: filterByBrandCategory | filter: filterByTypeCategory | orderBy: price | orderBy: publishDate | orderBy: sold) as filteredResult">
-                    <div class="item">
+                <div
+                    ng-repeat="product in (products | filter: search | filter: filterByBrandCategory | filter: filterByTypeCategory | orderBy: price | orderBy: publishDate | orderBy: sold) as filteredResult">
+                    <div class="item position-relative">
+                        <span class="add-to-compare d-flex align-items-center justify-content-center position-absolute"
+                            ng-click="addToCompare(product, $index)">
+                            <span class="material-icons">
+                                add_circle
+                            </span>
+                        </span>
                         <a class="img-container d-block" href="#!/Product-category/{{product.id}}">
                             <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
                         </a>
@@ -331,21 +421,9 @@
                             <span class="new-price">{{product.newPrice}}</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between  mt-2">
-                            <span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
+                            <span class="star-rating" ng-controller="StarStaticCtrl">
+                                <span ng-repeat="rating in product.starRating">
+                                  <div star-static-rating rating-value="rating.current" max="rating.max"></div>
                                 </span>
                             </span>
                             <span class="favorite" ng-click="favorite($event)">

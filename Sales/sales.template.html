@@ -42,21 +42,9 @@
                             <span class="new-price">{{product.newPrice}}</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between  mt-2">
-                            <span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
+                            <span class="star-rating" ng-controller="StarStaticCtrl">
+                                <span ng-repeat="rating in product.starRating">
+                                  <div star-static-rating rating-value="rating.current" max="rating.max"></div>
                                 </span>
                             </span>
                             <span class="favorite" ng-click="$ctrl.favorite($event)">
@@ -90,21 +78,9 @@
                             <span class="new-price">{{product.newPrice}}</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between  mt-2">
-                            <span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
+                            <span class="star-rating" ng-controller="StarStaticCtrl">
+                                <span ng-repeat="rating in product.starRating">
+                                  <div star-static-rating rating-value="rating.current" max="rating.max"></div>
                                 </span>
                             </span>
                             <span class="favorite" ng-click="$ctrl.favorite($event)">
@@ -138,21 +114,9 @@
                             <span class="new-price">{{product.newPrice}}</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between  mt-2">
-                            <span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
+                            <span class="star-rating" ng-controller="StarStaticCtrl">
+                                <span ng-repeat="rating in product.starRating">
+                                  <div star-static-rating rating-value="rating.current" max="rating.max"></div>
                                 </span>
                             </span>
                             <span class="favorite" ng-click="$ctrl.favorite($event)">
@@ -186,21 +150,9 @@
                             <span class="new-price">{{product.newPrice}}</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-between  mt-2">
-                            <span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
-                                </span>
-                                <span class="material-icons star">
-                                    star
+                            <span class="star-rating" ng-controller="StarStaticCtrl">
+                                <span ng-repeat="rating in product.starRating">
+                                  <div star-static-rating rating-value="rating.current" max="rating.max"></div>
                                 </span>
                             </span>
                             <span class="favorite" ng-click="$ctrl.favorite($event)">

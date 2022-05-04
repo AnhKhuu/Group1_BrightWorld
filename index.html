@@ -31,172 +31,175 @@
 
 <body ng-app="brightworldApp">
     <div id="header">
-        <section class="header">
-            <nav class="d-flex justify-content-between align-items-center position-relative container-lg">
-                <a href="#/!">
-                    <img src="./imgs/Logo.png" alt="Logo" class="header-logo">
-                </a>
-                <div class="search-desktop position-relative">
-                    <input type="text" placeholder="Search" class="w-100" ng-model="search">
-                    <a href="#!Product-category" class="btn material-icons-outlined position-absolute p-0 search-icon">
-                        search
+        <section class="header-container position-fixed">
+            <section class="header w-100">
+                <nav class="d-flex justify-content-between align-items-center position-relative container-lg">
+                    <a href="#/!">
+                        <img src="./imgs/Logo.png" alt="Logo" class="header-logo">
                     </a>
-                </div>
-                <div class="d-flex">
-                    <span class="material-icons-outlined ms-2" id="searchTrigger" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
-                        search
-                    </span>
-                    <div class="dropdown">
-                        <div class="position-relative cart ms-2 ms-lg-3 ms-xxl-0 dropdown-toggle"
-                            id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                            aria-expanded="false">
-                            <span class="material-icons-outlined">
-                                shopping_cart
-                            </span>
-                            <div class="cart-badge position-absolute">{{ProductInCart.length}}</div>
-                        </div>
-                        <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuClickableInside">
-                            <div class="dropdown-item p-0 cart-dropdown">
-                                <div class="product-info p-2 p-lg-4 d-flex align-items-center justify-content-between" ng-repeat="product in myProduct as ProductInCart">
-                                    <img ng-src="{{product.imageUrl}}" alt="">
-                                    <div class="product-detail px-2 px-md-3">
-                                        <p class="mb-1 mb-md-2">{{product.name}}</p>
-                                        <div class="quantity mb-1 mb-md-2">
-                                            x{{product.productQuantity}}
+                    <div class="search-desktop position-relative">
+                        <input type="text" placeholder="Search" class="w-100" ng-model="search">
+                        <a href="#!Product-category" class="btn material-icons-outlined position-absolute p-0 search-icon">
+                            search
+                        </a>
+                    </div>
+                    <div class="d-flex">
+                        <span class="material-icons-outlined ms-2" id="searchTrigger" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
+                            search
+                        </span>
+                        <div class="dropdown">
+                            <div class="position-relative cart ms-2 ms-lg-3 ms-xxl-0 dropdown-toggle"
+                                id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false">
+                                <span class="material-icons-outlined">
+                                    shopping_cart
+                                </span>
+                                <div class="cart-badge position-absolute">{{ProductInCart.length}}</div>
+                            </div>
+                            <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuClickableInside">
+                                <div class="dropdown-item p-0 cart-dropdown">
+                                    <div class="product-info p-2 p-lg-4 d-flex align-items-center justify-content-between" ng-repeat="product in myProduct as ProductInCart">
+                                        <img ng-src="{{product.imageUrl}}" alt="">
+                                        <div class="product-detail px-2 px-md-3">
+                                            <p class="mb-1 mb-md-2">{{product.name}}</p>
+                                            <div class="quantity mb-1 mb-md-2">
+                                                x{{product.productQuantity}}
+                                            </div>
+                                            <div class="price">
+                                                <div class="new-price">{{product.newPrice}}</div>
+                                                <div class="old-price">{{product.oldPrice}}</div>
+                                            </div>
                                         </div>
-                                        <div class="price">
-                                            <div class="new-price">{{product.newPrice}}</div>
-                                            <div class="old-price">{{product.oldPrice}}</div>
-                                        </div>
+                                        <span ng-click="delete($index)" class="material-icons-outlined close">
+                                            delete
+                                        </span>
                                     </div>
-                                    <span ng-click="delete($index)" class="material-icons-outlined close">
-                                        delete
-                                    </span>
-                                </div>
-                                <div class="btn-bar-cart w-100 d-flex justify-content-between my-0">
-                                    <!-- buy-now -->
+                                    <div class="btn-bar-cart w-100 d-flex justify-content-between my-0">
+                                        <!-- buy-now -->
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <a href="./Signin/signin.html" class="ms-2 ms-md-3 ms-xxl-5">
+                            <span class="material-icons-outlined">
+                                person_outline
+                            </span>
+                        </a>
+                        <span class="material-icons-outlined ms-2 trigger-mb-menu" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav">
+                            menu
+                        </span>
+                    </div>
+                    <div class="position-absolute collapse" id="collapseNav">
+                        <div>
+                            <a href="#/!" class="active" ng-click="active($event)">
+                                HOME
+                            </a>
+                            <div class="d-flex justify-content-between">
+                                <a href="#!Product-category" ng-click="active($event)">PRODUCT</a>
+                                <!-- <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSubMenuLev1" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev1">expand_more</span> -->
+                            </div>
+                            <div id="collapseSubMenuLev1" class="collapse ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <a href="">BULB</a>
+                                    <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
+                                        aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                </div>
+                                <div class="collapse collapseSubMenuLev2 ms-3" id="collapseSubMenuLev2-1">
+                                    <a href="">Wisteria Lane</a>
+                                    <a href="">BetUS</a>
+                                    <a href="">BTMWAY</a>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="">SPOT LIGHT</a>
+                                    <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
+                                        aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="">SMART LIGHT</a>
+                                    <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
+                                        aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="">DECORATION LIGHT</a>
+                                    <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
+                                        aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                </div>
+                            </div>
+                            <a class="" href="#!Sales" ng-click="active($event)">SALES</a>
+                            <a class="" href="#!Contact" ng-click="active($event)">CONTACT</a>
+                            <a class="" href="#!About" ng-click="active($event)">ABOUT</a>
                         </div>
                     </div>
-                    <a href="./Signin/signin.html" class="ms-2 ms-md-3 ms-xxl-5">
-                        <span class="material-icons-outlined">
-                            person_outline
-                        </span>
-                    </a>
-                    <span class="material-icons-outlined ms-2 trigger-mb-menu" data-bs-toggle="collapse"
-                        data-bs-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav">
-                        menu
-                    </span>
-                </div>
-                <div class="position-absolute collapse" id="collapseNav">
-                    <div>
-                        <a href="#/!" class="active" ng-click="active($event)">
-                            HOME
-                        </a>
-                        <div class="d-flex justify-content-between">
-                            <a href="#!Product-category" ng-click="active($event)">PRODUCT</a>
-                            <!-- <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSubMenuLev1" aria-expanded="false"
-                                aria-controls="collapseSubMenuLev1">expand_more</span> -->
+                    <div class="position-absolute collapse w-100 px-3 py-2 search-mobile" id="collapseSearch">
+                        <div class="position-relative">
+                            <a href="#!Product-category" class="material-icons-outlined ms-2 position-absolute">
+                                search
+                            </a>
+                            <input type="text" placeholder="Search" class="w-100" ng-model="search">
                         </div>
-                        <div id="collapseSubMenuLev1" class="collapse ms-3">
-                            <div class="d-flex justify-content-between">
+                    </div>
+                </nav>
+            </section>
+            <hr class="my-0">
+            <nav class="sub-menu">
+                <div
+                    class="d-flex justify-content-around align-items-center container-lg sub-menu-layout position-relative">
+                    <a href="#/!"class="active" ng-click="active($event)">HOME</a>
+                    <span>
+                        <div class="d-flex align-items-center">
+                            <a href="#!Product-category" class="me-2" ng-click="active($event)">PRODUCT</a>
+                            <!-- <span class="material-icons-outlined" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSubMenuLev1Desktop" aria-expanded="false"
+                                aria-controls="collapseSubMenuLev1Desktop">expand_more</span> -->
+                        </div>
+                        <div class="position-absolute collapse" id="collapseSubMenuLev1Desktop">
+                            <div class="d-flex justify-content-between position-relative">
                                 <a href="">BULB</a>
                                 <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
-                                    aria-controls="collapseSubMenuLev2-1">expand_more</span>
-                            </div>
-                            <div class="collapse collapseSubMenuLev2 ms-3" id="collapseSubMenuLev2-1">
-                                <a href="">Wisteria Lane</a>
-                                <a href="">BetUS</a>
-                                <a href="">BTMWAY</a>
+                                    data-bs-target="#collapseSubMenuLev2Desktop-1" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev2Desktop-1">chevron_right</span>
+                                <div class="collapse position-absolute collapseSubMenuLev2Desktop"
+                                    id="collapseSubMenuLev2Desktop-1">
+                                    <a href="">Wisteria Lane</a>
+                                    <a href="">BetUS</a>
+                                    <a href="">BTMWAY</a>
+                                </div>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <a href="">SPOT LIGHT</a>
                                 <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
-                                    aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                    data-bs-target="#collapseSubMenuLev2-2" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev2-2">chevron_right</span>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <a href="">SMART LIGHT</a>
                                 <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
-                                    aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                    data-bs-target="#collapseSubMenuLev2-3" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev2-3">chevron_right</span>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <a href="">DECORATION LIGHT</a>
                                 <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSubMenuLev2-1" aria-expanded="false"
-                                    aria-controls="collapseSubMenuLev2-1">expand_more</span>
+                                    data-bs-target="#collapseSubMenuLev2-4" aria-expanded="false"
+                                    aria-controls="collapseSubMenuLev2-4">chevron_right</span>
                             </div>
                         </div>
-                        <a class="" href="#!Sales" ng-click="active($event)">SALES</a>
-                        <a class="" href="#!Contact" ng-click="active($event)">CONTACT</a>
-                        <a class="" href="#!About" ng-click="active($event)">ABOUT</a>
-                    </div>
-                </div>
-                <div class="position-absolute collapse w-100 px-3 py-2 search-mobile" id="collapseSearch">
-                    <div class="position-relative">
-                        <a href="#!Product-category" class="material-icons-outlined ms-2 position-absolute">
-                            search
-                        </a>
-                        <input type="text" placeholder="Search" class="w-100" ng-model="search">
-                    </div>
+                    </span>
+                    <a ng-click="active($event)" class="#!Sales" href="#!Sales">SALES</a>
+                    <a ng-click="active($event)" class="#!Contact" href="#!Contact">CONTACT</a>
+                    <a ng-click="active($event)" class="#!About" href="#!About">ABOUT</a>
                 </div>
             </nav>
         </section>
-        <hr class="my-0">
-        <nav class="sub-menu">
-            <div
-                class="d-flex justify-content-around align-items-center container-lg sub-menu-layout position-relative">
-                <a href="#/!"class="active" ng-click="active($event)">HOME</a>
-                <span>
-                    <div class="d-flex align-items-center">
-                        <a href="#!Product-category" class="me-2" ng-click="active($event)">PRODUCT</a>
-                        <!-- <span class="material-icons-outlined" data-bs-toggle="collapse"
-                            data-bs-target="#collapseSubMenuLev1Desktop" aria-expanded="false"
-                            aria-controls="collapseSubMenuLev1Desktop">expand_more</span> -->
-                    </div>
-                    <div class="position-absolute collapse" id="collapseSubMenuLev1Desktop">
-                        <div class="d-flex justify-content-between position-relative">
-                            <a href="">BULB</a>
-                            <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSubMenuLev2Desktop-1" aria-expanded="false"
-                                aria-controls="collapseSubMenuLev2Desktop-1">chevron_right</span>
-                            <div class="collapse position-absolute collapseSubMenuLev2Desktop"
-                                id="collapseSubMenuLev2Desktop-1">
-                                <a href="">Wisteria Lane</a>
-                                <a href="">BetUS</a>
-                                <a href="">BTMWAY</a>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <a href="">SPOT LIGHT</a>
-                            <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSubMenuLev2-2" aria-expanded="false"
-                                aria-controls="collapseSubMenuLev2-2">chevron_right</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <a href="">SMART LIGHT</a>
-                            <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSubMenuLev2-3" aria-expanded="false"
-                                aria-controls="collapseSubMenuLev2-3">chevron_right</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <a href="">DECORATION LIGHT</a>
-                            <span class="material-icons-outlined" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSubMenuLev2-4" aria-expanded="false"
-                                aria-controls="collapseSubMenuLev2-4">chevron_right</span>
-                        </div>
-                    </div>
-                </span>
-                <a ng-click="active($event)" class="#!Sales" href="#!Sales">SALES</a>
-                <a ng-click="active($event)" class="#!Contact" href="#!Contact">CONTACT</a>
-                <a ng-click="active($event)" class="#!About" href="#!About">ABOUT</a>
-            </div>
-        </nav>
+        <section class="space"></section>
         <section>
             <ng-view></ng-view>
         </section>

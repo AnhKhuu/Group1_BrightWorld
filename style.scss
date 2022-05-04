@@ -30,6 +30,24 @@ input {
     }
 }
 
+.space {
+    height: 60px;
+
+        @include on('md')
+        {
+            height: 115px;
+        }
+
+        @include on('lg') {
+            height: 155px;
+        }
+}
+
+.header-container {
+    z-index: 50;
+    width: 100%;
+}
+
 .header {
     background-color: $white;
     

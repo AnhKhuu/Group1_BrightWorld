@@ -8,6 +8,8 @@ var app = angular.module('brightworldApp', [
 
 app.run(function ($rootScope, $http) {
     $rootScope.myProduct = [];
+    $rootScope.compareProduct = [];
+
     $http.get('products/addresses.json').then(function (response) {
         $rootScope.addresses = response.data;
     });
@@ -53,6 +55,44 @@ app.run(function ($rootScope, $http) {
             element.empty();
             element.append('<span class="material-icons heart-outline">favorite_border</span>')
         }
+    }
+    $rootScope.countItems = 0
+    $rootScope.addToCompare = function (i, index) {
+        var check = $rootScope.compareProduct.some(obj => {
+            return obj.id === i.id
+        })
+        if(!check && $rootScope.compareProduct.length <=2 )
+        {
+            let product = 'products/' + i.id + '.json'
+            $http.get(product).then(function (response) {
+                $rootScope.productCompare = response.data;
+                $rootScope.compareProduct.push($rootScope.productCompare)
+            });
+            $rootScope.countItems++
+        }
+        $(".compare-modal").addClass("d-block")
+        $rootScope.ableToCompare = $rootScope.countItems > 1 ? false : true
+    }
+
+    $rootScope.removeFromCompare = function(index) {
+        $rootScope.compareProduct.splice(index, 1)
+        if($rootScope.compareProduct.length == 0)
+        {
+            $(".compare-modal").removeClass("d-block")
+        }
+        $rootScope.countItems--
+        $rootScope.ableToCompare = $rootScope.countItems > 1 ? false : true
+    }
+
+    $rootScope.compare = function() {
+        $(".detail-compare-modal").addClass("d-block")
+    }
+
+    $rootScope.closeCompare = function() {
+        $(".detail-compare-modal").removeClass("d-block")
+        $(".compare-modal").removeClass("d-block")
+        $rootScope.compareProduct = [];
+        $rootScope.countItems = 0;
     }
 })
 
@@ -143,6 +183,7 @@ app.controller("ProductDetailCtrl", function ProductDetailCtrl($scope, $http, $r
                 }]
             }
         ]
+        
     });
 
     $scope.yourRating = 0;

@@ -33,6 +33,27 @@ input:focus {
   outline: 1px solid #FF9F15;
 }
 
+.space {
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .space {
+    height: 115px;
+  }
+}
+
+@media (min-width: 992px) {
+  .space {
+    height: 155px;
+  }
+}
+
+.header-container {
+  z-index: 50;
+  width: 100%;
+}
+
 .header {
   background-color: #FFFFF8;
 }
